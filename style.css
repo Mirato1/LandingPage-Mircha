@@ -167,6 +167,17 @@ p {
   background-color: var(--gray-dark-color);
 }
 
+@media screen and (min-width: 768px) {
+  .testimonials__carousel {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .testimonials__carousel {
+    max-width: 800px;
+  }
+}
+
 /******* Contact Form *******/
 .contact__form {
   margin: 2rem auto;
