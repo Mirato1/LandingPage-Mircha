@@ -1,7 +1,7 @@
 /******* Propiedades Personalizadas *******/
 :root {
-  --first-color: #d90062;
-  --first-alpha-color: rgba(217, 0, 98, 0.75);
+  --first-color: #cf4444;
+  --first-alpha-color: rgba(207, 68, 68, 0.75);
   --second-color: #14192d;
   --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
@@ -467,10 +467,6 @@ progress::-moz-progress-bar {
   max-width: var(--max-width);
 }
 
-.gray__scale {
-  filter: grayscale(1);
-}
-
 .none {
   display: none;
 }
@@ -584,20 +580,52 @@ progress::-moz-progress-bar {
   font-size: 2rem;
 }
 
-/* Cartas */
-.knowledge__card {
-  margin: 1rem auto;
+/*Champions Cards */
+.champions > .container {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  justify-content: space-between;
+  align-content: center;
+}
+
+.champions .section__title {
+  grid-column: span 2;
+}
+
+.champion__card {
+  margin: 0.5rem auto;
   padding: 1rem;
+  width: 100%;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
-.knowledge__card h3 {
+.champion__card h3 {
   color: var(--title-color);
+  transition: all 0.3s ease-in-out;
 }
 
-.knowledge__card svg {
-  fill: var(--first-color);
-  margin-bottom: 1.25rem;
+.champion__card img {
+  border-radius: 50%;
+  filter: grayscale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.champion__card p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.champion__card:hover {
+  box-shadow: 0rem 0.25rem 1rem #f5020265;
+}
+
+.champion__card:hover > h3 {
+  color: var(--first-color);
+}
+
+.champion__card:hover > img {
+  filter: grayscale(0);
 }
 
 /* Cartas Proyecto */
@@ -681,14 +709,14 @@ progress::-moz-progress-bar {
     grid-template-columns: repeat(2, 48%);
     justify-content: space-between;
   }
-  .languages > .container {
+  .champions > .container {
     display: grid;
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: repeat(3, 30%);
     justify-content: space-between;
     align-content: center;
   }
-  .languages .section__title {
-    grid-column: span 2;
+  .champions .section__title {
+    grid-column: span 3;
   }
 
   .modal__proyect {
@@ -712,6 +740,12 @@ progress::-moz-progress-bar {
 }
 
 @media screen and (min-width: 1024px) {
+  .portrait__image {
+    content: url("assets/Challenger.png");
+    border-radius: 10%;
+    box-shadow: 0px 0px 8px 2px #f8d68b;
+    text-align: center;
+  }
   .about {
     display: grid;
     grid-template-columns: repeat(3, 30%);
@@ -734,11 +768,11 @@ progress::-moz-progress-bar {
     height: calc(var(--header-height) - 0.5rem);
   }
 
-  .languages > .container {
-    grid-template-columns: repeat(3, 30%);
+  .champions > .container {
+    grid-template-columns: repeat(4, 22.5%);
   }
-  .languages .section__title {
-    grid-column: span 3;
+  .champions .section__title {
+    grid-column: span 4;
   }
 
   .proyect > .container {
