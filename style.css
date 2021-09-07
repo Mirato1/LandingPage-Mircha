@@ -19,6 +19,7 @@
   --font: "Raleway", sans-serif;
   --max-width: 1200px;
   --header-height: 4rem;
+  --border-first-color: #414165;
 }
 
 /****************************************** RESET  ***************************************/
@@ -617,7 +618,7 @@ progress::-moz-progress-bar {
 }
 
 .champion__card:hover {
-  box-shadow: 0rem 0.25rem 1rem #f5020265;
+  box-shadow: 0rem 0.25rem 1rem var(--first-alpha-color);
 }
 
 .champion__card:hover > h3 {
@@ -628,7 +629,297 @@ progress::-moz-progress-bar {
   filter: grayscale(0);
 }
 
-/* Cartas Proyecto */
+/* Champions Runes */
+.champion__info {
+  background-repeat: no-repeat;
+  background-position: 60% -60px;
+  background-image: radial-gradient(
+      400px 200px at 60% 34%,
+      rgba(7, 7, 32, 0) 0%,
+      rgb(7, 7, 32) 100%
+    ),
+    linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
+    url(https://static.u.gg/assets/lol/riot_static/11.16.1/img/splash/Aatrox_0.jpg);
+}
+
+.champion__info--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--first-color);
+}
+
+.champion__info--header > img {
+  margin: 1rem;
+  margin: 1rem;
+  border: medium solid var(--second-color);
+  border-radius: 10%;
+}
+
+.champion__header--content {
+  text-align: center;
+}
+
+.champion__header--abilities {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.champion__skill--label {
+  position: relative;
+  margin: 0 0.4rem;
+}
+
+.champion__skill--label > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.champion__skill--label .skill__label--key {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--second-color);
+  color: var(--white-color);
+  font-size: 10px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.skill__label--key.bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border: 1.5px solid var(--gray-dark-color);
+  box-sizing: content-box;
+}
+
+/* Runes -- Build -- Spells */
+.champion__info--runes {
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: #191937;
+}
+
+.champion__runes--content {
+  display: grid;
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid var(--border-first-color);
+  padding: 1rem;
+}
+
+.champion__runes--tree {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border-right: none;
+}
+
+.champion__build--spells {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding-top: 0.5rem;
+}
+
+.champion__runes--spells {
+  border-right: 1px solid var(--border-first-color);
+}
+
+.section__header::before,
+.section__header--right::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: var(--first-color);
+}
+
+.section__header--right::before {
+  left: 9.2rem;
+}
+
+.section__header,
+.section__header--right {
+  font-weight: bold;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+}
+
+.rune__tree {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1 1;
+  border-bottom: 1px solid var(--border-first-color);
+  padding-bottom: 1rem;
+}
+
+.rune {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rune.masterie__inactive {
+  background-color: #3f3f6e;
+  border-radius: 50%;
+}
+
+.rune img {
+  width: 12px;
+}
+
+.primary__tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.rune__tree--header {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  margin-bottom: 12px;
+  width: 8rem;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #11112a;
+}
+
+.rune__img--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: #191937;
+}
+
+.rune__img--container img {
+  width: 100%;
+}
+
+.rune__tree--title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white-color);
+  padding-left: 0.6rem;
+}
+
+.primary__tree--keystone .runes__row {
+  margin-bottom: 1rem;
+}
+.secondary__tree .runes__row {
+  margin-bottom: 0.4rem;
+}
+
+.runes__row {
+  width: 100%;
+}
+
+.runes__row:last-child {
+  margin-bottom: 0;
+}
+
+.keystone__row {
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-first-color);
+}
+
+.masteries {
+  display: flex;
+  justify-content: space-between;
+}
+
+.masterie {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+}
+.keystone {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+}
+
+.masterie img {
+  width: 100%;
+}
+
+.masterie__inactive {
+  filter: grayscale(100%);
+  opacity: 0.27;
+}
+
+.masterie__active {
+  border-width: 1px;
+  border: 1px solid var(--first-color);
+  border-radius: 50%;
+}
+
+.separador {
+  margin: 6px 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-first-color);
+}
+
+/* Spells */
+
+.spells__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.spells__container img {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+}
+
+/* Build */
+
+.champion__runes--build {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.build__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1.5rem);
+  justify-content: center;
+  gap: 5px;
+}
+
+.build__container img {
+  border: 1px solid #7582c8;
+}
+
+.build__container img[alt="Goredrinker"] {
+  border: 1px solid #f8b218;
+}
+
+/****** Cartas Proyecto *********/
 .proyect__card {
   position: relative;
   width: 100%;
@@ -717,6 +1008,17 @@ progress::-moz-progress-bar {
   }
   .champions .section__title {
     grid-column: span 3;
+  }
+
+  .champion__skill--label > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .champion__skill--label .skill__label--key {
+    width: 1rem;
+    height: 1rem;
+    font-size: 12px;
   }
 
   .modal__proyect {
