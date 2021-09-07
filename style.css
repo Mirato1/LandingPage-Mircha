@@ -644,7 +644,7 @@ a[href="#runas"] {
       rgb(7, 7, 32) 100%
     ),
     linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
-    url(assets/aatrox/Aatrox_wall.jpg);
+    url(assets/Aatrox_wall.jpg);
 }
 
 .champion__info--header {
