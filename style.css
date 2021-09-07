@@ -644,7 +644,7 @@ a[href="#runas"] {
       rgb(7, 7, 32) 100%
     ),
     linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
-    url(https://static.u.gg/assets/lol/riot_static/11.16.1/img/splash/Aatrox_0.jpg);
+    url(assets/aatrox/Aatrox_wall.jpg);
 }
 
 .champion__info--header {
@@ -922,6 +922,12 @@ a[href="#runas"] {
   border: 1px solid #f8b218;
 }
 
+/************************* HABILIDADES  **************************/
+.champion__info--skills {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: thin solid var(--border-first-color);
+}
 /****** Cartas Proyecto *********/
 .proyect__card {
   position: relative;
@@ -1031,7 +1037,7 @@ a[href="#runas"] {
   }
 
   .section__header {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   /********************************* RUNES TREES  ****************************/
