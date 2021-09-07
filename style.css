@@ -49,10 +49,6 @@ a {
   transition: all 0.5s ease-out;
 }
 
-a:hover {
-  opacity: 0.75;
-}
-
 h1 {
   margin: 0;
   font-size: 2rem;
@@ -168,7 +164,7 @@ p {
   background-color: var(--gray-dark-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   .testimonials__carousel {
     max-width: 600px;
   }
@@ -341,6 +337,7 @@ p {
 .nav__menu a:hover {
   color: var(--white-color);
   background-color: var(--first-color);
+  opacity: 0.75;
 }
 
 @media screen and (min-width: 1024px) {
@@ -581,12 +578,20 @@ progress::-moz-progress-bar {
   font-size: 2rem;
 }
 
+.header__logo a:hover {
+  opacity: 0.7;
+}
+
 /*Champions Cards */
 .champions > .container {
   display: grid;
   grid-template-columns: repeat(2, 45%);
   justify-content: space-between;
   align-content: center;
+}
+
+a[href="#runas"] {
+  color: initial;
 }
 
 .champions .section__title {
@@ -706,26 +711,14 @@ progress::-moz-progress-bar {
 .champion__info--runes {
   margin-top: 1rem;
   border-radius: 10px;
-  background-color: #191937;
+  background-image: linear-gradient(227deg, #313160 -130%, #191937);
 }
 
 .champion__runes--content {
-  display: grid;
-  /* grid-template-rows: repeat(2, 1fr); */
-  grid-template-columns: repeat(2, 1fr);
-  border-bottom: 1px solid var(--border-first-color);
   padding: 1rem;
 }
 
-.champion__runes--tree {
-  grid-column: 1/3;
-  grid-row: 1/2;
-  border-right: none;
-}
-
 .champion__build--spells {
-  grid-column: 1/3;
-  grid-row: 2/3;
   display: grid;
   grid-template-columns: 100px 1fr;
   padding-top: 0.5rem;
@@ -735,23 +728,18 @@ progress::-moz-progress-bar {
   border-right: 1px solid var(--border-first-color);
 }
 
-.section__header::before,
-.section__header--right::before {
+.section__header::before {
   content: "";
   position: absolute;
-  left: 30px;
+  left: 0;
   width: 2px;
   height: 20px;
   border-radius: 2px;
   background-color: var(--first-color);
 }
 
-.section__header--right::before {
-  left: 9.2rem;
-}
-
-.section__header,
-.section__header--right {
+.section__header {
+  position: relative;
   font-weight: bold;
   color: var(--white-color);
   margin-bottom: 1rem;
@@ -759,9 +747,10 @@ progress::-moz-progress-bar {
 }
 
 .rune__tree {
-  display: flex;
-  justify-content: space-evenly;
-  flex: 1 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30px 1fr;
+  align-items: center;
   border-bottom: 1px solid var(--border-first-color);
   padding-bottom: 1rem;
 }
@@ -781,10 +770,12 @@ progress::-moz-progress-bar {
 }
 
 .rune img {
-  width: 12px;
+  width: 1rem;
 }
 
 .primary__tree {
+  grid-column: 1/2;
+  grid-row: 2/3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -826,6 +817,16 @@ progress::-moz-progress-bar {
 .primary__tree--keystone .runes__row {
   margin-bottom: 1rem;
 }
+
+.secondary__tree {
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .secondary__tree .runes__row {
   margin-bottom: 0.4rem;
 }
@@ -846,6 +847,7 @@ progress::-moz-progress-bar {
 
 .masteries {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -873,10 +875,11 @@ progress::-moz-progress-bar {
   border-width: 1px;
   border: 1px solid var(--first-color);
   border-radius: 50%;
+  background-color: #11112a;
 }
 
 .separador {
-  margin: 6px 0;
+  margin-bottom: 6px;
   width: 100%;
   height: 1px;
   background-color: var(--border-first-color);
@@ -961,7 +964,7 @@ progress::-moz-progress-bar {
 
 .modal__proyect {
   padding: 1rem;
-  max-width: 400px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   background-color: var(--white-color);
@@ -994,12 +997,16 @@ progress::-moz-progress-bar {
   padding: 0.5rem;
 }
 
-@media screen and (min-width: 768px) {
+/****************************** MEDIA 720 *************************** */
+
+@media screen and (min-width: 720px) {
   .contact__cards {
     display: grid;
     grid-template-columns: repeat(2, 48%);
     justify-content: space-between;
   }
+
+  /*************** CHAMPIONS  ***************/
   .champions > .container {
     display: grid;
     grid-template-columns: repeat(3, 30%);
@@ -1009,6 +1016,8 @@ progress::-moz-progress-bar {
   .champions .section__title {
     grid-column: span 3;
   }
+
+  /*************** RUNES ********************/
 
   .champion__skill--label > img {
     width: 50px;
@@ -1021,6 +1030,99 @@ progress::-moz-progress-bar {
     font-size: 12px;
   }
 
+  .section__header {
+    font-size: 1.2rem;
+  }
+
+  /********************************* RUNES TREES  ****************************/
+  .rune__tree {
+    padding-bottom: 2rem;
+  }
+
+  .rune__tree--title {
+    font-size: 1rem;
+  }
+
+  .rune__tree--header {
+    width: 14rem;
+    height: 50px;
+    margin-bottom: 24px;
+  }
+
+  .masterie {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .keystone__row {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .primary__tree--keystone .runes__row {
+    margin-bottom: 26px;
+  }
+
+  .secondary__tree .runes__row .masteries .masterie {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .secondary__tree .runes__row {
+    margin-bottom: 17px;
+  }
+
+  .secondary__tree .rune__row:last-child {
+    margin-bottom: 0;
+  }
+
+  .keystone {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .rune {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .shard {
+    margin: 0 20px 0 20px;
+  }
+
+  .separador {
+    margin-bottom: 10px;
+  }
+
+  /******************* SPELLS ---------------------------- ITEMS  *****************/
+  .champion__build--spells {
+    grid-template-columns: 20% 1fr;
+    padding-top: 1rem;
+  }
+
+  .champion__runes--spells {
+    padding-right: 1rem;
+  }
+
+  .spells__container img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .build__container {
+    grid-template-columns: repeat(6, 10%);
+    column-gap: 0;
+  }
+
+  .build__container img {
+    width: 45px;
+  }
+
+  /************* MODAL ***********/
   .modal__proyect {
     flex-direction: row;
     max-width: 750px;
@@ -1040,6 +1142,8 @@ progress::-moz-progress-bar {
     grid-column: span 2;
   }
 }
+
+/****************************** MEDIA 1024 *************************** */
 
 @media screen and (min-width: 1024px) {
   .portrait__image {
