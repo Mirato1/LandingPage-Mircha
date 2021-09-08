@@ -16,4 +16,4 @@ Página sobre mí, realizada como proyecto para implementar todos mis conocimien
 
 Maquetado realizada con el curso de Jonmircha.
 
-https://mirato1.github.io/LandingPage-Mircha/
+https://mirato1.github.io/Lol-Page/
