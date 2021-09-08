@@ -4,15 +4,13 @@
   --first-alpha-color: rgba(207, 68, 68, 0.75);
   --first-color-hover: #cb2f2f;
   --second-color: #eaeaea;
-  --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
-  --third-alpha-color: rgba(80, 20, 100, 0.75);
   --white-color: #fff;
   --gray-light: #f3f3f3;
   --gray-color: #ccc;
   --gray-dark-color: #666;
   --black-color: #000;
-  --link-color: #509ee3;
+  --link-color: #f6c55d;
   --title-color: #333;
   --text-color: #222;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
@@ -220,7 +218,6 @@ main {
   font-family: var(--font);
   color: var(--text-color);
   background-color: var(--white-color);
-  padding-left: 0;
   outline: none;
   border: none;
   transition: all 0.3s ease-in-out;
@@ -295,6 +292,7 @@ main {
   .contact__form input[type="submit"] {
     background-color: var(--first-color);
     margin-left: 0;
+    color: var(--hero-text-color);
   }
 }
 /******* Hero Image *******/
@@ -496,7 +494,7 @@ progress::-moz-progress-bar {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--hero-text-color);
   background-color: var(--first-color);
 }
 
@@ -1155,7 +1153,7 @@ a[href="#runas"] {
 /* Footer */
 .footer {
   margin-bottom: var(--header-height);
-  background-color: var(--third-color);
+  background-color: var(--first-color);
   color: white;
   text-align: center;
   padding: 0.5rem;
