@@ -2,12 +2,13 @@
 :root {
   --first-color: #cf4444;
   --first-alpha-color: rgba(207, 68, 68, 0.75);
-  --second-color: #14192d;
+  --first-color-hover: #cb2f2f;
+  --second-color: #eaeaea;
   --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
   --third-alpha-color: rgba(80, 20, 100, 0.75);
   --white-color: #fff;
-  --gray-light-color: #f3f3f3;
+  --gray-light: #f3f3f3;
   --gray-color: #ccc;
   --gray-dark-color: #666;
   --black-color: #000;
@@ -15,11 +16,31 @@
   --title-color: #333;
   --text-color: #222;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
-  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.2);
+  --border-first-color: #414165;
+  --gray-background: #c2c2c2;
+  --white-gray: #eaeaea;
   --font: "Raleway", sans-serif;
   --max-width: 1200px;
   --header-height: 4rem;
-  --border-first-color: #414165;
+  --box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  --hero-image: url("assets/Aatrox-wall-2.jpg");
+  --hero-text-color: #fff;
+}
+
+:root.dark-mode {
+  --second-color: #313160;
+  --gray-color: #383864;
+  --gray-background: #11112a;
+  --white-gray: #191937;
+  --white-color: #1a1a1a;
+  --gray-light: #2f2f2f;
+  --text-color: #eee;
+  --title-color: #f3f3f3;
+  --box-shadow: 0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.25);
+  --hero-image: url("assets/aatrox.jpg");
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --white-alpha-color: rgba(0, 0, 0, 0.5);
 }
 
 /****************************************** RESET  ***************************************/
@@ -86,6 +107,10 @@ img {
 
 p {
   line-height: 1.6;
+}
+
+main {
+  background-color: var(--white-color);
 }
 
 ::selection {
@@ -193,6 +218,8 @@ p {
 .contact__form textarea {
   font-size: 0.85rem;
   font-family: var(--font);
+  color: var(--text-color);
+  background-color: var(--white-color);
   padding-left: 0;
   outline: none;
   border: none;
@@ -266,6 +293,7 @@ p {
   }
 
   .contact__form input[type="submit"] {
+    background-color: var(--first-color);
     margin-left: 0;
   }
 }
@@ -302,10 +330,25 @@ p {
   outline: thin solid var(--first-color);
   border: 0;
   cursor: pointer;
-  background-color: var(--second-color);
+  background-color: var(--white-color);
 }
 .header__menu-btn svg {
   fill: var(--first-color);
+}
+
+.dark__theme-btn {
+  z-index: 999;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+  fill: var(--first-color);
+}
+
+.dark__theme-btn:hover {
+  background-color: var(--text-color);
 }
 
 .nav__menu {
@@ -315,7 +358,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--second-color);
+  background-color: var(--white-color);
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -358,6 +401,7 @@ p {
   }
 
   .nav__menu a:hover {
+    color: var(--title-color);
     background-color: transparent;
   }
 
@@ -439,12 +483,9 @@ progress::-moz-progress-bar {
   width: 150px;
   height: 150px;
 }
-.bg-gray-light {
-  background-color: var(--gray-light-color);
-}
 
 .box-shadow-1 {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow);
 }
 
 .btn {
@@ -548,6 +589,7 @@ progress::-moz-progress-bar {
   width: 1.7rem;
   height: 1.7rem;
   transition: 0.3s all ease-in-out;
+  fill: var(--text-color);
 }
 
 .social-media svg:hover {
@@ -563,7 +605,7 @@ progress::-moz-progress-bar {
   padding: 1rem;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--second-color);
+  background-color: var(--white-color);
 }
 
 .header > .container {
@@ -620,6 +662,7 @@ a[href="#runas"] {
 .champion__card p {
   font-weight: bold;
   font-size: 1rem;
+  color: var(--text-color);
 }
 
 .champion__card:hover {
@@ -652,7 +695,6 @@ a[href="#runas"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--first-color);
 }
 
 .champion__info--header > img {
@@ -664,6 +706,7 @@ a[href="#runas"] {
 
 .champion__header--content {
   text-align: center;
+  color: var(--first-color);
 }
 
 .champion__header--abilities {
@@ -693,7 +736,7 @@ a[href="#runas"] {
   height: 12px;
   border-radius: 50%;
   background-color: var(--second-color);
-  color: var(--white-color);
+  /* color: var(--black-color); */
   font-size: 10px;
   font-weight: 700;
   pointer-events: none;
@@ -711,7 +754,12 @@ a[href="#runas"] {
 .champion__info--runes {
   margin-top: 1rem;
   border-radius: 10px;
-  background-image: linear-gradient(227deg, #313160 -130%, #191937);
+  background-image: linear-gradient(
+    227deg,
+    var(--second-color) -130%,
+    var(--white-gray)
+  );
+  /* background-image: linear-gradient(227deg, #313160 -130%, #191937); */
 }
 
 .champion__runes--content {
@@ -741,7 +789,6 @@ a[href="#runas"] {
 .section__header {
   position: relative;
   font-weight: bold;
-  color: var(--white-color);
   margin-bottom: 1rem;
   padding-left: 0.8rem;
 }
@@ -790,7 +837,7 @@ a[href="#runas"] {
   width: 8rem;
   height: 48px;
   border-radius: 6px;
-  background-color: #11112a;
+  background-color: var(--gray-background);
 }
 
 .rune__img--container {
@@ -800,7 +847,7 @@ a[href="#runas"] {
   width: 36px;
   height: 36px;
   border-radius: 2px;
-  background-color: #191937;
+  background-color: var(--gray-light);
 }
 
 .rune__img--container img {
@@ -810,7 +857,6 @@ a[href="#runas"] {
 .rune__tree--title {
   font-size: 12px;
   font-weight: 700;
-  color: var(--white-color);
   padding-left: 0.6rem;
 }
 
@@ -867,7 +913,7 @@ a[href="#runas"] {
 }
 
 .masterie__inactive {
-  filter: grayscale(100%);
+  filter: grayscale(70%);
   opacity: 0.27;
 }
 
@@ -938,6 +984,7 @@ a[href="#runas"] {
 .arrow-right {
   margin: 0 5px;
   width: 13px;
+  fill: var(--text-color);
 }
 
 /************************* SKILL TABLE *******************/
@@ -951,6 +998,15 @@ a[href="#runas"] {
   display: grid;
   overflow-x: auto;
   justify-items: center;
+}
+
+.skill__path--container::-webkit-scrollbar {
+  height: 3px;
+  background-color: rgba(37, 37, 75, 0.5);
+}
+
+.skill__path--container::-webkit-scrollbar-thumb {
+  background-color: #3a3a73;
 }
 
 .skill__order {
@@ -970,7 +1026,7 @@ a[href="#runas"] {
   height: 24px;
   border-radius: 3px;
   position: relative;
-  color: var(--white-color);
+  /* color: var(--black-color); */
 }
 
 .skill__img--label img {
@@ -991,7 +1047,7 @@ a[href="#runas"] {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--second-color);
+  background-color: var(--gray-color);
   font-size: 9px;
   font-weight: 700;
   pointer-events: none;
@@ -1100,7 +1156,7 @@ a[href="#runas"] {
 .footer {
   margin-bottom: var(--header-height);
   background-color: var(--third-color);
-  color: var(--white-color);
+  color: white;
   text-align: center;
   padding: 0.5rem;
 }
@@ -1282,7 +1338,7 @@ a[href="#runas"] {
   .portrait__image {
     content: url("assets/Challenger.png");
     border-radius: 10%;
-    box-shadow: 0px 0px 8px 2px #f8d68b;
+    box-shadow: 0px 0px 14px 6px #f8d68b;
     text-align: center;
   }
   .about {
@@ -1305,6 +1361,7 @@ a[href="#runas"] {
     top: 0;
     padding: 0.5rem;
     height: calc(var(--header-height) - 0.5rem);
+    border-bottom: thin solid var(--gray-light);
   }
 
   .champions > .container {
