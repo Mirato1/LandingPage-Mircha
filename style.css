@@ -349,6 +349,59 @@ main {
   background-color: var(--text-color);
 }
 
+/* Dark Theme Button */
+
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--text-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+/* La pelotita de color */
+.slider:before {
+  background-color: var(--first-color);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+/* Cuando se apreta la pelota se cambia el fondo */
+input:checked + .slider {
+  background-color: var(--text-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .nav__menu {
   position: fixed;
   left: 0;

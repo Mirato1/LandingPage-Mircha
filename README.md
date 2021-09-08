@@ -1,18 +1,6 @@
 # League of Legends Page
 
-Página sobre mí, realizada como proyecto para implementar todos mis conocimientos de páginas webs.
-
-
-
-
-
-
-
-
-
-
-
-
+Página personal de lol, realizada como proyecto para implementar todos mis conocimientos de páginas webs.
 
 Maquetado realizada con el curso de Jonmircha.
 
