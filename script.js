@@ -4,22 +4,18 @@
     $menu = d.querySelector(".nav__menu");
 
   $btnMenu.addEventListener("click", (e) => {
-    $btnMenu.firstElementChild.classList.toggle("none");
-    $btnMenu.lastElementChild.classList.toggle("none");
     $menu.classList.toggle("is-active");
+    $btnMenu.classList.toggle("is-active");
   });
 
   d.addEventListener("click", (e) => {
     if (!e.target.matches(".nav__menu a")) return false;
-
-    $btnMenu.firstElementChild.classList.remove("none");
-    $btnMenu.lastElementChild.classList.add("none");
     $menu.classList.remove("is-active");
+    $btnMenu.classList.remove("is-active");
   });
 })(document);
 
 // Formulario de Contacto
-
 ((d) => {
   const $form = d.querySelector(".contact__form"),
     $loader = d.querySelector(".contact__form--loader"),

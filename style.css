@@ -247,9 +247,6 @@ main {
   cursor: pointer;
   transition: all 0.5s ease-out;
 }
-.contact__form input[type="submit"]:hover {
-  opacity: 0.75;
-}
 
 .contact__form *::placeholder {
   color: var(--gray-dark-color);
@@ -327,32 +324,21 @@ main {
 
 /***** Menú *****/
 .header__menu-btn {
-  outline: thin solid var(--first-color);
   border: 0;
   cursor: pointer;
-  background-color: var(--white-color);
-}
-.header__menu-btn svg {
-  fill: var(--first-color);
 }
 
-.dark__theme-btn {
-  z-index: 999;
-  border-radius: 50%;
-  background-color: var(--white-color);
-  cursor: pointer;
-  outline: 0;
-  border: 0;
-  transition: all 0.3s ease-out;
-  fill: var(--first-color);
+.hamburger {
+  padding: 0;
 }
 
-.dark__theme-btn:hover {
-  background-color: var(--text-color);
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: var(--first-color) !important;
 }
 
 /* Dark Theme Button */
-
 .switch {
   display: inline-block;
   height: 34px;
@@ -551,6 +537,10 @@ progress::-moz-progress-bar {
   text-decoration: none;
   color: var(--hero-text-color);
   background-color: var(--first-color);
+}
+
+.btn:hover {
+  opacity: 0.5;
 }
 
 .container {
@@ -780,7 +770,7 @@ a[href="#runas"] {
 .champion__info--header > img {
   margin: 1rem;
   margin: 1rem;
-  border: medium solid var(--second-color);
+  border: medium solid #313160;
   border-radius: 10%;
 }
 
