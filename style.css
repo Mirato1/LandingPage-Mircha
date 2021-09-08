@@ -924,8 +924,6 @@ a[href="#runas"] {
 
 /************************* HABILIDADES  **************************/
 .champion__info--skills {
-  display: grid;
-  grid-template-columns: 202px 1fr;
   margin-top: 0.5rem;
   padding-top: 0.5rem;
   border-top: thin solid var(--border-first-color);
@@ -947,17 +945,12 @@ a[href="#runas"] {
   padding-top: 0.5rem;
   margin-top: 1rem;
   border-top: 1px solid var(--border-first-color);
-  grid-column: 1/3;
-  grid-row: 2/3;
 }
 
 .skill__path--container {
   display: grid;
   overflow: auto;
-}
-
-.champion__skill--priority {
-  grid-column: 1/3;
+  justify-items: center;
 }
 
 .skill__order {
@@ -1032,7 +1025,7 @@ a[href="#runas"] {
 .blank__row {
   margin-left: 6px;
   height: 24px;
-  width: 100%;
+  width: 534px;
   border-radius: 3px;
   background-color: rgba(37, 37, 75, 0.5);
 }
@@ -1236,6 +1229,11 @@ a[href="#runas"] {
   .build__container img {
     width: 45px;
   }
+  /********************************************* SKILLS  *******************************/
+  .skill__priority--path .champion__skill--label img {
+    width: 40px;
+    height: 40px;
+  }
 
   /************* MODAL ***********/
   .modal__proyect {
@@ -1255,6 +1253,23 @@ a[href="#runas"] {
 
   .proyect .section__title {
     grid-column: span 2;
+  }
+}
+
+/**************** MEDIA 850px *****************/
+
+@media screen and (min-width: 855px) {
+  .champion__info--skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .champion__skill--path {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
   }
 }
 
