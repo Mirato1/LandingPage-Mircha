@@ -60,6 +60,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   color: var(--text-color);
+  background-color: var(--white-color);
 }
 
 a {
@@ -1409,7 +1410,8 @@ a[href="#runas"] {
 
   .header {
     position: sticky;
-    top: 0;
+    margin-top: 1.5rem;
+    top: -0.1rem;
     padding: 0.5rem;
     height: calc(var(--header-height) - 0.5rem);
     border-bottom: thin solid var(--gray-light);
