@@ -317,7 +317,9 @@ function flujoEventos(e) {}
 })(document);
 
 function cambiarNombre(campeon) {
-  const $champName = document.querySelector(".champion__info--header");
+  const $champName = document.querySelector(".champion__info--header"),
+    campeonNombre =
+      campeon.nombre.charAt(0).toUpperCase() + campeon.nombre.slice(1);
 
   $champName.innerHTML = `
   <img src="assets/${campeon.foto}" alt="${campeon.nombre}">
@@ -327,33 +329,23 @@ function cambiarNombre(campeon) {
     </div>
     <div class="champion__header--abilities">
         <div class="champion__skill--label">
-                <img src="assets/${campeon.nombre}/${
-    campeon.nombre
-  }_Passive.png" alt="${campeon.nombre} Passive">
+                <img src="assets/${campeonNombre}/${campeonNombre}_Passive.png" alt="${campeonNombre} Passive">
                 <div class="skill__label--key bottom-center">P</div>
                 </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeon.nombre}/${
-    campeon.nombre
-  }Q.png" alt="${campeon.nombre} Q">
+                                <img src="assets/${campeonNombre}/${campeonNombre}Q.png" alt="${campeonNombre} Q">
                                 <div class="skill__label--key bottom-center">Q</div>
                             </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeon.nombre}/${
-    campeon.nombre
-  }W.png" alt="${campeon.nombre} W">
+                                <img src="assets/${campeonNombre}/${campeonNombre}W.png" alt="${campeonNombre} W">
                                 <div class="skill__label--key bottom-center">W</div>
                             </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeon.nombre}/${
-    campeon.nombre
-  }E.png" alt="${campeon.nombre} E">
+                                <img src="assets/${campeonNombre}/${campeonNombre}E.png" alt="${campeonNombre} E">
                                 <div class="skill__label--key bottom-center">E</div>
                             </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeon.nombre}/${
-    campeon.nombre
-  }R.png" alt="${campeon.nombre} R">
+                                <img src="assets/${campeonNombre}/${campeonNombre}R.png" alt="${campeonNombre} R">
                                 <div class="skill__label--key bottom-center">R</div>
                             </div>
                         </div>
