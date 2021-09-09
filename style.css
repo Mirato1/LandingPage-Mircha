@@ -752,13 +752,6 @@ a[href="#runas"] {
 .champion__info {
   background-repeat: no-repeat;
   background-position: 60% -60px;
-  background-image: radial-gradient(
-      400px 200px at 60% 34%,
-      rgba(7, 7, 32, 0) 0%,
-      rgb(7, 7, 32) 100%
-    ),
-    linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
-    url(assets/Aatrox_wall.jpg);
 }
 
 .champion__info--header {

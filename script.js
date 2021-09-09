@@ -117,6 +117,7 @@ function flujoEventos(e) {}
           "Chemptank.png",
           "Tabis.png",
         ],
+        priority: ["E", "Q", "W"],
       },
       {
         nombre: "akshan",
@@ -134,6 +135,7 @@ function flujoEventos(e) {}
           "GA.png",
           "Berseker.png",
         ],
+        priority: ["E", "Q", "W"],
       },
       {
         nombre: "sylas",
@@ -144,13 +146,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
-          "Goredrinker.png",
+          "Everfrost.png",
+          "Cosmic.png",
+          "Zhonyas.png",
+          "Deathcap.png",
+          "Morello.png",
+          "Ionia.png",
         ],
+        priority: ["W", "Q", "E"],
       },
       {
         nombre: "riven",
@@ -161,13 +164,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
           "Goredrinker.png",
+          "Black.png",
+          "Sterakk.png",
+          "DD.png",
+          "GA.png",
+          "Tabis.png",
         ],
+        priority: ["Q", "E", "W"],
       },
       {
         nombre: "kled",
@@ -178,13 +182,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
           "Goredrinker.png",
+          "Sterakk.png",
+          "Hydra.png",
+          "DD.png",
+          "GA.png",
+          "Tabis.png",
         ],
+        priority: ["Q", "W", "E"],
       },
       {
         nombre: "camille",
@@ -195,13 +200,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerIgnite.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
+          "Sunderer.png",
           "Sterakk.png",
-          "Goredrinker.png",
+          "Hydra.png",
+          "DD.png",
+          "GA.png",
+          "Tabis.png",
         ],
+        priority: ["Q", "E", "W"],
       },
       {
         nombre: "akali",
@@ -212,13 +218,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerIgnite.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
-          "Goredrinker.png",
+          "Protobelt.png",
+          "Zhonyas.png",
+          "Deathcap.png",
+          "VoidStaff.png",
+          "Morello.png",
+          "Sorcerer.png",
         ],
+        priority: ["Q", "E", "W"],
       },
       {
         nombre: "fiora",
@@ -229,13 +236,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
           "Goredrinker.png",
+          "Sterakk.png",
+          "Reaver.png",
+          "DD.png",
+          "GA.png",
+          "Tabis.png",
         ],
+        priority: ["Q", "E", "W"],
       },
       {
         nombre: "gwen",
@@ -246,13 +254,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerIgnite.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
-          "Goredrinker.png",
+          "Riftmaker.png",
+          "Cosmic.png",
+          "Zhonyas.png",
+          "Nashor.png",
+          "Morello.png",
+          "Ionia.png",
         ],
+        priority: ["Q", "E", "W"],
       },
       {
         nombre: "jayce",
@@ -263,13 +272,14 @@ function flujoEventos(e) {}
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Tabis.png",
+          "Eclipse.png",
+          "Muramana.png",
+          "Serpent.png",
+          "Serylda.png",
           "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
-          "Goredrinker.png",
+          "Ionia.png",
         ],
+        priority: ["Q", "W", "E"],
       },
       {
         nombre: "leesin",
@@ -281,12 +291,13 @@ function flujoEventos(e) {}
         },
         items: [
           "Goredrinker.png",
-          "Tabis.png",
           "Sterakk.png",
           "DD.png",
           "GA.png",
           "Chemptank.png",
+          "Tabis.png",
         ],
+        priority: ["E", "Q", "W"],
       },
       {
         nombre: "vladimir",
@@ -297,25 +308,27 @@ function flujoEventos(e) {}
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Tabis.png",
-          "GA.png",
-          "DD.png",
-          "Chemptank.png",
-          "Sterakk.png",
-          "Goredrinker.png",
+          "Protobelt.png",
+          "Cosmic.png",
+          "Deathcap.png",
+          "Zhonyas.png",
+          "VoidStaff.png",
+          "Sorcerer.png",
         ],
+        priority: ["Q", "E", "W"],
       },
     ];
     if ($card) {
       let campeon = champions.find((el) => el.nombre === $card.id);
-
       cambiarNombre(campeon);
       cambiarSpells(campeon);
       cambiarHabilidades(campeon);
+      cambiarFondo(campeon);
     }
   });
 })(document);
 
+// Cambiar Prioridad de El Header Completo según el champ
 function cambiarNombre(campeon) {
   const $champName = document.querySelector(".champion__info--header"),
     campeonNombre =
@@ -352,6 +365,7 @@ function cambiarNombre(campeon) {
   `;
 }
 
+// Cambiar Los Hechizos
 function cambiarSpells(campeon) {
   const $champSpells = document.querySelector(".spells__container"),
     $champItems = document.querySelectorAll(".build__container img");
@@ -371,9 +385,37 @@ function cambiarSpells(campeon) {
   }
 }
 
+// Cambiar Prioridad de Habilidades
 function cambiarHabilidades(campeon) {
   const $champPriority = document.querySelectorAll(
-    ".skill__priority--path div"
+      ".skill__priority--path .champion__skill--label"
+    ),
+    campeonNombre =
+      campeon.nombre.charAt(0).toUpperCase() + campeon.nombre.slice(1);
+
+  for (let i = 0; i < $champPriority.length; i++) {
+    $champPriority[i].children[0].setAttribute(
+      "src",
+      `assets/${campeonNombre}/${campeonNombre}${campeon.priority[i]}.png`
+    );
+    $champPriority[i].children[1].innerHTML = `${campeon.priority[i]}`;
+  }
+}
+
+// Cambiar fondo
+
+function cambiarFondo(campeon) {
+  const $champWall = document.querySelector(".champion__info"),
+    campeonNombre =
+      campeon.nombre.charAt(0).toUpperCase() + campeon.nombre.slice(1);
+  $champWall.setAttribute(
+    "style",
+    `background-image: radial-gradient(
+      400px 200px at 60% 34%,
+      rgba(7, 7, 32, 0) 0%,
+      rgb(7, 7, 32) 100%
+    ),
+    linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
+    url(assets/${campeonNombre}_wall.jpg)`
   );
-  console.log($champPriority);
 }
