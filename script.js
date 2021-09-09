@@ -80,29 +80,11 @@
 function flujoEventos(e) {}
 
 ((d) => {
-  //   if (d.getElementById("champs__section")) {
-  //     d.getElementById("champs__section").addEventListener("click", (e) => {
-  //       let $card = e.target.closest(".champion__card");
-  //       switch ($card.id) {
-  //         case "aatrox":
-  //           console.log("Soy", $card.id);
-  //           break;
-  //         case "akshan":
-  //           console.log("Soy", $card.id);
-  //           break;
-
-  //         case "sylas":
-  //           console.log("Soy", $card.id);
-  //           break;
-  //       }
-  //     });
-  //   }
-
   d.addEventListener("click", (e) => {
     let $card = e.target.closest(".champion__card");
     let champions = [
       {
-        nombre: "aatrox",
+        nombre: "Aatrox",
         titulo: "The Darking Blade",
         foto: "Aatrox.png",
         summoners: {
@@ -118,9 +100,10 @@ function flujoEventos(e) {}
           "Tabis.png",
         ],
         priority: ["E", "Q", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "akshan",
+        nombre: "Akshan",
         titulo: "The Rogue Sentinel",
         foto: "Akshan.png",
         summoners: {
@@ -136,9 +119,10 @@ function flujoEventos(e) {}
           "Berseker.png",
         ],
         priority: ["E", "Q", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "sylas",
+        nombre: "Sylas",
         titulo: "The Unshackled",
         foto: "Sylas.png",
         summoners: {
@@ -154,9 +138,10 @@ function flujoEventos(e) {}
           "Ionia.png",
         ],
         priority: ["W", "Q", "E"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "riven",
+        nombre: "Riven",
         titulo: "The Exile",
         foto: "Riven.png",
         summoners: {
@@ -172,9 +157,10 @@ function flujoEventos(e) {}
           "Tabis.png",
         ],
         priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "kled",
+        nombre: "Kled",
         titulo: "The Cantankerous Cavalier",
         foto: "Kled.png",
         summoners: {
@@ -190,9 +176,10 @@ function flujoEventos(e) {}
           "Tabis.png",
         ],
         priority: ["Q", "W", "E"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "camille",
+        nombre: "Camille",
         titulo: "The Steel Shadow",
         foto: "Camille.png",
         summoners: {
@@ -208,9 +195,10 @@ function flujoEventos(e) {}
           "Tabis.png",
         ],
         priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "akali",
+        nombre: "Akali",
         titulo: "The Rogue Assassin",
         foto: "Akali.png",
         summoners: {
@@ -226,9 +214,10 @@ function flujoEventos(e) {}
           "Sorcerer.png",
         ],
         priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "fiora",
+        nombre: "Fiora",
         titulo: "The Grand Duelist",
         foto: "Fiora.png",
         summoners: {
@@ -244,9 +233,10 @@ function flujoEventos(e) {}
           "Tabis.png",
         ],
         priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "gwen",
+        nombre: "Gwen",
         titulo: "The Hallowed Seamstress",
         foto: "Gwen.png",
         summoners: {
@@ -262,9 +252,10 @@ function flujoEventos(e) {}
           "Ionia.png",
         ],
         priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "jayce",
+        nombre: "Jayce",
         titulo: "The Defender Of Tomorrow",
         foto: "Jayce.png",
         summoners: {
@@ -280,9 +271,10 @@ function flujoEventos(e) {}
           "Ionia.png",
         ],
         priority: ["Q", "W", "E"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "leesin",
+        nombre: "LeeSin",
         titulo: "The Blind Monk",
         foto: "LeeSin.png",
         summoners: {
@@ -298,9 +290,10 @@ function flujoEventos(e) {}
           "Tabis.png",
         ],
         priority: ["E", "Q", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
       {
-        nombre: "vladimir",
+        nombre: "Vladimir",
         titulo: "The Crimson Reaper",
         foto: "Vladimir.png",
         summoners: {
@@ -316,6 +309,7 @@ function flujoEventos(e) {}
           "Sorcerer.png",
         ],
         priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
       },
     ];
     if ($card) {
@@ -324,15 +318,14 @@ function flujoEventos(e) {}
       cambiarSpells(campeon);
       cambiarHabilidades(campeon);
       cambiarFondo(campeon);
+      cambiarOrden(campeon);
     }
   });
 })(document);
 
 // Cambiar Prioridad de El Header Completo según el champ
 function cambiarNombre(campeon) {
-  const $champName = document.querySelector(".champion__info--header"),
-    campeonNombre =
-      campeon.nombre.charAt(0).toUpperCase() + campeon.nombre.slice(1);
+  const $champName = document.querySelector(".champion__info--header");
 
   $champName.innerHTML = `
   <img src="assets/${campeon.foto}" alt="${campeon.nombre}">
@@ -342,23 +335,33 @@ function cambiarNombre(campeon) {
     </div>
     <div class="champion__header--abilities">
         <div class="champion__skill--label">
-                <img src="assets/${campeonNombre}/${campeonNombre}_Passive.png" alt="${campeonNombre} Passive">
+                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }_Passive.png" alt="${campeon.nombre} Passive">
                 <div class="skill__label--key bottom-center">P</div>
                 </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeonNombre}/${campeonNombre}Q.png" alt="${campeonNombre} Q">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }Q.png" alt="${campeon.nombre} Q">
                                 <div class="skill__label--key bottom-center">Q</div>
                             </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeonNombre}/${campeonNombre}W.png" alt="${campeonNombre} W">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }W.png" alt="${campeon.nombre} W">
                                 <div class="skill__label--key bottom-center">W</div>
                             </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeonNombre}/${campeonNombre}E.png" alt="${campeonNombre} E">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }E.png" alt="${campeon.nombre} E">
                                 <div class="skill__label--key bottom-center">E</div>
                             </div>
                             <div class="champion__skill--label">
-                                <img src="assets/${campeonNombre}/${campeonNombre}R.png" alt="${campeonNombre} R">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }R.png" alt="${campeon.nombre} R">
                                 <div class="skill__label--key bottom-center">R</div>
                             </div>
                         </div>
@@ -388,15 +391,13 @@ function cambiarSpells(campeon) {
 // Cambiar Prioridad de Habilidades
 function cambiarHabilidades(campeon) {
   const $champPriority = document.querySelectorAll(
-      ".skill__priority--path .champion__skill--label"
-    ),
-    campeonNombre =
-      campeon.nombre.charAt(0).toUpperCase() + campeon.nombre.slice(1);
+    ".skill__priority--path .champion__skill--label"
+  );
 
   for (let i = 0; i < $champPriority.length; i++) {
     $champPriority[i].children[0].setAttribute(
       "src",
-      `assets/${campeonNombre}/${campeonNombre}${campeon.priority[i]}.png`
+      `assets/${campeon.nombre}/${campeon.nombre}${campeon.priority[i]}.png`
     );
     $champPriority[i].children[1].innerHTML = `${campeon.priority[i]}`;
   }
@@ -405,9 +406,8 @@ function cambiarHabilidades(campeon) {
 // Cambiar fondo
 
 function cambiarFondo(campeon) {
-  const $champWall = document.querySelector(".champion__info"),
-    campeonNombre =
-      campeon.nombre.charAt(0).toUpperCase() + campeon.nombre.slice(1);
+  const $champWall = document.querySelector(".champion__info");
+
   $champWall.setAttribute(
     "style",
     `background-image: radial-gradient(
@@ -416,6 +416,19 @@ function cambiarFondo(campeon) {
       rgb(7, 7, 32) 100%
     ),
     linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
-    url(assets/${campeonNombre}_wall.jpg)`
+    url(assets/${campeon.nombre}_wall.jpg)`
   );
+}
+
+// Orden Habilidades
+
+function cambiarOrden(campeon) {
+  const $orderPhoto = document.querySelectorAll(".skill__path--container img");
+
+  for (let i = 0; i < $orderPhoto.length; i++) {
+    $orderPhoto[i].setAttribute(
+      "src",
+      `assets/${campeon.nombre}/${campeon.nombre}${campeon.abilities[i]}.png`
+    );
+  }
 }
