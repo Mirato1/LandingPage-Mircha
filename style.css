@@ -704,6 +704,7 @@ progress::-moz-progress-bar {
 
 a[href="#runas"] {
   color: initial;
+  margin-bottom: 1rem;
 }
 
 .champions .section__title {
@@ -768,7 +769,6 @@ a[href="#runas"] {
 }
 
 .champion__info--header > img {
-  margin: 1rem;
   margin: 1rem;
   border: medium solid #313160;
   border-radius: 10%;
@@ -985,6 +985,16 @@ a[href="#runas"] {
 .masterie__inactive {
   filter: grayscale(70%);
   opacity: 0.27;
+}
+
+.masterie__inactive--row img {
+  filter: grayscale(70%);
+  opacity: 0.27;
+}
+
+.keystone__active.keystone img {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .masterie__active {

@@ -52,7 +52,6 @@
 })(document);
 
 //DARK MODE
-
 ((d) => {
   // Si tiene el ID se realiza la función
   if (d.getElementById("dark-mode")) {
@@ -75,3 +74,314 @@
     }
   }
 })(document);
+
+//Interactividad Campeones
+
+function flujoEventos(e) {}
+
+((d) => {
+  //   if (d.getElementById("champs__section")) {
+  //     d.getElementById("champs__section").addEventListener("click", (e) => {
+  //       let $card = e.target.closest(".champion__card");
+  //       switch ($card.id) {
+  //         case "aatrox":
+  //           console.log("Soy", $card.id);
+  //           break;
+  //         case "akshan":
+  //           console.log("Soy", $card.id);
+  //           break;
+
+  //         case "sylas":
+  //           console.log("Soy", $card.id);
+  //           break;
+  //       }
+  //     });
+  //   }
+
+  d.addEventListener("click", (e) => {
+    let $card = e.target.closest(".champion__card");
+    let champions = [
+      {
+        nombre: "aatrox",
+        titulo: "The Darking Blade",
+        foto: "Aatrox.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Goredrinker.png",
+          "Sterakk.png",
+          "DD.png",
+          "GA.png",
+          "Chemptank.png",
+          "Tabis.png",
+        ],
+      },
+      {
+        nombre: "akshan",
+        titulo: "The Rogue Sentinel",
+        foto: "Akshan.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Kraken.png",
+          "Collector.png",
+          "Infinity.png",
+          "Dominik.png",
+          "GA.png",
+          "Berseker.png",
+        ],
+      },
+      {
+        nombre: "sylas",
+        titulo: "The Unshackled",
+        foto: "Sylas.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "riven",
+        titulo: "The Exile",
+        foto: "Riven.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "kled",
+        titulo: "The Cantankerous Cavalier",
+        foto: "Kled.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "camille",
+        titulo: "The Steel Shadow",
+        foto: "Camille.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerIgnite.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "akali",
+        titulo: "The Rogue Assassin",
+        foto: "Akali.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerIgnite.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "fiora",
+        titulo: "The Grand Duelist",
+        foto: "Fiora.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "gwen",
+        titulo: "The Hallowed Seamstress",
+        foto: "Gwen.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerIgnite.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "jayce",
+        titulo: "The Defender Of Tomorrow",
+        foto: "Jayce.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+      {
+        nombre: "leesin",
+        titulo: "The Blind Monk",
+        foto: "LeeSin.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Goredrinker.png",
+          "Tabis.png",
+          "Sterakk.png",
+          "DD.png",
+          "GA.png",
+          "Chemptank.png",
+        ],
+      },
+      {
+        nombre: "vladimir",
+        titulo: "The Crimson Reaper",
+        foto: "Vladimir.png",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Tabis.png",
+          "GA.png",
+          "DD.png",
+          "Chemptank.png",
+          "Sterakk.png",
+          "Goredrinker.png",
+        ],
+      },
+    ];
+    if ($card) {
+      let campeon = champions.find((el) => el.nombre === $card.id);
+
+      cambiarNombre(campeon);
+      cambiarSpells(campeon);
+      cambiarHabilidades(campeon);
+    }
+  });
+})(document);
+
+function cambiarNombre(campeon) {
+  const $champName = document.querySelector(".champion__info--header");
+
+  $champName.innerHTML = `
+  <img src="assets/${campeon.foto}" alt="${campeon.nombre}">
+  <div class="champion__header--content">
+        <h2>${campeon.nombre.toUpperCase()}</h2>
+        <h4>${campeon.titulo}</h4>
+    </div>
+    <div class="champion__header--abilities">
+        <div class="champion__skill--label">
+                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }_Passive.png" alt="${campeon.nombre} Passive">
+                <div class="skill__label--key bottom-center">P</div>
+                </div>
+                            <div class="champion__skill--label">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }Q.png" alt="${campeon.nombre} Q">
+                                <div class="skill__label--key bottom-center">Q</div>
+                            </div>
+                            <div class="champion__skill--label">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }W.png" alt="${campeon.nombre} W">
+                                <div class="skill__label--key bottom-center">W</div>
+                            </div>
+                            <div class="champion__skill--label">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }E.png" alt="${campeon.nombre} E">
+                                <div class="skill__label--key bottom-center">E</div>
+                            </div>
+                            <div class="champion__skill--label">
+                                <img src="assets/${campeon.nombre}/${
+    campeon.nombre
+  }R.png" alt="${campeon.nombre} R">
+                                <div class="skill__label--key bottom-center">R</div>
+                            </div>
+                        </div>
+  `;
+}
+
+function cambiarSpells(campeon) {
+  const $champSpells = document.querySelector(".spells__container"),
+    $champItems = document.querySelectorAll(".build__container img");
+
+  $champSpells.firstElementChild.setAttribute(
+    "src",
+    `assets/${campeon.summoners.sum_1}`
+  );
+  $champSpells.lastElementChild.setAttribute(
+    "src",
+    `assets/${campeon.summoners.sum_2}`
+  );
+
+  for (let i = 0; i < $champItems.length; i++) {
+    $champItems[i].setAttribute("src", `assets/Items/${campeon.items[i]}`);
+    $champItems[i].setAttribute("alt", `${campeon.items[i]}`);
+  }
+}
+
+function cambiarHabilidades(campeon) {
+  const $champPriority = document.querySelectorAll(
+    ".skill__priority--path div"
+  );
+  console.log($champPriority);
+}
