@@ -101,6 +101,7 @@ function flujoEventos(e) {}
         ],
         priority: ["E", "Q", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Akshan",
@@ -120,6 +121,7 @@ function flujoEventos(e) {}
         ],
         priority: ["E", "Q", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Sylas",
@@ -139,6 +141,7 @@ function flujoEventos(e) {}
         ],
         priority: ["W", "Q", "E"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Inspiration"],
       },
       {
         nombre: "Riven",
@@ -158,6 +161,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Kled",
@@ -177,6 +181,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "W", "E"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Camille",
@@ -196,6 +201,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Resolve", "Inspiration"],
       },
       {
         nombre: "Akali",
@@ -215,6 +221,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Fiora",
@@ -234,6 +241,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Inspiration"],
       },
       {
         nombre: "Gwen",
@@ -253,6 +261,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Jayce",
@@ -272,6 +281,7 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "W", "E"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Inspiration"],
       },
       {
         nombre: "LeeSin",
@@ -291,6 +301,7 @@ function flujoEventos(e) {}
         ],
         priority: ["E", "Q", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Precision", "Resolve"],
       },
       {
         nombre: "Vladimir",
@@ -310,8 +321,10 @@ function flujoEventos(e) {}
         ],
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Sorcery", "Inspiration"],
       },
     ];
+    let runes = [{}];
     if ($card) {
       let campeon = champions.find((el) => el.nombre === $card.id);
       cambiarNombre(campeon);
@@ -319,6 +332,7 @@ function flujoEventos(e) {}
       cambiarHabilidades(campeon);
       cambiarFondo(campeon);
       cambiarOrden(campeon);
+      cambiarArbol(campeon);
     }
   });
 })(document);
@@ -404,7 +418,6 @@ function cambiarHabilidades(campeon) {
 }
 
 // Cambiar fondo
-
 function cambiarFondo(campeon) {
   const $champWall = document.querySelector(".champion__info");
 
@@ -421,7 +434,6 @@ function cambiarFondo(campeon) {
 }
 
 // Orden Habilidades
-
 function cambiarOrden(campeon) {
   const $orderPhoto = document.querySelectorAll(".skill__path--container img");
 
@@ -432,3 +444,22 @@ function cambiarOrden(campeon) {
     );
   }
 }
+
+//Cambiar Arbol
+function cambiarArbol(campeon) {
+  const $champName = document.querySelector(".champion__runes--name"),
+    $runeTree = document.querySelectorAll(".rune__tree--header");
+
+  $champName.innerHTML = `Runas de ${campeon.nombre}`;
+
+  for (let i = 0; i < $runeTree.length; i++) {
+    $runeTree[i].firstElementChild.lastElementChild.setAttribute(
+      "src",
+      `assets/Runas/${campeon.arbol[i]}.png`
+    );
+    $runeTree[i].lastElementChild.innerHTML = `${campeon.arbol[i]}`;
+  }
+}
+
+// Cambiar Runas
+function cambiarRunas(campeon) {}
