@@ -99,7 +99,7 @@ function flujoEventos(e) {}
           "Chemptank.png",
           "Tabis.png",
         ],
-        priority: ["E", "Q", "W"],
+        priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
       },
@@ -322,17 +322,95 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Sorcery", "Inspiration"],
+        runas: [3, 7, 8, 13, 15, 20],
       },
     ];
-    let runes = [{}];
+    let runes = [
+      {
+        nombre: "Resolve",
+        maestrias: [
+          "",
+          "assets/Runas/Grasp.png",
+          "assets/Runas/After.png",
+          "assets/Runas/Guardian.png",
+          "assets/Runas/Demolish.png",
+          "assets/Runas/FontOfLife.png",
+          "assets/Runas/MirrorShell.png",
+          "assets/Runas/Conditioning.png",
+          "assets/Runas/SecondWind.png",
+          "assets/Runas/BonePlating.png",
+          "assets/Runas/Overgrowth.png",
+          "assets/Runas/Revitalize.png",
+          "assets/Runas/Unflinching.png",
+        ],
+      },
+      {
+        nombre: "Inspiration",
+        maestrias: [
+          "",
+          "assets/Runas/PressTheAttack.png",
+          "assets/Runas/LethalTempoTemp.png",
+          "assets/Runas/FleetFootwork.png",
+          "assets/Runas/Conqueror.png",
+          "assets/Runas/Overheal.png",
+          "assets/Runas/Triumph.png",
+          "assets/Runas/PresenceOfMind.png",
+          "assets/Runas/LegendAlacrity.png",
+          "assets/Runas/LegendTenacity.png",
+          "assets/Runas/LegendBloodline.png",
+          "assets/Runas/CoupDeGrace.png",
+          "assets/Runas/CutDown.png",
+        ],
+      },
+      {
+        nombre: "Precision",
+        maestrias: [
+          "assets/Runas/PressTheAttack.png",
+          "assets/Runas/LethalTempoTemp.png",
+          "assets/Runas/FleetFootwork.png",
+          "assets/Runas/Conqueror.png",
+          "assets/Runas/Overheal.png",
+          "assets/Runas/Triumph.png",
+          "assets/Runas/PresenceOfMind.png",
+          "assets/Runas/LegendAlacrity.png",
+          "assets/Runas/LegendTenacity.png",
+          "assets/Runas/LegendBloodline.png",
+          "assets/Runas/CoupDeGrace.png",
+          "assets/Runas/CutDown.png",
+          "assets/Runas/LastStand.png",
+        ],
+      },
+      {
+        nombre: "Sorcery",
+        maestrias: [
+          "",
+          "assets/Runas/Aery.png",
+          "assets/Runas/Comet.png",
+          "assets/Runas/PhaseRush.png",
+          "assets/Runas/Orb.png",
+          "assets/Runas/Manaflow.png",
+          "assets/Runas/Nimbus.png",
+          "assets/Runas/Transcendence.png",
+          "assets/Runas/Celerity.png",
+          "assets/Runas/Absolute.png",
+          "assets/Runas/Scorch.png",
+          "assets/Runas/Waterwalking.png",
+          "assets/Runas/GatheringStorm.png",
+        ],
+      },
+    ];
+
     if ($card) {
       let campeon = champions.find((el) => el.nombre === $card.id);
+
       cambiarNombre(campeon);
       cambiarSpells(campeon);
       cambiarHabilidades(campeon);
       cambiarFondo(campeon);
       cambiarOrden(campeon);
       cambiarArbol(campeon);
+      cambiarMaestrias(campeon, runes);
+      cambiarRunas(campeon, runes);
     }
   });
 })(document);
@@ -461,5 +539,85 @@ function cambiarArbol(campeon) {
   }
 }
 
-// Cambiar Runas
-function cambiarRunas(campeon) {}
+// Cambiar Arbol Maestrias
+
+function cambiarMaestrias(campeon, runes) {
+  const $maestrias = document.querySelectorAll(
+    ".primary__tree--keystone .masterie"
+  );
+
+  for (let i = 0; i < runes.length; i++) {
+    if (runes[i].nombre === campeon.arbol[0]) {
+      let primArbol = runes[i].nombre,
+        primMastery = runes[i].maestrias;
+
+      if (
+        primArbol !== "Precision" &&
+        $maestrias[0].classList.contains("fake")
+      ) {
+        $maestrias[0].classList.add("fake-none");
+        $maestrias[2].classList.add("margin-child");
+
+        for (let x = 1; x < primMastery.length; x++) {
+          console.log(primMastery[x], $maestrias[x]);
+          $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
+        }
+      } else if (
+        $maestrias[0].classList.contains("fake-none") &&
+        primArbol === "Precision"
+      ) {
+        $maestrias[0].classList.remove("fake-none");
+        $maestrias[2].classList.remove("margin-child");
+
+        for (let x = 0; x < primMastery.length; x++) {
+          console.log(primMastery[x], $maestrias[x]);
+          $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
+        }
+      }
+
+      //   for (let j = 0; j < $maestrias.length; j++) {
+      //     console.log($maestrias[0].classList.contains());
+      //     if (primArbol !== "Precision") {
+      //     }
+      //   }
+      //   const $keyStone = document.querySelector(".keystone__row"),
+      //     $newImg = document.createElement("div");
+      //   let $contentImage = `
+      // <img src="${primMastery[0]}" alt="">`;
+      //   $newImg.classList.add("masterie");
+      //   $newImg.classList.add("keystone");
+      //   $newImg.classList.add("fake");
+      //   console.log($maestrias);
+      //   console.log(primMastery);
+      //   if (primMastery.length === $maestrias.length) {
+      //     for (let x = 0; x < primMastery.length; x++) {
+      //       console.log(primMastery[x], $maestrias[x]);
+      //       $maestrias[x].setAttribute("src", primMastery[x]);
+      //     }
+      //   }
+      //   for (let j = 0; j < $maestrias.length; j++) {
+      //     if (
+      //       primArbol !== "Precision" &&
+      //       $keyStone.firstElementChild.classList.contains("fake")
+      //     ) {
+      //       const $oldNode = $keyStone.removeChild($keyStone.firstElementChild);
+      //       if (
+      //         primArbol === "Precision" &&
+      //         j === 1 &&
+      //         !$keyStone.firstElementChild.classList.contains("fake")
+      //       ) {
+      //         $newImg.insertAdjacentHTML("afterbegin", $contentImage);
+      //         $keyStone.insertAdjacentElement("afterbegin", $oldNode);
+      //       }
+      //     }
+    }
+  }
+}
+
+// Cambiar Runas según champ
+function cambiarRunas(campeon, runes) {
+  const $maestrias = document.querySelectorAll(".masterie"),
+    $runes = document.querySelectorAll(".rune");
+
+  for (let i = 0; i < runes.length; i++) {}
+}

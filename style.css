@@ -874,11 +874,6 @@ a[href="#runas"] {
   align-items: center;
 }
 
-.rune.masterie__inactive {
-  background-color: #3f3f6e;
-  border-radius: 50%;
-}
-
 .rune img {
   width: 1rem;
 }
@@ -975,19 +970,16 @@ a[href="#runas"] {
   width: 100%;
 }
 
-.masterie__inactive {
+.masterie {
   filter: grayscale(70%);
   opacity: 0.27;
 }
 
-.masterie__inactive--row img {
+.rune {
+  background-color: #3f3f6e;
+  border-radius: 50%;
   filter: grayscale(70%);
   opacity: 0.27;
-}
-
-.keystone__active.keystone img {
-  filter: grayscale(0);
-  opacity: 1;
 }
 
 .masterie__active {
@@ -995,6 +987,13 @@ a[href="#runas"] {
   border: 1px solid var(--first-color);
   border-radius: 50%;
   background-color: #11112a;
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.keystone__active {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .separador {
@@ -1313,6 +1312,14 @@ a[href="#runas"] {
 
   .secondary__tree .rune__row:last-child {
     margin-bottom: 0;
+  }
+
+  .fake-none {
+    display: none;
+  }
+
+  .margin-child {
+    margin: 0 1rem;
   }
 
   .keystone {
