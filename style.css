@@ -865,6 +865,15 @@ a[href="#runas"] {
   padding-bottom: 1rem;
 }
 
+.fake-none,
+.fake-none img {
+  display: none;
+}
+
+.margin-child {
+  margin: 0 1rem;
+}
+
 .rune {
   flex: 0 0 18px;
   width: 18px;
@@ -991,7 +1000,9 @@ a[href="#runas"] {
   opacity: 1;
 }
 
-.keystone__active {
+.masterie__active.keystone {
+  border: none;
+  background-color: transparent;
   filter: grayscale(0);
   opacity: 1;
 }
@@ -1312,14 +1323,6 @@ a[href="#runas"] {
 
   .secondary__tree .rune__row:last-child {
     margin-bottom: 0;
-  }
-
-  .fake-none {
-    display: none;
-  }
-
-  .margin-child {
-    margin: 0 1rem;
   }
 
   .keystone {

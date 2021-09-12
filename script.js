@@ -102,6 +102,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [4, 2, 2, 3, 0, 3, 2, 1, 1, 2],
       },
       {
         nombre: "Akshan",
@@ -122,6 +123,7 @@ function flujoEventos(e) {}
         priority: ["E", "Q", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [1, 3, 3, 1, 3, 3, 0, 2, 1, 2],
       },
       {
         nombre: "Sylas",
@@ -142,6 +144,7 @@ function flujoEventos(e) {}
         priority: ["W", "Q", "E"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Inspiration"],
+        mastery: [4, 3, 2, 3, 0, 3, 1, 1, 1, 2],
       },
       {
         nombre: "Riven",
@@ -162,6 +165,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [4, 2, 1, 3, 0, 3, 3, 1, 1, 2],
       },
       {
         nombre: "Kled",
@@ -182,6 +186,7 @@ function flujoEventos(e) {}
         priority: ["Q", "W", "E"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [4, 2, 1, 3, 1, 3, 0, 2, 1, 2],
       },
       {
         nombre: "Camille",
@@ -202,6 +207,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Resolve", "Inspiration"],
+        mastery: [2, 3, 3, 3, 0, 3, 1, 2, 1, 2],
       },
       {
         nombre: "Akali",
@@ -222,6 +228,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [4, 3, 2, 3, 0, 3, 1, 1, 1, 2],
       },
       {
         nombre: "Fiora",
@@ -242,6 +249,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Inspiration"],
+        mastery: [4, 3, 3, 3, 2, 3, 0, 2, 1, 2],
       },
       {
         nombre: "Gwen",
@@ -262,6 +270,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [4, 3, 1, 3, 0, 3, 3, 2, 1, 2],
       },
       {
         nombre: "Jayce",
@@ -282,6 +291,7 @@ function flujoEventos(e) {}
         priority: ["Q", "W", "E"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Inspiration"],
+        mastery: [4, 3, 1, 3, 2, 3, 0, 1, 1, 2],
       },
       {
         nombre: "LeeSin",
@@ -302,6 +312,7 @@ function flujoEventos(e) {}
         priority: ["E", "Q", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
+        mastery: [4, 2, 2, 3, 0, 3, 2, 1, 1, 2],
       },
       {
         nombre: "Vladimir",
@@ -322,7 +333,7 @@ function flujoEventos(e) {}
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Sorcery", "Inspiration"],
-        runas: [3, 7, 8, 13, 15, 20],
+        mastery: [4, 3, 1, 3, 2, 0, 1, 3, 1, 1],
       },
     ];
     let runes = [
@@ -351,15 +362,15 @@ function flujoEventos(e) {}
           "assets/Runas/PressTheAttack.png",
           "assets/Runas/LethalTempoTemp.png",
           "assets/Runas/FleetFootwork.png",
-          "assets/Runas/Conqueror.png",
-          "assets/Runas/Overheal.png",
-          "assets/Runas/Triumph.png",
-          "assets/Runas/PresenceOfMind.png",
-          "assets/Runas/LegendAlacrity.png",
-          "assets/Runas/LegendTenacity.png",
-          "assets/Runas/LegendBloodline.png",
-          "assets/Runas/CoupDeGrace.png",
-          "assets/Runas/CutDown.png",
+          "assets/Runas/Hexflash.png",
+          "assets/Runas/Magical.png",
+          "assets/Runas/Timing.png",
+          "assets/Runas/Market.png",
+          "assets/Runas/Minion.png",
+          "assets/Runas/Biscuit.png",
+          "assets/Runas/Insight.png",
+          "assets/Runas/Velocity.png",
+          "assets/Runas/Tonic.png",
         ],
       },
       {
@@ -410,7 +421,7 @@ function flujoEventos(e) {}
       cambiarOrden(campeon);
       cambiarArbol(campeon);
       cambiarMaestrias(campeon, runes);
-      cambiarRunas(campeon, runes);
+      cambiarRunas(campeon);
     }
   });
 })(document);
@@ -543,8 +554,9 @@ function cambiarArbol(campeon) {
 
 function cambiarMaestrias(campeon, runes) {
   const $maestrias = document.querySelectorAll(
-    ".primary__tree--keystone .masterie"
-  );
+      ".primary__tree--keystone .masterie"
+    ),
+    $secMaestrias = document.querySelectorAll(".rune__tree--v2 .masterie");
 
   for (let i = 0; i < runes.length; i++) {
     if (runes[i].nombre === campeon.arbol[0]) {
@@ -559,7 +571,6 @@ function cambiarMaestrias(campeon, runes) {
         $maestrias[2].classList.add("margin-child");
 
         for (let x = 1; x < primMastery.length; x++) {
-          console.log(primMastery[x], $maestrias[x]);
           $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
         }
       } else if (
@@ -570,7 +581,6 @@ function cambiarMaestrias(campeon, runes) {
         $maestrias[2].classList.remove("margin-child");
 
         for (let x = 0; x < primMastery.length; x++) {
-          console.log(primMastery[x], $maestrias[x]);
           $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
         }
       }
@@ -611,13 +621,36 @@ function cambiarMaestrias(campeon, runes) {
       //       }
       //     }
     }
+
+    if (runes[i].nombre === campeon.arbol[1]) {
+      let secArbol = runes[i].nombre,
+        secMastery = runes[i].maestrias;
+
+      for (let x = 4; x < secMastery.length; x++) {
+        $secMaestrias[x - 4].firstElementChild.setAttribute(
+          "src",
+          secMastery[x]
+        );
+      }
+    }
   }
 }
 
 // Cambiar Runas según champ
-function cambiarRunas(campeon, runes) {
-  const $maestrias = document.querySelectorAll(".masterie"),
-    $runes = document.querySelectorAll(".rune");
+function cambiarRunas(campeon) {
+  const $maestrias = document.querySelectorAll(".masteries");
 
-  for (let i = 0; i < runes.length; i++) {}
+  for (let i = 0; i < $maestrias.length; i++) {
+    let maestrias = $maestrias[i].children,
+      runasChamp = campeon.mastery[i] - 1;
+
+    for (let j = 0; j < maestrias.length; j++) {
+      maestrias[j].classList.remove("masterie__active");
+    }
+    if (maestrias.item(runasChamp) === null) {
+      continue;
+    } else {
+      maestrias.item(runasChamp).classList.add("masterie__active");
+    }
+  }
 }
