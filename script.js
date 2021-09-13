@@ -77,8 +77,6 @@
 
 //Interactividad Campeones
 
-function flujoEventos(e) {}
-
 ((d) => {
   d.addEventListener("click", (e) => {
     let $card = e.target.closest(".champion__card");
@@ -103,6 +101,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [4, 2, 2, 3, 0, 3, 2, 1, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Akshan",
@@ -124,6 +128,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [1, 3, 3, 1, 3, 3, 0, 2, 1, 2],
+        order: [
+          [2, 8, 10, 12, 13],
+          [3, 14, 15, 17, 18],
+          [1, 4, 5, 7, 9],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Sylas",
@@ -145,6 +155,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Inspiration"],
         mastery: [4, 3, 2, 3, 0, 3, 1, 1, 1, 2],
+        order: [
+          [3, 8, 10, 12, 13],
+          [2, 4, 5, 7, 9],
+          [1, 14, 15, 17, 18],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Riven",
@@ -166,6 +182,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [4, 2, 1, 3, 0, 3, 3, 1, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Kled",
@@ -187,6 +209,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [4, 2, 1, 3, 1, 3, 0, 2, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [2, 8, 10, 12, 13],
+          [3, 14, 15, 17, 18],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Camille",
@@ -208,6 +236,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Resolve", "Inspiration"],
         mastery: [2, 3, 3, 3, 0, 3, 1, 2, 1, 2],
+        order: [
+          [3, 4, 5, 7, 9],
+          [1, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Akali",
@@ -229,6 +263,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [4, 3, 2, 3, 0, 3, 1, 1, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Fiora",
@@ -250,6 +290,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Inspiration"],
         mastery: [4, 3, 3, 3, 2, 3, 0, 2, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Gwen",
@@ -271,6 +317,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [4, 3, 1, 3, 0, 3, 3, 2, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Jayce",
@@ -292,6 +344,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Inspiration"],
         mastery: [4, 3, 1, 3, 2, 3, 0, 1, 1, 2],
+        order: [
+          [1, 3, 5, 7, 9, 11],
+          [4, 6, 8, 10, 12, 13],
+          [2, 14, 15, 16, 17, 18],
+          [],
+        ],
       },
       {
         nombre: "LeeSin",
@@ -313,6 +371,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Precision", "Resolve"],
         mastery: [4, 2, 2, 3, 0, 3, 2, 1, 1, 2],
+        order: [
+          [2, 8, 10, 12, 13],
+          [3, 14, 15, 17, 18],
+          [1, 4, 5, 7, 9],
+          [6, 11, 16],
+        ],
       },
       {
         nombre: "Vladimir",
@@ -334,6 +398,12 @@ function flujoEventos(e) {}
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Sorcery", "Inspiration"],
         mastery: [4, 3, 1, 3, 2, 0, 1, 3, 1, 1],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
+        ],
       },
     ];
     let runes = [
@@ -422,6 +492,7 @@ function flujoEventos(e) {}
       cambiarArbol(campeon);
       cambiarMaestrias(campeon, runes);
       cambiarRunas(campeon);
+      cambiarSkills(campeon);
     }
   });
 })(document);
@@ -651,6 +722,40 @@ function cambiarRunas(campeon) {
       continue;
     } else {
       maestrias.item(runasChamp).classList.add("masterie__active");
+    }
+  }
+}
+
+//  Cambiar leveleo de habilidades
+
+function cambiarSkills(campeon) {
+  const $habilidades = document.querySelectorAll(".skill__order");
+
+  for (let i = 0; i < 4; i++) {
+    let campeonOrder = campeon.order[i],
+      habilidadesRow = $habilidades[i].children;
+
+    let maxSkill = campeonOrder.pop() - 1;
+
+    for (let x = 0; x < habilidadesRow.length; x++) {
+      habilidadesRow[x].classList.replace("skill__up", "no__skill--up");
+      habilidadesRow[x].classList.replace("skill__up--max", "no__skill--up");
+      habilidadesRow[x].innerText = "";
+    }
+
+    for (let j = 0; j < campeonOrder.length; j++) {
+      let ordenSkill = campeonOrder[j] - 1;
+      habilidadesRow[ordenSkill].classList.replace(
+        "no__skill--up",
+        "skill__up"
+      );
+      habilidadesRow[ordenSkill].innerText = `${campeonOrder[j]}`;
+
+      habilidadesRow[maxSkill].classList.replace(
+        "no__skill--up",
+        "skill__up--max"
+      );
+      habilidadesRow[maxSkill].innerText = `${maxSkill + 1}`;
     }
   }
 }
