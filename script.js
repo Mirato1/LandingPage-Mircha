@@ -417,6 +417,32 @@
           [6, 11, 16],
         ],
       },
+      {
+        nombre: "Gnar",
+        titulo: "SHU SHU BANA",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Sunderer.png",
+          "Black.png",
+          "Sterakk.png",
+          "WitEnds.png",
+          "DD.png",
+          "Tabis.png",
+        ],
+        priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Resolve", "Domination"],
+        mastery: [2, 1, 3, 1, 0, 3, 3, 1, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [2, 8, 10, 12, 13],
+          [3, 14, 15, 17, 18],
+          [6, 11, 16],
+        ],
+      },
     ];
 
     createCards(champions);
@@ -494,6 +520,25 @@
             "assets/Runas/Scorch.png",
             "assets/Runas/Waterwalking.png",
             "assets/Runas/GatheringStorm.png",
+          ],
+        },
+        {
+          nombre: "Domination",
+          maestrias: [
+            "",
+            "assets/Runas/Grasp.png",
+            "assets/Runas/After.png",
+            "",
+            "assets/Runas/CheapShot.png",
+            "assets/Runas/TasteOfBlood.png",
+            "assets/Runas/SuddenImpact.png",
+            "assets/Runas/ZombieWard.png",
+            "assets/Runas/GhostPoro.png",
+            "assets/Runas/EyeballCollection.png",
+            "assets/Runas/RavenousHunter.png",
+            "assets/Runas/IngeniousHunter.png",
+            "assets/Runas/RelentlessHunter.png",
+            "assets/Runas/UltimateHunter.png",
           ],
         },
       ];
@@ -680,11 +725,39 @@ function cambiarMaestrias(campeon, runes) {
     if (runes[i].nombre === campeon.arbol[1]) {
       let secMastery = runes[i].maestrias;
 
-      for (let x = 4; x < secMastery.length; x++) {
-        $secMaestrias[x - 4].firstElementChild.setAttribute(
-          "src",
-          secMastery[x]
-        );
+      if (
+        runes[i].nombre !== "Domination" &&
+        $secMaestrias[9].classList.contains("fake-none")
+      ) {
+        for (let x = 4; x < secMastery.length; x++) {
+          $secMaestrias[x - 4].firstElementChild.setAttribute(
+            "src",
+            secMastery[x]
+          );
+        }
+      } else if (
+        runes[i].nombre !== "Domination" &&
+        !$secMaestrias[9].classList.contains("fake-none")
+      ) {
+        $secMaestrias[9].classList.add("fake-none");
+        for (let x = 4; x < secMastery.length; x++) {
+          $secMaestrias[x - 4].firstElementChild.setAttribute(
+            "src",
+            secMastery[x]
+          );
+        }
+      }
+      if (
+        runes[i].nombre === "Domination" &&
+        $secMaestrias[9].classList.contains("fake-none")
+      ) {
+        $secMaestrias[9].classList.remove("fake-none");
+        for (let x = 4; x < secMastery.length; x++) {
+          $secMaestrias[x - 4].firstElementChild.setAttribute(
+            "src",
+            secMastery[x]
+          );
+        }
       }
     }
   }
@@ -862,6 +935,7 @@ function skins(campeon) {
             $h3 = document.createElement("h3");
           $newSlide.classList.add("carrousel__slide");
           $img.setAttribute("src", `${splashAPI}${champNick}_${key[1]}.jpg`);
+          $img.setAttribute("href", `${key[0]}`);
           $h3.textContent = `${key[0]}`;
           $newSlide.appendChild($img);
           $newSlide.appendChild($h3);
