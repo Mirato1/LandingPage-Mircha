@@ -747,7 +747,7 @@ function cambiarSkills(campeon) {
 
 function createCards(campeon) {
   const apiChamps =
-    "http://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/";
+    "https://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/";
 
   //   Crear un array con los champNick de objetos para poder ordenarlos
   let nombres = [],
@@ -821,9 +821,9 @@ function skins(campeon) {
     try {
       const champNick = campeon.nombre;
       const champsAPI =
-          "http://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/",
+          "https://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/",
         splashAPI =
-          "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
+          "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
 
       let promise,
         campeonesData = [],
