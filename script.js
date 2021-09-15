@@ -76,15 +76,12 @@
 })(document);
 
 //Interactividad Campeones
-
 ((d) => {
-  d.addEventListener("click", (e) => {
-    let $card = e.target.closest(".champion__card");
-    let champions = [
+  d.addEventListener("DOMContentLoaded", (e) => {
+    const champions = [
       {
         nombre: "Aatrox",
-        titulo: "The Darking Blade",
-        foto: "Aatrox.png",
+        titulo: "EL DEMONIO PAPÁ",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -110,8 +107,7 @@
       },
       {
         nombre: "Akshan",
-        titulo: "The Rogue Sentinel",
-        foto: "Akshan.png",
+        titulo: "MACUMBERO",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -137,8 +133,7 @@
       },
       {
         nombre: "Sylas",
-        titulo: "The Unshackled",
-        foto: "Sylas.png",
+        titulo: "EL CHAMPION",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -164,8 +159,7 @@
       },
       {
         nombre: "Riven",
-        titulo: "The Exile",
-        foto: "Riven.png",
+        titulo: "LA ROTA",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -191,8 +185,7 @@
       },
       {
         nombre: "Kled",
-        titulo: "The Cantankerous Cavalier",
-        foto: "Kled.png",
+        titulo: "EL TILTEADO",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -218,8 +211,7 @@
       },
       {
         nombre: "Camille",
-        titulo: "The Steel Shadow",
-        foto: "Camille.png",
+        titulo: "LA CYBORG",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerIgnite.png",
@@ -245,8 +237,7 @@
       },
       {
         nombre: "Akali",
-        titulo: "The Rogue Assassin",
-        foto: "Akali.png",
+        titulo: "LA NINJA",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerIgnite.png",
@@ -272,8 +263,7 @@
       },
       {
         nombre: "Fiora",
-        titulo: "The Grand Duelist",
-        foto: "Fiora.png",
+        titulo: "LA FRANCESA",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -299,8 +289,7 @@
       },
       {
         nombre: "Gwen",
-        titulo: "The Hallowed Seamstress",
-        foto: "Gwen.png",
+        titulo: "LA MUÑECA",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerIgnite.png",
@@ -326,8 +315,7 @@
       },
       {
         nombre: "Jayce",
-        titulo: "The Defender Of Tomorrow",
-        foto: "Jayce.png",
+        titulo: "FACHERO SENDOH",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -353,8 +341,7 @@
       },
       {
         nombre: "LeeSin",
-        titulo: "The Blind Monk",
-        foto: "LeeSin.png",
+        titulo: "EL CIEGO",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -380,8 +367,7 @@
       },
       {
         nombre: "Vladimir",
-        titulo: "The Crimson Reaper",
-        foto: "Vladimir.png",
+        titulo: "EL VÁMPIRO",
         summoners: {
           sum_1: "SummonerTeleport.png",
           sum_2: "SummonerFlash.png",
@@ -405,95 +391,129 @@
           [6, 11, 16],
         ],
       },
-    ];
-    let runes = [
       {
-        nombre: "Resolve",
-        maestrias: [
-          "",
-          "assets/Runas/Grasp.png",
-          "assets/Runas/After.png",
-          "assets/Runas/Guardian.png",
-          "assets/Runas/Demolish.png",
-          "assets/Runas/FontOfLife.png",
-          "assets/Runas/MirrorShell.png",
-          "assets/Runas/Conditioning.png",
-          "assets/Runas/SecondWind.png",
-          "assets/Runas/BonePlating.png",
-          "assets/Runas/Overgrowth.png",
-          "assets/Runas/Revitalize.png",
-          "assets/Runas/Unflinching.png",
+        nombre: "Gangplank",
+        titulo: "EL JACK SPARROW",
+        summoners: {
+          sum_1: "SummonerTeleport.png",
+          sum_2: "SummonerFlash.png",
+        },
+        items: [
+          "Shieldbow.png",
+          "Reaver.png",
+          "Collector.png",
+          "Infinity.png",
+          "Dominik.png",
+          "Ionia.png",
         ],
-      },
-      {
-        nombre: "Inspiration",
-        maestrias: [
-          "",
-          "assets/Runas/PressTheAttack.png",
-          "assets/Runas/LethalTempoTemp.png",
-          "assets/Runas/FleetFootwork.png",
-          "assets/Runas/Hexflash.png",
-          "assets/Runas/Magical.png",
-          "assets/Runas/Timing.png",
-          "assets/Runas/Market.png",
-          "assets/Runas/Minion.png",
-          "assets/Runas/Biscuit.png",
-          "assets/Runas/Insight.png",
-          "assets/Runas/Velocity.png",
-          "assets/Runas/Tonic.png",
-        ],
-      },
-      {
-        nombre: "Precision",
-        maestrias: [
-          "assets/Runas/PressTheAttack.png",
-          "assets/Runas/LethalTempoTemp.png",
-          "assets/Runas/FleetFootwork.png",
-          "assets/Runas/Conqueror.png",
-          "assets/Runas/Overheal.png",
-          "assets/Runas/Triumph.png",
-          "assets/Runas/PresenceOfMind.png",
-          "assets/Runas/LegendAlacrity.png",
-          "assets/Runas/LegendTenacity.png",
-          "assets/Runas/LegendBloodline.png",
-          "assets/Runas/CoupDeGrace.png",
-          "assets/Runas/CutDown.png",
-          "assets/Runas/LastStand.png",
-        ],
-      },
-      {
-        nombre: "Sorcery",
-        maestrias: [
-          "",
-          "assets/Runas/Aery.png",
-          "assets/Runas/Comet.png",
-          "assets/Runas/PhaseRush.png",
-          "assets/Runas/Orb.png",
-          "assets/Runas/Manaflow.png",
-          "assets/Runas/Nimbus.png",
-          "assets/Runas/Transcendence.png",
-          "assets/Runas/Celerity.png",
-          "assets/Runas/Absolute.png",
-          "assets/Runas/Scorch.png",
-          "assets/Runas/Waterwalking.png",
-          "assets/Runas/GatheringStorm.png",
+        priority: ["Q", "E", "W"],
+        abilities: ["Q", "W", "E", "R", "_Passive"],
+        arbol: ["Resolve", "Inspiration"],
+        mastery: [2, 1, 3, 1, 0, 3, 3, 1, 1, 2],
+        order: [
+          [1, 4, 5, 7, 9],
+          [3, 14, 15, 17, 18],
+          [2, 8, 10, 12, 13],
+          [6, 11, 16],
         ],
       },
     ];
 
-    if ($card) {
-      let campeon = champions.find((el) => el.nombre === $card.id);
+    createCards(champions);
 
-      cambiarNombre(campeon);
-      cambiarSpells(campeon);
-      cambiarHabilidades(campeon);
-      cambiarFondo(campeon);
-      cambiarOrden(campeon);
-      cambiarArbol(campeon);
-      cambiarMaestrias(campeon, runes);
-      cambiarRunas(campeon);
-      cambiarSkills(campeon);
-    }
+    d.addEventListener("click", (e) => {
+      let $card = e.target.closest(".champion__card");
+      const runes = [
+        {
+          nombre: "Resolve",
+          maestrias: [
+            "",
+            "assets/Runas/Grasp.png",
+            "assets/Runas/After.png",
+            "assets/Runas/Guardian.png",
+            "assets/Runas/Demolish.png",
+            "assets/Runas/FontOfLife.png",
+            "assets/Runas/MirrorShell.png",
+            "assets/Runas/Conditioning.png",
+            "assets/Runas/SecondWind.png",
+            "assets/Runas/BonePlating.png",
+            "assets/Runas/Overgrowth.png",
+            "assets/Runas/Revitalize.png",
+            "assets/Runas/Unflinching.png",
+          ],
+        },
+        {
+          nombre: "Inspiration",
+          maestrias: [
+            "",
+            "assets/Runas/PressTheAttack.png",
+            "assets/Runas/LethalTempoTemp.png",
+            "assets/Runas/FleetFootwork.png",
+            "assets/Runas/Hexflash.png",
+            "assets/Runas/Magical.png",
+            "assets/Runas/Timing.png",
+            "assets/Runas/Market.png",
+            "assets/Runas/Minion.png",
+            "assets/Runas/Biscuit.png",
+            "assets/Runas/Insight.png",
+            "assets/Runas/Velocity.png",
+            "assets/Runas/Tonic.png",
+          ],
+        },
+        {
+          nombre: "Precision",
+          maestrias: [
+            "assets/Runas/PressTheAttack.png",
+            "assets/Runas/LethalTempoTemp.png",
+            "assets/Runas/FleetFootwork.png",
+            "assets/Runas/Conqueror.png",
+            "assets/Runas/Overheal.png",
+            "assets/Runas/Triumph.png",
+            "assets/Runas/PresenceOfMind.png",
+            "assets/Runas/LegendAlacrity.png",
+            "assets/Runas/LegendTenacity.png",
+            "assets/Runas/LegendBloodline.png",
+            "assets/Runas/CoupDeGrace.png",
+            "assets/Runas/CutDown.png",
+            "assets/Runas/LastStand.png",
+          ],
+        },
+        {
+          nombre: "Sorcery",
+          maestrias: [
+            "",
+            "assets/Runas/Aery.png",
+            "assets/Runas/Comet.png",
+            "assets/Runas/PhaseRush.png",
+            "assets/Runas/Orb.png",
+            "assets/Runas/Manaflow.png",
+            "assets/Runas/Nimbus.png",
+            "assets/Runas/Transcendence.png",
+            "assets/Runas/Celerity.png",
+            "assets/Runas/Absolute.png",
+            "assets/Runas/Scorch.png",
+            "assets/Runas/Waterwalking.png",
+            "assets/Runas/GatheringStorm.png",
+          ],
+        },
+      ];
+
+      if ($card) {
+        let campeon = champions.find((el) => el.nombre === $card.id);
+
+        cambiarNombre(campeon);
+        cambiarSpells(campeon);
+        cambiarHabilidades(campeon);
+        cambiarFondo(campeon);
+        cambiarOrden(campeon);
+        cambiarArbol(campeon);
+        cambiarMaestrias(campeon, runes);
+        cambiarRunas(campeon);
+        cambiarSkills(campeon);
+        // carrousel();
+        skins(campeon);
+      }
+    });
   });
 })(document);
 
@@ -502,7 +522,7 @@ function cambiarNombre(campeon) {
   const $champName = document.querySelector(".champion__info--header");
 
   $champName.innerHTML = `
-  <img src="assets/${campeon.foto}" alt="${campeon.nombre}">
+  <img src="assets/${campeon.nombre}.png" alt="${campeon.nombre}">
   <div class="champion__header--content">
         <h2>${campeon.nombre.toUpperCase()}</h2>
         <h4>${campeon.titulo}</h4>
@@ -655,47 +675,10 @@ function cambiarMaestrias(campeon, runes) {
           $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
         }
       }
-
-      //   for (let j = 0; j < $maestrias.length; j++) {
-      //     console.log($maestrias[0].classList.contains());
-      //     if (primArbol !== "Precision") {
-      //     }
-      //   }
-      //   const $keyStone = document.querySelector(".keystone__row"),
-      //     $newImg = document.createElement("div");
-      //   let $contentImage = `
-      // <img src="${primMastery[0]}" alt="">`;
-      //   $newImg.classList.add("masterie");
-      //   $newImg.classList.add("keystone");
-      //   $newImg.classList.add("fake");
-      //   console.log($maestrias);
-      //   console.log(primMastery);
-      //   if (primMastery.length === $maestrias.length) {
-      //     for (let x = 0; x < primMastery.length; x++) {
-      //       console.log(primMastery[x], $maestrias[x]);
-      //       $maestrias[x].setAttribute("src", primMastery[x]);
-      //     }
-      //   }
-      //   for (let j = 0; j < $maestrias.length; j++) {
-      //     if (
-      //       primArbol !== "Precision" &&
-      //       $keyStone.firstElementChild.classList.contains("fake")
-      //     ) {
-      //       const $oldNode = $keyStone.removeChild($keyStone.firstElementChild);
-      //       if (
-      //         primArbol === "Precision" &&
-      //         j === 1 &&
-      //         !$keyStone.firstElementChild.classList.contains("fake")
-      //       ) {
-      //         $newImg.insertAdjacentHTML("afterbegin", $contentImage);
-      //         $keyStone.insertAdjacentElement("afterbegin", $oldNode);
-      //       }
-      //     }
     }
 
     if (runes[i].nombre === campeon.arbol[1]) {
-      let secArbol = runes[i].nombre,
-        secMastery = runes[i].maestrias;
+      let secMastery = runes[i].maestrias;
 
       for (let x = 4; x < secMastery.length; x++) {
         $secMaestrias[x - 4].firstElementChild.setAttribute(
@@ -758,4 +741,176 @@ function cambiarSkills(campeon) {
       habilidadesRow[maxSkill].innerText = `${maxSkill + 1}`;
     }
   }
+}
+
+// API RIOT
+
+function createCards(campeon) {
+  const apiChamps =
+    "http://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/";
+
+  //   Crear un array con los champNick de objetos para poder ordenarlos
+  let nombres = [],
+    titulos = [];
+
+  for (let i = 0; i < campeon.length; i++) {
+    nombres.push(campeon[i].nombre);
+    titulos.push([campeon[i].nombre, campeon[i].titulo]);
+  }
+  // Ordenar los nombres alfabeticamente
+  nombres = nombres.sort();
+  titulos = titulos.sort();
+
+  for (let i = 0; i < nombres.length; i++) {
+    fetch(`${apiChamps}${nombres[i]}.json`)
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+
+      .then((json) => {
+        const imgAPI =
+          "https://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/";
+        let campeones = json.data,
+          champs = Object.values(campeones);
+
+        console.log(campeones);
+
+        const $parent = document.querySelector("#champs__section"),
+          $fragment = document.createDocumentFragment();
+
+        //  Dependiendo la cantidad de nombres que tenga se hace TODO esto
+        for (let i = 0; i < nombres.length; i++) {
+          //  Crear cards dinámicamente según el champ que tengo como objeto
+          let champ = champs.filter((el) => el.id === nombres[i]);
+          for (const el of champ) {
+            const $newCard = document.createElement("a"),
+              $article = document.createElement("article"),
+              $img = document.createElement("img"),
+              $h3 = document.createElement("h3"),
+              $p = document.createElement("p");
+
+            $newCard.setAttribute("href", "#runas");
+            $article.classList.add("champion__card");
+            $article.setAttribute("id", el.id);
+
+            $img.setAttribute("src", `${imgAPI}${el.image.full}`);
+            $img.setAttribute("width", "120");
+
+            $h3.textContent = `${el.name}`;
+            $p.textContent = `${titulos[i][1]}`;
+
+            $article.appendChild($img);
+            $article.appendChild($h3);
+            $article.appendChild($p);
+            $newCard.appendChild($article);
+
+            $fragment.appendChild($newCard);
+          }
+        }
+        $parent.appendChild($fragment);
+      })
+      .catch((err) => {
+        console.log("Estamos en el catch", err);
+      });
+  }
+}
+
+function skins(campeon) {
+  const $splashSection = document.querySelector(".carrousel__slides"),
+    $fragment = document.createDocumentFragment();
+
+  async function sliders(champNick) {
+    try {
+      const champNick = campeon.nombre;
+      const champsAPI =
+          "http://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/",
+        splashAPI =
+          "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/";
+
+      let promise,
+        campeonesData = [],
+        skins = [],
+        totalSkins = [],
+        numNombre = [],
+        skinsChamp = [];
+
+      for (let i = 0; i < 1; i++) {
+        promise = await fetch(`${champsAPI}${champNick}.json`);
+        campeonesData.push(await promise.json());
+      }
+
+      for (let i = 0; i < campeonesData.length; i++) {
+        skins = await campeonesData[i]["data"][`${champNick}`]["skins"];
+        for (const key of skins) {
+          totalSkins.push(Object.values(key));
+        }
+      }
+      for (let i = 0; i < totalSkins.length; i++) {
+        numNombre.push([totalSkins[i][2], totalSkins[i][1]]);
+      }
+
+      for (const key of numNombre) {
+        let $slides = document.querySelectorAll(".carrousel__slide");
+        if ($slides.length >= 1) {
+          while (
+            $splashSection.firstElementChild.classList.contains(
+              "carrousel__slide"
+            )
+          ) {
+            $splashSection.firstElementChild.remove();
+          }
+        } else {
+          const $newSlide = document.createElement("div"),
+            $img = document.createElement("img"),
+            $h3 = document.createElement("h3");
+          $newSlide.classList.add("carrousel__slide");
+          $img.setAttribute("src", `${splashAPI}${champNick}_${key[1]}.jpg`);
+          $h3.textContent = `${key[0]}`;
+          $newSlide.appendChild($img);
+          $newSlide.appendChild($h3);
+          $fragment.appendChild($newSlide);
+        }
+      }
+
+      $splashSection.prepend($fragment);
+      $splashSection.firstElementChild.classList.add("active");
+
+      const d = document;
+      const $nextBtn = d.querySelector(".carrousel__btns .next"),
+        $prevBtn = d.querySelector(".carrousel__btns .prev"),
+        $slides = d.querySelectorAll(".carrousel__slide");
+
+      let i = 0;
+
+      d.addEventListener("click", (e) => {
+        if (e.target === $prevBtn) {
+          e.preventDefault();
+          $slides[i].classList.remove("active");
+          i--;
+
+          if (i < 0) {
+            i = $slides.length - 1;
+          }
+
+          $slides[i].classList.add("active");
+        }
+      });
+
+      d.addEventListener("click", (e) => {
+        if (e.target === $nextBtn) {
+          e.preventDefault();
+          $slides[i].classList.remove("active");
+          i++;
+
+          if (i >= $slides.length) {
+            i = 0;
+          }
+
+          $slides[i].classList.add("active");
+        }
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  sliders(campeon);
 }
