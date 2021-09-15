@@ -1172,7 +1172,7 @@ a[href="#runas"] {
 
 .carrousel__slides {
   position: relative;
-  height: 700px;
+  height: 45vh;
 }
 
 .carrousel__slide {
@@ -1238,6 +1238,10 @@ a[href="#runas"] {
     display: grid;
     grid-template-columns: repeat(2, 48%);
     justify-content: space-between;
+  }
+
+  .carrousel__slides {
+    height: 70vh;
   }
 
   /*************** CHAMPIONS  ***************/

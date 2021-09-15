@@ -399,7 +399,7 @@
           sum_2: "SummonerFlash.png",
         },
         items: [
-          "Shieldbow.png",
+          "ShieldBow.png",
           "Reaver.png",
           "Collector.png",
           "Infinity.png",
@@ -715,10 +715,11 @@ function cambiarSkills(campeon) {
   const $habilidades = document.querySelectorAll(".skill__order");
 
   for (let i = 0; i < 4; i++) {
-    let campeonOrder = campeon.order[i],
+    let test = campeon.order[i],
+      campeonOrder = campeon.order[i],
       habilidadesRow = $habilidades[i].children;
 
-    let maxSkill = campeonOrder.pop() - 1;
+    let maxSkill = campeonOrder.slice(-1)[0] - 1;
 
     for (let x = 0; x < habilidadesRow.length; x++) {
       habilidadesRow[x].classList.replace("skill__up", "no__skill--up");
@@ -732,6 +733,7 @@ function cambiarSkills(campeon) {
         "no__skill--up",
         "skill__up"
       );
+
       habilidadesRow[ordenSkill].innerText = `${campeonOrder[j]}`;
 
       habilidadesRow[maxSkill].classList.replace(
@@ -770,8 +772,6 @@ function createCards(campeon) {
           "https://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/";
         let campeones = json.data,
           champs = Object.values(campeones);
-
-        console.log(campeones);
 
         const $parent = document.querySelector("#champs__section"),
           $fragment = document.createDocumentFragment();
@@ -817,7 +817,7 @@ function skins(campeon) {
   const $splashSection = document.querySelector(".carrousel__slides"),
     $fragment = document.createDocumentFragment();
 
-  async function sliders(champNick) {
+  async function sliders() {
     try {
       const champNick = campeon.nombre;
       const champsAPI =
@@ -829,8 +829,7 @@ function skins(campeon) {
         campeonesData = [],
         skins = [],
         totalSkins = [],
-        numNombre = [],
-        skinsChamp = [];
+        numNombre = [];
 
       for (let i = 0; i < 1; i++) {
         promise = await fetch(`${champsAPI}${champNick}.json`);
@@ -849,7 +848,7 @@ function skins(campeon) {
 
       for (const key of numNombre) {
         let $slides = document.querySelectorAll(".carrousel__slide");
-        if ($slides.length >= 1) {
+        if ($slides.length > 0) {
           while (
             $splashSection.firstElementChild.classList.contains(
               "carrousel__slide"
