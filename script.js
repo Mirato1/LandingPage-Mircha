@@ -75,6 +75,34 @@
   }
 })(document);
 
+// Header Espía
+
+((d) => {
+  const $sections = d.querySelectorAll("section[data__scroll--spy]");
+
+  const cb = (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+
+      if (entry.isIntersecting) {
+        d.querySelector(`a[data__scroll--spy][href="#${id}"]`).classList.add(
+          "spy__on"
+        );
+      } else {
+        d.querySelector(`a[data__scroll--spy][href="#${id}"]`).classList.remove(
+          "spy__on"
+        );
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(cb, {
+    threshold: [0.4, 0.75],
+  });
+
+  $sections.forEach((el) => observer.observe(el));
+})(document);
+
 //Interactividad Campeones
 ((d) => {
   d.addEventListener("DOMContentLoaded", (e) => {
@@ -435,7 +463,7 @@
         priority: ["Q", "E", "W"],
         abilities: ["Q", "W", "E", "R", "_Passive"],
         arbol: ["Resolve", "Domination"],
-        mastery: [2, 1, 3, 1, 0, 3, 3, 1, 1, 2],
+        mastery: [2, 1, 3, 1, 2, 0, 1, 2, 1, 2],
         order: [
           [1, 4, 5, 7, 9],
           [2, 8, 10, 12, 13],
@@ -648,12 +676,8 @@ function cambiarFondo(campeon) {
 
   $champWall.setAttribute(
     "style",
-    `background-image: radial-gradient(
-      400px 200px at 60% 34%,
-      rgba(7, 7, 32, 0) 0%,
-      rgb(7, 7, 32) 100%
-    ),
-    linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
+    `background-image: radial-gradient( 600px 230px at 60% 35%, rgb(0 0 0 / 10%) 0%, rgb(7 7 32) 100% ), linear-gradient(
+90deg, rgb(11 11 28 / 61%) 0%, rgb(7 7 32 / 40%) 100%),
     url(assets/${campeon.nombre}_wall.jpg)`
   );
 }
@@ -920,27 +944,24 @@ function skins(campeon) {
       }
 
       for (const key of numNombre) {
-        let $slides = document.querySelectorAll(".carrousel__slide");
-        if ($slides.length > 0) {
-          while (
-            $splashSection.firstElementChild.classList.contains(
-              "carrousel__slide"
-            )
-          ) {
-            $splashSection.firstElementChild.remove();
-          }
-        } else {
-          const $newSlide = document.createElement("div"),
-            $img = document.createElement("img"),
-            $h3 = document.createElement("h3");
-          $newSlide.classList.add("carrousel__slide");
-          $img.setAttribute("src", `${splashAPI}${champNick}_${key[1]}.jpg`);
-          $img.setAttribute("href", `${key[0]}`);
-          $h3.textContent = `${key[0]}`;
-          $newSlide.appendChild($img);
-          $newSlide.appendChild($h3);
-          $fragment.appendChild($newSlide);
+        while (
+          $splashSection.firstElementChild.classList.contains(
+            "carrousel__slide"
+          )
+        ) {
+          $splashSection.firstElementChild.remove();
         }
+
+        const $newSlide = document.createElement("div"),
+          $img = document.createElement("img"),
+          $h3 = document.createElement("h3");
+        $newSlide.classList.add("carrousel__slide");
+        $img.setAttribute("src", `${splashAPI}${champNick}_${key[1]}.jpg`);
+        $img.setAttribute("href", `${key[0]}`);
+        $h3.textContent = `${key[0]}`;
+        $newSlide.appendChild($img);
+        $newSlide.appendChild($h3);
+        $fragment.appendChild($newSlide);
       }
 
       $splashSection.prepend($fragment);

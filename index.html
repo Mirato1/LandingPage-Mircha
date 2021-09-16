@@ -66,12 +66,13 @@
             </button>
 
             <nav class="nav__menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#acerca">Sobre Mí</a>
-                <a href="#campeones">Campeones</a>
-                <a href="#portafolio">Proyectos</a>
-                <a href="#skins">Skins</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#inicio" data__scroll--spy>Inicio</a>
+                <a href="#acerca" data__scroll--spy>Sobre Mí</a>
+                <a href="#campeones" data__scroll--spy>Campeones</a>
+                <a href="#runas" data__scroll--spy>Runas</a>
+                <a href="#portafolio" data__scroll--spy>Proyectos</a>
+                <a href="#skins" data__scroll--spy>Skins</a>
+                <a href="#contacto" data__scroll--spy>Contacto</a>
             </nav>
         </section>
     </header>
@@ -79,7 +80,7 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
         <!-- Sección Inicio -->
-        <section id="inicio" class="home">
+        <section id="inicio" class="home" data__scroll--spy>
             <article class="hero__image" style="--hero-attachment:fixed;">
                 <aside class="hero__image--opacity" style="--hero-opacity-color:var(--black-alpha-color)">
                     <div class="hero__image--content">
@@ -96,7 +97,7 @@
         </section>
 
         <!-- Sección Acerca -->
-        <section id="acerca" class="about section container full__screen--lg">
+        <section id="acerca" class="about section container full__screen--lg" data__scroll--spy>
             <article>
                 <aside class="text__center">
                     <h1>Mirato</h1>
@@ -165,7 +166,7 @@
         </section>
 
         <!-- Sección Campeones -->
-        <section id="campeones" class="champions section">
+        <section id="campeones" class="champions section" data__scroll--spy>
             <div class="container full__screen--lg" id="champs__section">
                 <h2 class="section__title">Mis "Mains"</h2>
 
@@ -293,15 +294,11 @@
         </section>
 
         <!-- Sección Runas Maestrias ETC -->
-        <section id="runas" class="section">
+        <section id="runas" class="section" data__scroll--spy>
             <div class="container full__screen--lg">
                 <h2 class="section__title">Runas y Maestrias Para TOP</h2>
-                <article class="champion__info" style="background-image: radial-gradient(
-      400px 200px at 60% 34%,
-      rgba(7, 7, 32, 0) 0%,
-      rgb(7, 7, 32) 100%
-    ),
-    linear-gradient(90deg, rgb(7, 7, 32) 0%, rgba(7, 7, 32, 0.4) 100%),
+                <article class="champion__info" style="background-image: radial-gradient( 600px 230px at 60% 35%, rgb(0 0 0 / 10%) 0%, rgb(7 7 32) 100% ), linear-gradient(
+90deg, rgb(11 11 28 / 61%) 0%, rgb(7 7 32 / 40%) 100%),
     url(assets/Aatrox_wall.jpg)">
                     <div class="champion__info--header">
                         <img src="assets/Aatrox.png" alt="Aatrox">
@@ -332,7 +329,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="champion__info--runes">
                         <div class="champion__runes--content">
                             <div class="champion__runes--tree">
@@ -846,8 +842,9 @@
 
             </div>
         </section>
+
         <!-- Sección Portafolio -->
-        <section id="portafolio" class="proyect section">
+        <section id="portafolio" class="proyect section" data__scroll--spy>
             <div class="container">
                 <h2 class="section__title">Mis Proyectos</h2>
                 <a href="#trabajo-1" class="proyect__card">
@@ -1131,7 +1128,7 @@
         </article>
 
 
-        <section id="skins" class="testimonials">
+        <section id="skins" data__scroll--spy>
             <article class="hero__image" style="--hero-image: url('assets/Akshan_wall.jpg'); --hero-attachment:scroll;">
                 <aside class="hero__image--opacity" style="--hero-opacity-color:var(--white-alpha-color)">
                     <div class="skins__content">
@@ -1150,7 +1147,7 @@
             </article>
         </section>
 
-        <section id="contacto" class="contact section">
+        <section id="contacto" class="contact section" data__scroll--spy>
             <div class="container">
                 <h2 class="section__title">¿Interesado?</h2>
                 <article class="contact__cards">

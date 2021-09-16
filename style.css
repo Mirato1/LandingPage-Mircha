@@ -615,7 +615,7 @@ progress::-moz-progress-bar {
   align-content: center;
 }
 
-a[href="#runas"] {
+.champions a {
   color: initial;
   margin-bottom: 1rem;
 }
@@ -1183,7 +1183,7 @@ a[href="#runas"] {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in;
 }
 
 .carrousel__slide h3 {
@@ -1491,4 +1491,8 @@ a[href="#runas"] {
   .champion__skill--label {
     margin: 0 0.8rem;
   }
+}
+
+.spy__on[data__scroll--spy] {
+  color: var(--text-color);
 }
