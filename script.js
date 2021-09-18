@@ -105,6 +105,12 @@
 
 //Interactividad Campeones
 ((d) => {
+  const fighter = `<path d="M67.84 56.35v5.5c8.62-8.62 14.37 0 14.37 0C112.14 40.78 90.35 2 90.35 2s-.72 17.24-15.08 27.77v16.52c-.24 4.79-3.84 7.9-7.43 10.06M17.79 62.09s4.07-6.46 10.78-2.63L20.91 48.2l6.7-16c-17.24-10.54-18-29.93-18-29.93S-12.14 41 17.79 62.09M26.89 83.89l5.51-18.68-.24-.48L19.23 77.9A17.78 17.78 0 017.5 83.17H3l-1 2.39 12 11.5zM92.27 83.89a16.24 16.24 0 01-11.74-5.27L68.8 66.88l3.83 17.72L85.8 98l12-11.49-1-2.4zM55.87 42.7c0 .24-.24.48-.24.71h.72c5.75.48 7.66 2.64 9.1 7.67a9.35 9.35 0 002.39-1.92c1-1 1.68-1.67 1.68-2.63V28.09a2 2 0 00-1.68-1.92l-31.37-5.74H36a2.39 2.39 0 00-2.39 2.39v6.71l24.9 3.35z" fill="#D0A85C"></path><path d="M60.18 54c-1.2-5.27-1.44-4.55-5.75-4.79L40.78 48v-3.87h5.51A4.09 4.09 0 0050.36 41l1-3.35L32.4 35l-5 12.22 11.74 17-5.54 18.47L49.88 98l16.53-15.07s-6.23-28.5-6.23-29M49.88 2.23l-4.79 10.29 4.79 3.83 4.79-3.83zM62.1 9.41l1.43 6h6l2.87-11zM30.25 15.4h6l.24-.72 1.2-5.27-10.3-5z" fill="#D0A85C"></path>
+  `,
+    mage = `<path d="M84.48 77.3h13.41l-3.83-12.93h-9.58a36.73 36.73 0 00-27.54 12.45L50 85l-6.94-8.14a36.73 36.73 0 00-27.54-12.49H5.94L2.11 77.3h13.41a36.73 36.73 0 0127.54 12.45l.71.72h-9.1v7.42h30.9v-7.42h-9.1l.71-.72a35.85 35.85 0 0127.3-12.45" fill="#D0A85C"></path><path d="M56.23 54.31L50 62.21l-6.23-7.9a5.42 5.42 0 01-.24-6.47L50 37.31l6.47 10.53a5.42 5.42 0 01-.24 6.47M42.58 28.93l-7.91 12.69a13.37 13.37 0 00.72 15.09L50 75.14l14.61-18.43a13 13 0 00.72-15.09L50 17l-.48.72a5.58 5.58 0 01-4.31 1.68c-4.07 0-7.18-8.62 4.55-17.24 0 0-28.74 5.5-14.85 30.41z" fill="#D0A85C"></path>`,
+    assassin = `<path d="M56.59 73.71l1.67-2.88c5.75-9.34 5.51-16 3.83-20.59a39.78 39.78 0 01-9.1 16 2 2 0 01-1.43.48H48.2a2.17 2.17 0 01-1.67-.72 39.78 39.78 0 01-9.1-16c-1.68 4.55-1.68 11.26 3.83 20.59l1.68 2.88-3.36 5.75 10.06 17.72L59.7 79.22z" fill="#D0A85C"></path><path d="M73.11 38.74c-3.35-4.31-6-10-6-18.91 0-4.07-3.59-8.15-7.66-12-4.79-4.31-5.75-5.74-9.58-5.74s-4.79 1.43-9.34 5.74c-4.07 3.83-7.66 7.91-7.66 12 0 8.86-2.88 14.6-6 18.68L12.76 52.87 2.23 45.69v12.93S2.47 84 39.58 97.89c0 0-14.13-7.18-16.28-31.13-.24-1.67-.24-9.1-.24-10.29A119.77 119.77 0 0036.71 74c-.72-1.2-1.44-2.64-2.16-3.83-5-10.54-4.07-18.2-1.67-23.47a22.77 22.77 0 017.42-8.86l9.58 9.58 9.58-9.58a22.77 22.77 0 017.42 8.86c2.4 5.27 3.59 12.93-1.43 23.23-.72 1.38-1.45 2.58-2.16 4.07a119.77 119.77 0 0013.65-17.53c0 1.19 0 8.62-.24 10.29-2.39 23.95-16.28 31.13-16.28 31.13C97.53 84 97.77 58.62 97.77 58.62V45.69l-10.53 7.18z" fill="#D0A85C"></path>`,
+    marksman = `<path d="M28.69 27.25h6.94l1.92-6.94-13.41-7.91zM71.31 27.25l4.55-14.85-13.41 7.91 1.92 6.94zM71.31 35.39c-1.43 0-12.21-3.83-12.21-3.83L50 42.34l-9.1-10.78s-10.54 3.83-12.21 3.83c-7.67 0-4.79-7.18-4.79-7.18S4.26 48.32 2.11 64.13c0 0 5.74-8.86 24.42-13.17a26.22 26.22 0 0013.89 12.93c-.72-3.11-1.44-6.71-2.15-10.06a22.36 22.36 0 01-3.84-4.31c.72 0 7.19-.72 8.15-.72.71 2.64 4.55 28.74 4.55 28.74l-7 10.3v10L50 93.82l9.82 4.07V87.6l-7-10.3s3.84-26.1 4.55-28.74c.72 0 7.19.72 8.15.72a16.52 16.52 0 01-3.84 4.31 98.08 98.08 0 00-2.15 10.06 25.33 25.33 0 0013.94-12.93c18.68 4.55 24.42 13.17 24.42 13.17C95.74 48.32 76.1 28 76.1 28s2.88 7.42-4.79 7.42" fill="#D0A85C"></path><path d="M50 2.11l-7.66 21.31h.24L50 33.24l7.42-9.82h.24z" fill="#D0A85C"></path>`;
+
   d.addEventListener("DOMContentLoaded", (e) => {
     const champions = [
       {
@@ -132,6 +138,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Akshan",
@@ -184,6 +191,7 @@
           [1, 14, 15, 17, 18],
           [6, 11, 16],
         ],
+        rol: mage,
       },
       {
         nombre: "Riven",
@@ -210,6 +218,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Kled",
@@ -236,6 +245,7 @@
           [3, 14, 15, 17, 18],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Camille",
@@ -262,6 +272,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Akali",
@@ -288,6 +299,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: assassin,
       },
       {
         nombre: "Fiora",
@@ -314,6 +326,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Gwen",
@@ -340,6 +353,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Jayce",
@@ -366,6 +380,7 @@
           [2, 14, 15, 16, 17, 18],
           [],
         ],
+        rol: fighter,
       },
       {
         nombre: "LeeSin",
@@ -392,6 +407,7 @@
           [1, 4, 5, 7, 9],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Vladimir",
@@ -418,6 +434,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: mage,
       },
       {
         nombre: "Gangplank",
@@ -444,6 +461,7 @@
           [2, 8, 10, 12, 13],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
       {
         nombre: "Gnar",
@@ -470,6 +488,7 @@
           [3, 14, 15, 17, 18],
           [6, 11, 16],
         ],
+        rol: fighter,
       },
     ];
 
@@ -583,8 +602,8 @@
         cambiarMaestrias(campeon, runes);
         cambiarRunas(campeon);
         cambiarSkills(campeon);
-        // carrousel();
         skins(campeon);
+        countersData(campeon);
       }
     });
   });
@@ -860,54 +879,57 @@ function createCards(campeon) {
   nombres = nombres.sort();
   titulos = titulos.sort();
 
-  for (let i = 0; i < nombres.length; i++) {
-    fetch(`${apiChamps}${nombres[i]}.json`)
-      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+  async function cartas() {
+    for (let i = 0; i < nombres.length; i++) {
+      await fetch(`${apiChamps}${nombres[i]}.json`)
+        .then((res) => (res.ok ? res.json() : Promise.reject(res)))
 
-      .then((json) => {
-        const imgAPI =
-          "https://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/";
-        let campeones = json.data,
-          champs = Object.values(campeones);
+        .then((json) => {
+          const imgAPI =
+            "https://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/";
+          let campeones = json.data,
+            champs = Object.values(campeones);
 
-        const $parent = document.querySelector("#champs__section"),
-          $fragment = document.createDocumentFragment();
+          const $parent = document.querySelector("#champs__section"),
+            $fragment = document.createDocumentFragment();
 
-        //  Dependiendo la cantidad de nombres que tenga se hace TODO esto
-        for (let i = 0; i < nombres.length; i++) {
-          //  Crear cards dinámicamente según el champ que tengo como objeto
-          let champ = champs.filter((el) => el.id === nombres[i]);
-          for (const el of champ) {
-            const $newCard = document.createElement("a"),
-              $article = document.createElement("article"),
-              $img = document.createElement("img"),
-              $h3 = document.createElement("h3"),
-              $p = document.createElement("p");
+          //  Dependiendo la cantidad de nombres que tenga se hace TODO esto
+          for (let i = 0; i < nombres.length; i++) {
+            //  Crear cards dinámicamente según el champ que tengo como objeto
+            let champ = champs.filter((el) => el.id === nombres[i]);
+            for (const el of champ) {
+              const $newCard = document.createElement("a"),
+                $article = document.createElement("article"),
+                $img = document.createElement("img"),
+                $h3 = document.createElement("h3"),
+                $p = document.createElement("p");
 
-            $newCard.setAttribute("href", "#runas");
-            $article.classList.add("champion__card");
-            $article.setAttribute("id", el.id);
+              $newCard.setAttribute("href", "#runas");
+              $article.classList.add("champion__card");
+              $article.setAttribute("id", el.id);
 
-            $img.setAttribute("src", `${imgAPI}${el.image.full}`);
-            $img.setAttribute("width", "120");
+              $img.setAttribute("src", `${imgAPI}${el.image.full}`);
+              $img.setAttribute("width", "120");
 
-            $h3.textContent = `${el.name}`;
-            $p.textContent = `${titulos[i][1]}`;
+              $h3.textContent = `${el.name}`;
+              $p.textContent = `${titulos[i][1]}`;
 
-            $article.appendChild($img);
-            $article.appendChild($h3);
-            $article.appendChild($p);
-            $newCard.appendChild($article);
+              $article.appendChild($img);
+              $article.appendChild($h3);
+              $article.appendChild($p);
+              $newCard.appendChild($article);
 
-            $fragment.appendChild($newCard);
+              $fragment.appendChild($newCard);
+            }
           }
-        }
-        $parent.appendChild($fragment);
-      })
-      .catch((err) => {
-        console.log("Estamos en el catch", err);
-      });
+          $parent.appendChild($fragment);
+        })
+        .catch((err) => {
+          console.log("Estamos en el catch", err);
+        });
+    }
   }
+  cartas();
 }
 
 function skins(campeon) {
@@ -1007,4 +1029,104 @@ function skins(campeon) {
   }
 
   sliders(campeon);
+}
+
+async function countersData(campeon) {
+  const d = document;
+  const champNick = campeon.nombre,
+    $champName = d.querySelector(".champ__data--name h2"),
+    $champRol = d.querySelector(".champ__data--name .stat__data p"),
+    $champRolSvg = d.querySelector(".champ__data--name .stat__data svg");
+
+  // El nombre y rol del champ
+  $champName.textContent = champNick;
+  $champRolSvg.innerHTML = campeon.rol;
+
+  try {
+    const champsAPI =
+        "https://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/",
+      loadingAPI =
+        "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/",
+      squareAPI =
+        "https://ddragon.leagueoflegends.com/cdn/11.18.1/img/champion/";
+
+    const $hp = d.getElementById("hp"),
+      $attack = d.getElementById("attack"),
+      $attackS = d.getElementById("attackS"),
+      $ms = d.getElementById("ms"),
+      $armor = d.getElementById("armor"),
+      $mr = d.getElementById("mr");
+    $level = d.getElementById("level");
+
+    const $champImg = d.querySelector(".champ__data img");
+
+    let promise,
+      campeonesData = [],
+      tags,
+      stats;
+
+    console.log($champName);
+    for (let i = 0; i < 1; i++) {
+      promise = await fetch(`${champsAPI}${champNick}.json`);
+      campeonesData.push(await promise.json());
+    }
+
+    console.log(campeonesData);
+    for (let i = 0; i < campeonesData.length; i++) {
+      tags = await campeonesData[i]["data"][`${champNick}`]["tags"][0];
+      stats = await campeonesData[i]["data"][`${champNick}`]["stats"];
+    }
+
+    $champRol.textContent = tags;
+
+    $hp.textContent = stats.hp;
+    $attack.textContent = stats.attackdamage;
+    $attackS.textContent = stats.attackspeed;
+    $ms.textContent = stats.movespeed;
+    $armor.textContent = stats.armor;
+    $mr.textContent = stats.spellblock;
+
+    $level.addEventListener("input", function () {
+      let nivel = $level.value,
+        hp = stats.hpperlevel,
+        attack = stats.attackdamageperlevel,
+        armor = stats.armorperlevel,
+        attackS = stats.attackspeedperlevel,
+        mr = stats.spellblockperlevel;
+
+      if (nivel >= 1 && nivel <= 18) {
+        $hp.textContent = (stats.hp + (nivel - 1) * hp).toFixed(0);
+        $attack.textContent = (
+          stats.attackdamage +
+          (nivel - 1) * attack
+        ).toFixed(0);
+        $attackS.textContent = (
+          stats.attackspeed +
+          (nivel - 1) * ((stats.attackspeed * attackS) / 100)
+        ).toFixed(2);
+
+        $armor.textContent = (stats.armor + (nivel - 1) * armor).toFixed(0);
+        $mr.textContent = (stats.spellblock + (nivel - 1) * mr).toFixed(0);
+      }
+    });
+    $level.value = 1;
+
+    console.log(stats);
+
+    // Para la imagen responsive
+    let breakpoint = window.matchMedia("(min-width: 855px)");
+
+    const responsive = (e) => {
+      if (e.matches) {
+        $champImg.setAttribute("src", `${loadingAPI}${champNick}_0.jpg`);
+      } else {
+        $champImg.setAttribute("src", `${squareAPI}${champNick}.png`);
+      }
+    };
+    // Valida el cambio de MQ
+    breakpoint.addEventListener("change", responsive);
+    responsive(breakpoint);
+  } catch (err) {
+    console.log(err);
+  }
 }
