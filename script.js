@@ -1758,6 +1758,7 @@
     ];
 
     createCards(champions);
+    myData();
 
     d.addEventListener("click", (e) => {
       let $card = e.target.closest(".champion__card");
@@ -2425,4 +2426,26 @@ async function countersData(campeon) {
   } catch (err) {
     console.log(err);
   }
+}
+
+async function myData() {
+  let win = document.querySelector(".win"),
+    losses = document.querySelector(".losses"),
+    lp = document.querySelector(".lp");
+  let res = await fetch(
+      "https://la2.api.riotgames.com/lol/summoner/v4/summoners/by-name/Mirato?api_key=RGAPI-014d717d-3486-4813-97f9-b9d492475497"
+    ),
+    json = await res.json();
+
+  let rank = await fetch(
+      "https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/ZdBOFiDYRWWGbjpmGts8rgP2ZsZl8MNRzvpujGXOHr6H?api_key=RGAPI-014d717d-3486-4813-97f9-b9d492475497"
+    ),
+    rankJson = await rank.json();
+
+  win.textContent = `${rankJson[0].wins} V`;
+  losses.textContent = `${rankJson[0].losses} D`;
+  lp.textContent = `${rankJson[0].leaguePoints} LP`;
+
+  console.log(json);
+  console.log(rankJson[0]);
 }
