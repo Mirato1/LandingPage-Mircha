@@ -2445,7 +2445,4 @@ async function myData() {
   win.textContent = `${rankJson[0].wins} V`;
   losses.textContent = `${rankJson[0].losses} D`;
   lp.textContent = `${rankJson[0].leaguePoints} LP`;
-
-  console.log(json);
-  console.log(rankJson[0]);
 }
