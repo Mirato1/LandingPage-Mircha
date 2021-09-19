@@ -197,28 +197,28 @@
           {
             nombre: "Shen",
             tips: `
-            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
-            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
-             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
-            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            <li>Tener cuidado si va con <b>Ignite</b>.</li>
+            <li>Si usa su <b>E</b> se come el combo gratis.</li>
+             <li>Si está bajo torre pokearlo a puras <b>Q</b> .</li>
+            <li>Su <b>E</b> es cancelable ya sea con la <b>Q</b> o la <b>W</b>.</li>
             `,
           },
           {
             nombre: "Sylas",
             tips: `
-            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
-            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
-             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
-            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            <li>Si se acerca a farmear <b>Q</b>, la clave es punishearlo cuando farmea.</li>
+            <li>Si esquivas la <b>E</b> queda regalado el pibe.</li>
+             <li>Nuestro nivel <b>6</b> es muchísimo mejor que el de él.</li>
+            <li>Saquen daño de primera en vez de corta curas ya que tiene poca armor.</li>
             `,
           },
           {
             nombre: "Vladimir",
             tips: `
-            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
-            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
-             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
-            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            <li>Tienen que hacer trades largos para gastarle su <b>W</b>.</li>
+            <li>Nuestra <b>W</b> lo puede agarrar cuando él usa la suya</b>.</li>
+             <li>Es recomendable que <b>congelemos</b> la línea cerca de torre ya que es muy fácil gankearlo.</li>
+            <li>Podemos rushear corta curas o daño ya que es muy <b>squishy</b>.</li>
             `,
           },
           {
@@ -276,8 +276,8 @@
           {
             nombre: "Tryndamere",
             tips: `
-            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
-            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+            <li>Intentar abusar en <b>early</b> pero después en lvl 6 hace lo que se le canta.</li>
+            <li>Pedir <b>ganks</b> para poder abusar en nivel bajo así roamean.</li>
              <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
             <li>Rushear <b>tabis</b> o te caga a piñas.</li>
             `,
@@ -1210,7 +1210,7 @@
         `,
         counters: [
           {
-            nombre: "Aatrox",
+            nombre: "Lucian",
             tips: `
             <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
             <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
@@ -1311,6 +1311,96 @@
           [6, 11, 16],
         ],
         rol: fighter,
+        tips: `
+        <li>
+            En <b>early</b> abusar mucho del rango y el daño que hace nuestra pasiva + la runa.
+        </li>
+        <li>
+            Guardarse la <b>E</b> o bien usarla precavidamente.
+        </li>
+        <li>
+             <b>Wardear</b> ya que somos muy vulnerables a enemigos que se lancen y no podamos usar la <b>E</b>.
+        </li>
+        <li>
+            <b>Roamear</b> mucho con la <b>W</b> para poder ayudar al team y sacar más gold.    
+        </li>
+        `,
+        counters: [
+          {
+            nombre: "Jayce",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Fiora",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Renekton",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Sett",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
+        easy: [
+          {
+            nombre: "Camille",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Sylas",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Irelia",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Gnar",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
       },
       {
         nombre: "Vladimir",
@@ -1354,6 +1444,82 @@
              rápido.
         </li>
         `,
+        counters: [
+          {
+            nombre: "Aatrox",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Jayce",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Riven",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Irelia",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
+        easy: [
+          {
+            nombre: "Ornn",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Shen",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Gangplank",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Malphite",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
       },
       {
         nombre: "Gangplank",
@@ -1381,6 +1547,96 @@
           [6, 11, 16],
         ],
         rol: fighter,
+        tips: `
+        <li>
+            En <b>early</b> abusar mucho del rango y el daño que hace nuestra pasiva + la runa.
+        </li>
+        <li>
+            Guardarse la <b>E</b> o bien usarla precavidamente.
+        </li>
+        <li>
+             <b>Wardear</b> ya que somos muy vulnerables a enemigos que se lancen y no podamos usar la <b>E</b>.
+        </li>
+        <li>
+            <b>Roamear</b> mucho con la <b>W</b> para poder ayudar al team y sacar más gold.    
+        </li>
+        `,
+        counters: [
+          {
+            nombre: "Lucian",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Irelia",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Kled",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Darius",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
+        easy: [
+          {
+            nombre: "Gnar",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Sylas",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Ornn",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Sett",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
       },
       {
         nombre: "Gnar",
@@ -1408,6 +1664,96 @@
           [6, 11, 16],
         ],
         rol: fighter,
+        tips: `
+        <li>
+            En <b>early</b> abusar mucho del rango y el daño que hace nuestra pasiva + la runa.
+        </li>
+        <li>
+            Guardarse la <b>E</b> o bien usarla precavidamente.
+        </li>
+        <li>
+             <b>Wardear</b> ya que somos muy vulnerables a enemigos que se lancen y no podamos usar la <b>E</b>.
+        </li>
+        <li>
+            <b>Roamear</b> mucho con la <b>W</b> para poder ayudar al team y sacar más gold.    
+        </li>
+        `,
+        counters: [
+          {
+            nombre: "Gangplank",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Jayce",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Irelia",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Sylas",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
+        easy: [
+          {
+            nombre: "Kled",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Riven",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Sett",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+          {
+            nombre: "Renekton",
+            tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+          },
+        ],
       },
     ];
 

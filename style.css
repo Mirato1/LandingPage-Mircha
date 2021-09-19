@@ -414,19 +414,19 @@ input:checked + .slider:before {
 progress {
   width: 100%;
   height: 1rem;
-  background-color: var(--gray-color);
+  background-color: var(--gray-dark-color);
 }
 
 progress::-webkit-progress-bar {
-  background-color: var(--gray-color);
+  background-color: var(--gray-dark-color);
 }
 
 progress::-webkit-progress-value {
-  background-color: var(--gray-dark-color);
+  background-color: var(--first-color);
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--gray-dark-color);
+  background-color: var(--first-color);
 }
 
 .progress {
@@ -524,9 +524,40 @@ progress::-moz-progress-bar {
   margin-bottom: 2rem;
 }
 
-.portrait__image {
-  border-radius: 5%;
-  box-shadow: 0px 0px 14px 6px #f8d68b;
+.about article:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about article:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chall__icon {
+  width: 300px;
+  filter: drop-shadow(0px 6px 20px #faa75b);
+}
+
+.about__data {
+  display: flex;
+  align-items: center;
+}
+
+.about__data img {
+  width: 40px;
+}
+
+.about__data h2 {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.about__data .icono {
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #a57932;
 }
 
 .text__rank--list li {
@@ -1706,11 +1737,6 @@ details[open] summary ~ * {
   .hero__image {
     background-position: center;
   }
-  .portrait__image {
-    content: url("assets/Challenger.png");
-    border-radius: 10%;
-    text-align: center;
-  }
   .about {
     display: grid;
     grid-template-columns: repeat(3, 30%);
@@ -1823,6 +1849,7 @@ details[open] summary ~ * {
   }
 }
 
+/* Scroll Espía */
 .spy__on[data__scroll--spy] {
   color: var(--text-color);
 }
