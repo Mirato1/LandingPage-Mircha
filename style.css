@@ -221,6 +221,7 @@ main {
   background-position: 60%;
   background-size: cover;
   background-attachment: var(--hero-attachment);
+  transition: background-image 0.4s ease;
 }
 
 .hero__image--title b {
