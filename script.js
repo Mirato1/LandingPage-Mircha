@@ -2433,12 +2433,12 @@ async function myData() {
     losses = document.querySelector(".losses"),
     lp = document.querySelector(".lp");
   let res = await fetch(
-      "https://la2.api.riotgames.com/lol/summoner/v4/summoners/by-name/Mirato?api_key=RGAPI-014d717d-3486-4813-97f9-b9d492475497"
+      "https://la2.api.riotgames.com/lol/summoner/v4/summoners/by-name/Mirato?api_key=RGAPI-0f56a678-f8d9-40dd-8387-c47f72a009da"
     ),
     json = await res.json();
 
   let rank = await fetch(
-      "https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/ZdBOFiDYRWWGbjpmGts8rgP2ZsZl8MNRzvpujGXOHr6H?api_key=RGAPI-014d717d-3486-4813-97f9-b9d492475497"
+      "https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/ZdBOFiDYRWWGbjpmGts8rgP2ZsZl8MNRzvpujGXOHr6H?api_key=RGAPI-0f56a678-f8d9-40dd-8387-c47f72a009da"
     ),
     rankJson = await rank.json();
 
