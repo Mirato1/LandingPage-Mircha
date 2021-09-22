@@ -21,7 +21,7 @@ export function Cards() {
 
   async function cartas() {
     for (let i = 0; i < nombres.length; i++) {
-      ajax({
+      await ajax({
         url: `${apiChamps}${nombres[i]}.json`,
         cbSuccess: (campeones) => {
           let champsNick = campeones.data,
@@ -43,6 +43,7 @@ export function Cards() {
               $article.setAttribute("id", el.id);
               $img.setAttribute("src", `${imgAPI}${el.image.full}`);
               $img.setAttribute("width", "120");
+              $img.setAttribute("alt", `${el.name}`);
               $h3.textContent = `${el.name}`;
               $p.textContent = `${titulos[i][1]}`;
               $article.appendChild($img);
