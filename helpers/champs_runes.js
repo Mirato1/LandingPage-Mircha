@@ -20,8 +20,12 @@ const champions = [
       "Chemptank.png",
       "Tabis.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["AatroxQ.png", "AatroxE.png", "AatroxW.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [4, 2, 2, 3, 0, 3, 2, 1, 1, 2],
     order: [
@@ -139,8 +143,12 @@ const champions = [
       "GA.png",
       "Berseker.png",
     ],
-    priority: ["E", "Q", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["E", "Q", "W"],
+        skill: ["AkshanE.png", "AkshanQ.png", "AkshanW.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [1, 3, 3, 1, 3, 3, 0, 2, 1, 2],
     order: [
@@ -256,8 +264,12 @@ const champions = [
       "Morello.png",
       "Ionia.png",
     ],
-    priority: ["W", "Q", "E"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["W", "Q", "E"],
+        skill: ["SylasW.png", "SylasQ.png", "SylasE.png"],
+      },
+    ],
     arbol: ["Precision", "Inspiration"],
     mastery: [4, 3, 2, 3, 0, 3, 1, 1, 1, 2],
     order: [
@@ -373,8 +385,12 @@ const champions = [
       "GA.png",
       "Tabis.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["RivenTriCleave.png", "RivenFeint.png", "RivenMartyr.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [4, 2, 1, 3, 0, 3, 3, 1, 1, 2],
     order: [
@@ -490,8 +506,12 @@ const champions = [
       "GA.png",
       "Tabis.png",
     ],
-    priority: ["Q", "W", "E"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "W", "E"],
+        skill: ["KledQ.png", "KledW.png", "KledE.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [4, 2, 1, 3, 1, 3, 0, 2, 1, 2],
     order: [
@@ -597,7 +617,7 @@ const champions = [
     titulo: "LA CYBORG",
     summoners: {
       sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerIgnite.png",
+      sum_2: "SummonerDot.png",
     },
     items: [
       "Sunderer.png",
@@ -607,8 +627,12 @@ const champions = [
       "GA.png",
       "Tabis.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["CamilleQ.png", "CamilleE.png", "CamilleW.png"],
+      },
+    ],
     arbol: ["Resolve", "Inspiration"],
     mastery: [2, 3, 3, 3, 0, 3, 1, 2, 1, 2],
     order: [
@@ -714,7 +738,7 @@ const champions = [
     titulo: "LA NINJA",
     summoners: {
       sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerIgnite.png",
+      sum_2: "SummonerDot.png",
     },
     items: [
       "Protobelt.png",
@@ -724,8 +748,12 @@ const champions = [
       "Morello.png",
       "Sorcerer.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["AkaliQ.png", "AkaliE.png", "AkaliW.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [4, 3, 2, 3, 0, 3, 1, 1, 1, 2],
     order: [
@@ -841,8 +869,12 @@ const champions = [
       "GA.png",
       "Tabis.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["FioraQ.png", "FioraE.png", "FioraW.png"],
+      },
+    ],
     arbol: ["Precision", "Inspiration"],
     mastery: [4, 3, 3, 3, 2, 3, 0, 2, 1, 2],
     order: [
@@ -948,7 +980,7 @@ const champions = [
     titulo: "LA MUÑECA",
     summoners: {
       sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerIgnite.png",
+      sum_2: "SummonerDot.png",
     },
     items: [
       "Riftmaker.png",
@@ -958,8 +990,12 @@ const champions = [
       "Morello.png",
       "Ionia.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["GwenQ.png", "GwenE.png", "GwenW.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [4, 3, 1, 3, 0, 3, 3, 2, 1, 2],
     order: [
@@ -1075,8 +1111,16 @@ const champions = [
       "GA.png",
       "Ionia.png",
     ],
-    priority: ["Q", "W", "E"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: [
+          "JayceToTheSkies.png",
+          "JayceThunderingBlow.png",
+          "JayceStaticField.png",
+        ],
+      },
+    ],
     arbol: ["Precision", "Inspiration"],
     mastery: [4, 3, 1, 3, 2, 3, 0, 1, 1, 2],
     order: [
@@ -1192,8 +1236,12 @@ const champions = [
       "Chemptank.png",
       "Tabis.png",
     ],
-    priority: ["E", "Q", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["E", "Q", "W"],
+        skill: ["BlindMonkEOne.png", "BlindMonkQOne.png", "BlindMonkWOne.png"],
+      },
+    ],
     arbol: ["Precision", "Resolve"],
     mastery: [4, 2, 2, 3, 0, 3, 2, 1, 1, 2],
     order: [
@@ -1309,8 +1357,12 @@ const champions = [
       "VoidStaff.png",
       "Sorcerer.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["VladimirQ.png", "VladimirE.png", "VladimirSanguinePool.png"],
+      },
+    ],
     arbol: ["Sorcery", "Inspiration"],
     mastery: [4, 3, 1, 3, 2, 0, 1, 3, 1, 1],
     order: [
@@ -1428,8 +1480,12 @@ const champions = [
       "Dominik.png",
       "Ionia.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["GangplankQWrapper.png", "GangplankE.png", "GangplankW.png"],
+      },
+    ],
     arbol: ["Resolve", "Inspiration"],
     mastery: [2, 1, 3, 1, 0, 3, 3, 1, 1, 2],
     order: [
@@ -1545,8 +1601,12 @@ const champions = [
       "DD.png",
       "Tabis.png",
     ],
-    priority: ["Q", "E", "W"],
-    abilities: ["Q", "W", "E", "R", "_Passive"],
+    priority: [
+      {
+        orden: ["Q", "E", "W"],
+        skill: ["GnarQ.png", "GnarE.png", "GnarW.png"],
+      },
+    ],
     arbol: ["Resolve", "Domination"],
     mastery: [2, 1, 3, 1, 2, 0, 1, 2, 1, 2],
     order: [

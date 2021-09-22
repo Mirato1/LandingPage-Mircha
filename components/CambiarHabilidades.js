@@ -1,3 +1,5 @@
+import api from "../helpers/lol_api.js";
+
 export function cambiarHabilidades(campeon) {
   const $champPriority = document.querySelectorAll(
     ".skill__priority--path .champion__skill--label"
@@ -13,8 +15,8 @@ export function cambiarHabilidades(campeon) {
   for (let i = 0; i < $champPriority.length; i++) {
     $champPriority[i].children[0].setAttribute(
       "src",
-      `assets/${campeon.nombre}/${campeon.nombre}${campeon.priority[i]}.png`
+      `${api.SPELL}${campeon.priority[0].skill[i]}`
     );
-    $champPriority[i].children[1].innerHTML = `${campeon.priority[i]}`;
+    $champPriority[i].children[1].innerHTML = `${campeon.priority[0].orden[i]}`;
   }
 }

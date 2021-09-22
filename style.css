@@ -37,7 +37,7 @@
   --text-color: #eee;
   --title-color: #f3f3f3;
   --box-shadow: 0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.25);
-  --hero-image: url("assets/aatrox.jpg");
+  --hero-image: url("assets/Aatrox_wall.jpg");
   --black-alpha-color: rgba(0, 0, 0, 0.5);
   --white-alpha-color: rgba(0, 0, 0, 0.5);
   --drop-shadow: drop-shadow(0px 6px 20px #faa75b);
@@ -1731,7 +1731,6 @@ details[open] summary ~ * {
     grid-template-columns: 30% 25% 30%;
   }
   .champ__data img {
-    /* content: url(assets/Aatrox_0.jpg); */
     border: none;
     width: 75%;
   }
