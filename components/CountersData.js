@@ -114,6 +114,7 @@ export async function countersData(campeon) {
     let breakpoint = window.matchMedia("(min-width: 855px)");
 
     const responsive = (e) => {
+      $champImg.setAttribute("alt", `${champNick}`);
       if (e.matches) {
         $champImg.setAttribute("src", `${loadingAPI}${champNick}_0.jpg`);
       } else {

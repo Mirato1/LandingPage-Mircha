@@ -7,9 +7,17 @@ export function cambiarSpells(campeon) {
     "src",
     `${SUMM}${campeon.summoners.sum_1}`
   );
+  $champSpells.firstElementChild.setAttribute(
+    "alt",
+    `${campeon.summoners.sum_1}`
+  );
   $champSpells.lastElementChild.setAttribute(
     "src",
     `${SUMM}${campeon.summoners.sum_2}`
+  );
+  $champSpells.lastElementChild.setAttribute(
+    "alt",
+    `${campeon.summoners.sum_2}`
   );
 
   for (let i = 0; i < $champItems.length; i++) {
