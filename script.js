@@ -109,10 +109,9 @@ import { TargetName } from "./components/TargetName.js";
 
 //Interactividad Campeones
 ((d) => {
-  Cards();
-  MyData();
-
   d.addEventListener("DOMContentLoaded", (e) => {
+    Cards();
+    MyData();
     TargetName();
   });
 })(document);
