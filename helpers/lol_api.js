@@ -9,7 +9,7 @@ const CHAMPS =
     "https://ddragon.leagueoflegends.com/cdn/11.18.1/data/en_US/champion/",
   SUMMAPI =
     "https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/ZdBOFiDYRWWGbjpmGts8rgP2ZsZl8MNRzvpujGXOHr6H",
-  APIKEY = "RGAPI-cf87280b-70c5-49b1-8083-e3295a7d96d4",
+  APIKEY = "RGAPI-d5e69ae1-f20e-4bee-b190-862e5f81faa3",
   TOTALAPI = `${SUMMAPI}?api_key=${APIKEY}`;
 
 export default {

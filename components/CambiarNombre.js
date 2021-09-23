@@ -7,7 +7,10 @@ export function cambiarNombre(campeon) {
     ),
     $champH2 = document.querySelector(".champion__header--content h2"),
     $champH4 = document.querySelector(".champion__header--content h4"),
-    $champImg = document.querySelector(".champion__info--header img");
+    $champImg = document.querySelector(".champion__info--header img"),
+    $tooltipH4 = document.querySelectorAll(".tooltip__text h4"),
+    $tooltipSmall = document.querySelectorAll(".tooltip__text small"),
+    $tooltipContent = document.querySelectorAll(".tooltip__text p");
 
   $champH4.textContent = campeon.titulo;
   const champNick = campeon.nombre;
@@ -28,11 +31,19 @@ export function cambiarNombre(campeon) {
           "src",
           `${api.SPELL}${arrSpells[i].image.full}`
         );
+        $tooltipH4[i + 1].textContent = `${arrSpells[i].name}`;
+        $tooltipSmall[i].textContent = `${arrSpells[i].cooldownBurn}`;
+        $tooltipContent[i + 1].textContent = `${arrSpells[i].description}`;
       }
+
       $champAbilities[0].firstElementChild.setAttribute(
         "src",
         `${api.PASSIVE}${passive}`
       );
+      $tooltipH4[0].textContent = `${json.data[`${champNick}`].passive.name}`;
+      $tooltipContent[0].textContent = `${
+        json.data[`${champNick}`].passive.description
+      }`;
     },
   });
 }

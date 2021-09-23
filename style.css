@@ -1553,6 +1553,48 @@ details[open] summary ~ * {
   color: var(--first-color);
 }
 
+/* Tooltip */
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip__text h4 {
+  color: var(--first-color);
+}
+
+.tooltip__text small {
+  color: var(--link-color);
+}
+
+.tooltip__text {
+  z-index: 500;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  pointer-events: none;
+  transition: 0.2s;
+  top: calc(100% + 10px);
+  transform-origin: top center;
+  padding: 10px 18px;
+  width: 190px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: #0f0f2e;
+  box-shadow: var(--box-shadow);
+  color: var(--hero-text-color);
+  transform: translate(-50%, 5px) scale(0.5);
+  /* transition: transform 0.2s ease-in; */
+}
+
+.tooltip:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) scaleY(1);
+}
+
 /****************************** MEDIA 720 *************************** */
 
 @media screen and (min-width: 720px) {
@@ -1707,6 +1749,11 @@ details[open] summary ~ * {
 
   .proyect .section__title {
     grid-column: span 2;
+  }
+
+  /* Tooltip */
+  .tooltip__text {
+    width: 300px;
   }
 }
 

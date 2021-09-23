@@ -9,8 +9,8 @@ const champions = [
     nombre: "Aatrox",
     titulo: "EL DEMONIO PAPÁ",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Goredrinker.png",
@@ -132,8 +132,8 @@ const champions = [
     nombre: "Akshan",
     titulo: "MACUMBERO",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Kraken.png",
@@ -253,8 +253,8 @@ const champions = [
     nombre: "Sylas",
     titulo: "EL CHAMPION",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Everfrost.png",
@@ -374,8 +374,8 @@ const champions = [
     nombre: "Riven",
     titulo: "LA ROTA",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Goredrinker.png",
@@ -495,8 +495,8 @@ const champions = [
     nombre: "Kled",
     titulo: "EL TILTEADO",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Goredrinker.png",
@@ -616,8 +616,8 @@ const champions = [
     nombre: "Camille",
     titulo: "LA CYBORG",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerDot.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerDot",
     },
     items: [
       "Sunderer.png",
@@ -737,8 +737,8 @@ const champions = [
     nombre: "Akali",
     titulo: "LA NINJA",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerDot.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerDot",
     },
     items: [
       "Protobelt.png",
@@ -858,8 +858,8 @@ const champions = [
     nombre: "Fiora",
     titulo: "LA FRANCESA",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Goredrinker.png",
@@ -979,8 +979,8 @@ const champions = [
     nombre: "Gwen",
     titulo: "LA MUÑECA",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerDot.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerDot",
     },
     items: [
       "Riftmaker.png",
@@ -1100,8 +1100,8 @@ const champions = [
     nombre: "Jayce",
     titulo: "FACHERO SENDOH",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Eclipse.png",
@@ -1225,8 +1225,8 @@ const champions = [
     nombre: "LeeSin",
     titulo: "EL CIEGO",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Goredrinker.png",
@@ -1346,8 +1346,8 @@ const champions = [
     nombre: "Vladimir",
     titulo: "EL VÁMPIRO",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Protobelt.png",
@@ -1469,8 +1469,8 @@ const champions = [
     nombre: "Gangplank",
     titulo: "EL JACK SPARROW",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "ShieldBow.png",
@@ -1590,8 +1590,8 @@ const champions = [
     nombre: "Gnar",
     titulo: "SHU SHU BANA",
     summoners: {
-      sum_1: "SummonerTeleport.png",
-      sum_2: "SummonerFlash.png",
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
     },
     items: [
       "Sunderer.png",
