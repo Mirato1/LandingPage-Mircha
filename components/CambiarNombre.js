@@ -31,17 +31,17 @@ export function cambiarNombre(campeon) {
           "src",
           `${api.SPELL}${arrSpells[i].image.full}`
         );
-        $tooltipH4[i + 1].textContent = `${arrSpells[i].name}`;
+        $tooltipH4[i + 1].innerHTML = `${arrSpells[i].name}`;
         $tooltipSmall[i].textContent = `${arrSpells[i].cooldownBurn}`;
-        $tooltipContent[i + 1].textContent = `${arrSpells[i].description}`;
+        $tooltipContent[i + 1].innerHTML = `${arrSpells[i].description}`;
       }
 
       $champAbilities[0].firstElementChild.setAttribute(
         "src",
         `${api.PASSIVE}${passive}`
       );
-      $tooltipH4[0].textContent = `${json.data[`${champNick}`].passive.name}`;
-      $tooltipContent[0].textContent = `${
+      $tooltipH4[0].innerHTML = `${json.data[`${champNick}`].passive.name}`;
+      $tooltipContent[0].innerHTML = `${
         json.data[`${champNick}`].passive.description
       }`;
     },

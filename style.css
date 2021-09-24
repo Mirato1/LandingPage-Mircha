@@ -1566,6 +1566,7 @@ details[open] summary ~ * {
 
 .tooltip__text small {
   color: var(--link-color);
+  font-size: 12px;
 }
 
 .tooltip__text {
@@ -1586,7 +1587,6 @@ details[open] summary ~ * {
   box-shadow: var(--box-shadow);
   color: var(--hero-text-color);
   transform: translate(-50%, 5px) scale(0.5);
-  /* transition: transform 0.2s ease-in; */
 }
 
 .tooltip:hover .tooltip__text {

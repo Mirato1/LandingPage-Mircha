@@ -1,74 +1,94 @@
+import api from "../helpers/lol_api.js";
+import { ajax } from "../helpers/ajax.js";
+
 export function cambiarMaestrias(campeon, runes) {
-  const $maestrias = document.querySelectorAll(
+  const $secArbol = document.querySelectorAll(".rune__tree--v2 .masterie"),
+    $primerArbol = document.querySelectorAll(
       ".primary__tree--keystone .masterie"
-    ),
-    $secMaestrias = document.querySelectorAll(".rune__tree--v2 .masterie");
+    );
+  ajax({
+    url: api.RUNESKEY,
+    cbSuccess: (res) => {
+      let primerArbol = res.find((el) => el.key === campeon.arbol[0]).slots,
+        segundoArbol = res.find((el) => el.key === campeon.arbol[1]).slots;
 
-  for (let i = 0; i < runes.length; i++) {
-    if (runes[i].nombre === campeon.arbol[0]) {
-      let primArbol = runes[i].nombre,
-        primMastery = runes[i].maestrias;
+      let totalPrim = [],
+        totalSeg = [];
 
-      if (
-        primArbol !== "Precision" &&
-        $maestrias[0].classList.contains("fake")
-      ) {
-        $maestrias[0].classList.add("fake-none");
-        $maestrias[2].classList.add("margin-child");
+      primerArbol.map((el) => {
+        totalPrim.push(el.runes);
+      });
+      segundoArbol.map((el) => {
+        totalSeg.push(el.runes);
+      });
+      let primerRuna = [],
+        segundaRuna = [];
 
-        for (let x = 1; x < primMastery.length; x++) {
-          $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
+      totalPrim.map((el) => {
+        for (let i = 0; i < el.length; i++) {
+          primerRuna.push(el[i]);
         }
-      } else if (
-        $maestrias[0].classList.contains("fake-none") &&
-        primArbol === "Precision"
-      ) {
-        $maestrias[0].classList.remove("fake-none");
-        $maestrias[2].classList.remove("margin-child");
+      });
+      totalSeg.map((el) => {
+        for (let i = 0; i < el.length; i++) {
+          segundaRuna.push(el[i]);
+        }
+      });
 
-        for (let x = 0; x < primMastery.length; x++) {
-          $maestrias[x].firstElementChild.setAttribute("src", primMastery[x]);
+      for (let i = 0; i < $primerArbol.length; i++) {
+        if (primerRuna.length > 12) {
+          $primerArbol[0].classList.remove("fake-none");
+          $primerArbol[2].classList.remove("margin-child");
+          $primerArbol[i].firstElementChild.setAttribute(
+            "src",
+            `${api.KEYSTONE}${primerRuna[i].icon}`
+          );
+        } else if (
+          $primerArbol[0].classList.contains("fake") &&
+          primerRuna.length <= 12
+        ) {
+          $primerArbol[0].classList.add("fake-none");
+          $primerArbol[2].classList.add("margin-child");
+          if ($primerArbol[i + 1] === undefined) {
+            continue;
+          } else {
+            $primerArbol[i + 1].firstElementChild.setAttribute(
+              "src",
+              `${api.KEYSTONE}${primerRuna[i].icon}`
+            );
+          }
         }
       }
-    }
-
-    if (runes[i].nombre === campeon.arbol[1]) {
-      let secMastery = runes[i].maestrias;
-
-      if (
-        runes[i].nombre !== "Domination" &&
-        $secMaestrias[9].classList.contains("fake-none")
-      ) {
-        for (let x = 4; x < secMastery.length; x++) {
-          $secMaestrias[x - 4].firstElementChild.setAttribute(
+      for (let i = 0; i < $secArbol.length; i++) {
+        if (segundaRuna.length > 13) {
+          $secArbol[9].classList.remove("fake-none");
+          $secArbol[i].firstElementChild.setAttribute(
             "src",
-            secMastery[x]
+            `${api.KEYSTONE}${segundaRuna[i + 4].icon}`
           );
-        }
-      } else if (
-        runes[i].nombre !== "Domination" &&
-        !$secMaestrias[9].classList.contains("fake-none")
-      ) {
-        $secMaestrias[9].classList.add("fake-none");
-        for (let x = 4; x < secMastery.length; x++) {
-          $secMaestrias[x - 4].firstElementChild.setAttribute(
+        } else if (
+          segundaRuna.length < 13 &&
+          $secArbol[9].classList.contains("fake-none")
+        ) {
+          if (segundaRuna[i + 3] === undefined) {
+            continue;
+          } else {
+            $secArbol[i].firstElementChild.setAttribute(
+              "src",
+              `${api.KEYSTONE}${segundaRuna[i + 3].icon}`
+            );
+          }
+        } else if (
+          segundaRuna.length < 13 &&
+          !$secArbol[9].classList.contains("fake-none")
+        ) {
+          $secArbol[9].classList.add("fake-none");
+          $secArbol[i].firstElementChild.setAttribute(
             "src",
-            secMastery[x]
-          );
-        }
-      }
-      if (
-        runes[i].nombre === "Domination" &&
-        $secMaestrias[9].classList.contains("fake-none")
-      ) {
-        $secMaestrias[9].classList.remove("fake-none");
-        for (let x = 4; x < secMastery.length; x++) {
-          $secMaestrias[x - 4].firstElementChild.setAttribute(
-            "src",
-            secMastery[x]
+            `${api.KEYSTONE}${segundaRuna[i + 3].icon}`
           );
         }
       }
-    }
-  }
+    },
+  });
 }

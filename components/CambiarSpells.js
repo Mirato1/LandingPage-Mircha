@@ -11,12 +11,16 @@ export function cambiarSpells(campeon) {
       ".spells__container .tooltip__text p"
     );
 
-  console.log($tooltipH4, $tooltipContent);
   ajax({
     url: "https://ddragon.leagueoflegends.com/cdn/11.19.1/data/en_US/summoner.json",
     cbSuccess: (json) => {
-      console.log(json["data"][campeon.summoners.sum_1]);
-      console.log(json["data"][campeon.summoners.sum_2]);
+      $tooltipH4[0].textContent = json["data"][campeon.summoners.sum_1].name;
+      $tooltipContent[0].textContent =
+        json["data"][campeon.summoners.sum_1].description;
+
+      $tooltipH4[1].textContent = json["data"][campeon.summoners.sum_2].name;
+      $tooltipContent[1].textContent =
+        json["data"][campeon.summoners.sum_2].description;
     },
   });
 

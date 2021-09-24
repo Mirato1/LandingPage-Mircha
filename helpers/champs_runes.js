@@ -1587,6 +1587,252 @@ const champions = [
     ],
   },
   {
+    nombre: "Sett",
+    titulo: "Mano a Mano",
+    summoners: {
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
+    },
+    items: [
+      "Sunderer.png",
+      "Black.png",
+      "Sterakk.png",
+      "WitEnds.png",
+      "DD.png",
+      "Tabis.png",
+    ],
+    priority: [
+      {
+        orden: ["Q", "W", "E"],
+        skill: ["SettQ.png", "SettW.png", "SettE.png"],
+      },
+    ],
+    arbol: ["Precision", "Resolve"],
+    mastery: [4, 2, 1, 3, 0, 3, 1, 2, 1, 2],
+    order: [
+      [1, 4, 5, 7, 9],
+      [2, 8, 10, 12, 13],
+      [3, 14, 15, 17, 18],
+      [6, 11, 16],
+    ],
+    rol: fighter,
+    tips: `
+        <li>
+            En <b>early</b> abusar mucho del rango y el daño que hace nuestra pasiva + la runa.
+        </li>
+        <li>
+            Guardarse la <b>E</b> o bien usarla precavidamente.
+        </li>
+        <li>
+             <b>Wardear</b> ya que somos muy vulnerables a enemigos que se lancen y no podamos usar la <b>E</b>.
+        </li>
+        <li>
+            <b>Roamear</b> mucho con la <b>W</b> para poder ayudar al team y sacar más gold.    
+        </li>
+        `,
+    counters: [
+      {
+        nombre: "Gangplank",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Jayce",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Irelia",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Sylas",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+    ],
+    easy: [
+      {
+        nombre: "Kled",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Riven",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Sett",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Renekton",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+    ],
+  },
+  {
+    nombre: "Kennen",
+    titulo: "El Ninja enano",
+    summoners: {
+      sum_1: "SummonerTeleport",
+      sum_2: "SummonerFlash",
+    },
+    items: [
+      "Sunderer.png",
+      "Black.png",
+      "Sterakk.png",
+      "WitEnds.png",
+      "DD.png",
+      "Tabis.png",
+    ],
+    priority: [
+      {
+        orden: ["Q", "W", "E"],
+        skill: [
+          "KennenShurikenHurlMissile1.png",
+          "KennenBringTheLight.png",
+          "KennenLightningRush.png",
+        ],
+      },
+    ],
+    arbol: ["Resolve", "Domination"],
+    mastery: [2, 1, 3, 1, 2, 0, 1, 2, 1, 2],
+    order: [
+      [1, 4, 5, 7, 9],
+      [2, 8, 10, 12, 13],
+      [3, 14, 15, 17, 18],
+      [6, 11, 16],
+    ],
+    rol: mage,
+    tips: `
+        <li>
+            En <b>early</b> abusar mucho del rango y el daño que hace nuestra pasiva + la runa.
+        </li>
+        <li>
+            Guardarse la <b>E</b> o bien usarla precavidamente.
+        </li>
+        <li>
+             <b>Wardear</b> ya que somos muy vulnerables a enemigos que se lancen y no podamos usar la <b>E</b>.
+        </li>
+        <li>
+            <b>Roamear</b> mucho con la <b>W</b> para poder ayudar al team y sacar más gold.    
+        </li>
+        `,
+    counters: [
+      {
+        nombre: "Gangplank",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Jayce",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Irelia",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Sylas",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+    ],
+    easy: [
+      {
+        nombre: "Kled",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Riven",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Sett",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+      {
+        nombre: "Renekton",
+        tips: `
+            <li>Empezar con <b>escudo</b> y pedir gank <b>early</b> ya que suelen pushear mucho.</li>
+            <li>Estar atento de cuando cambia a rango que es muy <b>vulnerable</b>.</li>
+             <li>En nivel <b>7/8/9</b> hay que empezar a pokearlo con la primera <b>Q</b>.</li>
+            <li>Rushear <b>tabis</b> o te caga a piñas.</li>
+            `,
+      },
+    ],
+  },
+  {
     nombre: "Gnar",
     titulo: "SHU SHU BANA",
     summoners: {
@@ -1708,97 +1954,22 @@ const champions = [
     ],
   },
 ];
+
 const runes = [
   {
     nombre: "Resolve",
-    maestrias: [
-      "",
-      "assets/Runas/Grasp.png",
-      "assets/Runas/After.png",
-      "assets/Runas/Guardian.png",
-      "assets/Runas/Demolish.png",
-      "assets/Runas/FontOfLife.png",
-      "assets/Runas/MirrorShell.png",
-      "assets/Runas/Conditioning.png",
-      "assets/Runas/SecondWind.png",
-      "assets/Runas/BonePlating.png",
-      "assets/Runas/Overgrowth.png",
-      "assets/Runas/Revitalize.png",
-      "assets/Runas/Unflinching.png",
-    ],
   },
   {
     nombre: "Inspiration",
-    maestrias: [
-      "",
-      "assets/Runas/PressTheAttack.png",
-      "assets/Runas/LethalTempoTemp.png",
-      "assets/Runas/FleetFootwork.png",
-      "assets/Runas/Hexflash.png",
-      "assets/Runas/Magical.png",
-      "assets/Runas/Timing.png",
-      "assets/Runas/Market.png",
-      "assets/Runas/Minion.png",
-      "assets/Runas/Biscuit.png",
-      "assets/Runas/Insight.png",
-      "assets/Runas/Velocity.png",
-      "assets/Runas/Tonic.png",
-    ],
   },
   {
     nombre: "Precision",
-    maestrias: [
-      "assets/Runas/PressTheAttack.png",
-      "assets/Runas/LethalTempoTemp.png",
-      "assets/Runas/FleetFootwork.png",
-      "assets/Runas/Conqueror.png",
-      "assets/Runas/Overheal.png",
-      "assets/Runas/Triumph.png",
-      "assets/Runas/PresenceOfMind.png",
-      "assets/Runas/LegendAlacrity.png",
-      "assets/Runas/LegendTenacity.png",
-      "assets/Runas/LegendBloodline.png",
-      "assets/Runas/CoupDeGrace.png",
-      "assets/Runas/CutDown.png",
-      "assets/Runas/LastStand.png",
-    ],
   },
   {
     nombre: "Sorcery",
-    maestrias: [
-      "",
-      "assets/Runas/Aery.png",
-      "assets/Runas/Comet.png",
-      "assets/Runas/PhaseRush.png",
-      "assets/Runas/Orb.png",
-      "assets/Runas/Manaflow.png",
-      "assets/Runas/Nimbus.png",
-      "assets/Runas/Transcendence.png",
-      "assets/Runas/Celerity.png",
-      "assets/Runas/Absolute.png",
-      "assets/Runas/Scorch.png",
-      "assets/Runas/Waterwalking.png",
-      "assets/Runas/GatheringStorm.png",
-    ],
   },
   {
     nombre: "Domination",
-    maestrias: [
-      "",
-      "assets/Runas/Grasp.png",
-      "assets/Runas/After.png",
-      "",
-      "assets/Runas/CheapShot.png",
-      "assets/Runas/TasteOfBlood.png",
-      "assets/Runas/SuddenImpact.png",
-      "assets/Runas/ZombieWard.png",
-      "assets/Runas/GhostPoro.png",
-      "assets/Runas/EyeballCollection.png",
-      "assets/Runas/RavenousHunter.png",
-      "assets/Runas/IngeniousHunter.png",
-      "assets/Runas/RelentlessHunter.png",
-      "assets/Runas/UltimateHunter.png",
-    ],
   },
 ];
 
