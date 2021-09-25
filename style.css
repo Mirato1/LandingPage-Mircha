@@ -968,8 +968,11 @@ progress::-moz-progress-bar {
 .rune {
   background-color: #3f3f6e33;
   border-radius: 50%;
-  /* filter: grayscale(70%);
-  opacity: 0.27; */
+}
+
+.rune img {
+  filter: grayscale(1);
+  opacity: 0.27;
 }
 
 .masterie__active img {
