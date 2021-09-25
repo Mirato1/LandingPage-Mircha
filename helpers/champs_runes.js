@@ -1594,10 +1594,10 @@ const champions = [
       sum_2: "SummonerFlash",
     },
     items: [
-      "Sunderer.png",
-      "Black.png",
+      "Goredrinker.png",
+      "Ruined.png",
       "Sterakk.png",
-      "WitEnds.png",
+      "Titanic.png",
       "DD.png",
       "Tabis.png",
     ],
@@ -1715,12 +1715,12 @@ const champions = [
       sum_2: "SummonerFlash",
     },
     items: [
-      "Sunderer.png",
-      "Black.png",
-      "Sterakk.png",
-      "WitEnds.png",
-      "DD.png",
-      "Tabis.png",
+      "Protobelt.png",
+      "Zhonyas.png",
+      "Cosmic.png",
+      "Morello.png",
+      "Deathcap.png",
+      "Sorcerer.png",
     ],
     priority: [
       {
@@ -1732,8 +1732,8 @@ const champions = [
         ],
       },
     ],
-    arbol: ["Resolve", "Domination"],
-    mastery: [2, 1, 3, 1, 2, 0, 1, 2, 1, 2],
+    arbol: ["Sorcery", "Domination"],
+    mastery: [2, 3, 1, 1, 2, 0, 1, 2, 1, 2],
     order: [
       [1, 4, 5, 7, 9],
       [2, 8, 10, 12, 13],

@@ -391,28 +391,6 @@ input:checked + .slider:before {
   transition: all 1s;
 }
 
-.modal__content {
-  position: relative;
-}
-
-.modal__close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-}
-
-.modal__close svg {
-  width: 3rem;
-  height: 3rem;
-  fill: var(--first-color);
-}
-
-/* | Que empiece con la palabra trabajo */
-.modal[id|="trabajo"]:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 /* Barra de Progreso */
 progress {
   width: 100%;
@@ -1157,72 +1135,6 @@ progress::-moz-progress-bar {
   background-color: rgba(37, 37, 75, 0.5);
 }
 
-/****** Cartas Proyecto *********/
-.proyect__card {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-.proyect__card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.proyect__card--info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  background-color: var(--first-alpha-color);
-  color: var(--white-color);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.proyect__card--info > div {
-  padding: 1rem;
-  border: thin solid var(--white-color);
-  width: 100%;
-  height: 100%;
-}
-
-.proyect__card:hover .proyect__card--info {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Modal */
-
-.modal__proyect {
-  padding: 1rem;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white-color);
-}
-
-.modal__proyect h3 {
-  padding: 0.5rem 0;
-  margin: 1rem auto;
-  color: var(--title-color);
-  border-bottom: medium solid var(--first-color);
-}
-
-.modal__proyect--details {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-auto-rows: 2rem;
-  align-items: center;
-}
-
-.modal__proyect--details b {
-  color: var(--first-color);
-}
-
 /* Footer */
 .footer {
   margin-bottom: var(--header-height);
@@ -1740,28 +1652,6 @@ details[open] summary ~ * {
     height: 40px;
   }
 
-  /******************* STATS ESTADÍSTICAS ************************/
-
-  /************* MODAL ***********/
-  .modal__proyect {
-    flex-direction: row;
-    max-width: 750px;
-  }
-
-  .modal__proyect--info {
-    margin-left: 1rem;
-    align-self: center;
-  }
-
-  .proyect > .container {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  .proyect .section__title {
-    grid-column: span 2;
-  }
-
   /* Tooltip */
   .tooltip__text {
     width: 300px;
@@ -1855,14 +1745,6 @@ details[open] summary ~ * {
   }
   .champions .section__title {
     grid-column: span 4;
-  }
-
-  .proyect > .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .proyect .section__title {
-    grid-column: span 3;
   }
 
   /***********Runes Section ************/
