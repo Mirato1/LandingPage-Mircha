@@ -5,7 +5,7 @@ export function cambiarArbol(campeon) {
   $champName.innerHTML = `Runas de ${campeon.nombre}`;
 
   for (let i = 0; i < $runeTree.length; i++) {
-    $runeTree[i].firstElementChild.lastElementChild.setAttribute(
+    $runeTree[i].firstElementChild.firstElementChild.setAttribute(
       "src",
       `assets/Runas/${campeon.arbol[i]}.png`
     );

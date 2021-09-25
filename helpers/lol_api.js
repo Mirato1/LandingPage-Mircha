@@ -12,7 +12,7 @@ const CHAMPS =
   SUMMAPI =
     "https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/ZdBOFiDYRWWGbjpmGts8rgP2ZsZl8MNRzvpujGXOHr6H",
   // KEY
-  APIKEY = "RGAPI-d5e69ae1-f20e-4bee-b190-862e5f81faa3",
+  APIKEY = "RGAPI-c169a6c9-070d-49dd-b061-8d426fff9488",
   TOTALAPI = `${SUMMAPI}?api_key=${APIKEY}`,
   //Runas
   RUNESKEY =

@@ -271,57 +271,191 @@
 
                                         <div class="primary__tree--keystone">
                                             <div class="masteries keystone__row">
-                                                <div class="masterie keystone fake">
+                                                <div class="masterie keystone fake tooltip">
                                                     <img src="assets/Runas/PressTheAttack.png" alt=" PressTheAttack">
+                                                    <span class="tooltip__text left">
+                                                        <h4>Press the Attack</h4>
+                                                        <p>
+                                                            Hitting an enemy champion with 3 consecutive basic attacks
+                                                            deals 40 - 180 bonus <lol-uikit-tooltipped-keyword
+                                                                key='LinkTooltip_Description_AdaptiveDmg'>
+                                                                <font color='#48C4B7'>adaptive damage</font>
+                                                            </lol-uikit-tooltipped-keyword> (based on level) and makes
+                                                            them vulnerable, increasing the damage they take by 8 - 12%
+                                                            from all sources for 6s.
+                                                        </p>
+                                                    </span>
                                                 </div>
-                                                <div class="masterie keystone">
+                                                <div class="masterie keystone tooltip">
                                                     <img src="assets/Runas/LethalTempoTemp.png" alt="LethalTempoTemp">
+                                                    <span class="tooltip__text left">
+                                                        <h4>Lethal Tempo</h4>
+                                                        <p>
+                                                            1.5s after damaging a champion gain 40 - 110% Attack Speed
+                                                            (based on level) for 3s. Attacking a champion extends the
+                                                            effect to 6s.<br><br>Cooldown: 6s<br><br>Lethal Tempo allows
+                                                            you to temporarily exceed the attack speed limit.
+                                                        </p>
+                                                    </span>
                                                 </div>
-                                                <div class="masterie keystone">
+                                                <div class="masterie keystone tooltip">
                                                     <img src="assets/Runas/FleetFootwork.png" alt="FleetFootwork">
+                                                    <span class="tooltip__text ">
+                                                        <h4>Fleet Footwork</h4>
+                                                        <p>
+                                                            Attacking and moving builds Energy stacks. At 100 stacks,
+                                                            your next attack is Energized<br><br>Energized attacks heal
+                                                            you for 10 - 100 (+0.4 Bonus AD, +0.3 AP) and grant <speed>
+                                                                20% Move Speed</speed> for 1s.<br><br>Healing from
+                                                            minions is
+                                                            10% effective for Ranged Champions, and 20% effective for
+                                                            Melee Champions.
+                                                        </p>
+                                                    </span>
                                                 </div>
-                                                <div class="masterie keystone masterie__active">
+                                                <div class="masterie keystone masterie__active tooltip">
                                                     <img src="assets/Runas/Conqueror.png" alt="Conqueror">
+                                                    <span class="tooltip__text">
+                                                        <h4>Conqueror</h4>
+                                                        <p>
+                                                            Basic attacks or spells that deal damage to an enemy
+                                                            champion grant 2 stacks of Conqueror for 6s, gaining 2-5
+                                                            <lol-uikit-tooltipped-keyword
+                                                                key='LinkTooltip_Description_Adaptive'>
+                                                                <font color='#48C4B7'>Adaptive Force</font>
+                                                            </lol-uikit-tooltipped-keyword> per stack. Stacks up to 12
+                                                            times. Ranged champions gain only 1 stack per basic
+                                                            attack.<br><br>When fully stacked, heal for 9% of the damage
+                                                            you deal to champions (6% for ranged champions).
+                                                        </p>
+                                                    </span>
                                                 </div>
                                             </div>
                                             <div class="runes__row">
                                                 <div class="masteries">
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/Overheal.png" alt="Overheal">
+                                                        <span class="tooltip__text left">
+                                                            <h4>Overheal</h4>
+                                                            <p>
+                                                                Excess healing on you becomes a shield, for up to 10
+                                                                <scaleHealth>(+10% Max Health)</scaleHealth>
+                                                                .<br><br>Shield is
+                                                                built up from 20 to 100% of excess healing from yourself
+                                                                or any ally.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie masterie__active">
+                                                    <div class="masterie masterie__active tooltip">
                                                         <img src="assets/Runas/Triumph.png" alt="Triumph">
+                                                        <span class="tooltip__text">
+                                                            <h4>Triumph</h4>
+                                                            <p>
+                                                                Takedowns restore 12% of your missing health and grant
+                                                                an additional 20 gold. <br><br>
+                                                                <hr><br><i>'The most dangerous game brings the greatest
+                                                                    glory.' <br>—Noxian Reckoner</i>
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets//Runas/PresenceOfMind.png"
                                                             alt="PresenceOfMind">
+                                                        <span class="tooltip__text">
+                                                            <h4>Presence of Mind</h4>
+                                                            <p>
+                                                                Damaging an enemy champion increases your mana
+                                                                regeneration by @RegenAmount@ (80% for ranged) mana per
+                                                                second for 4
+                                                                seconds. All energy users gain 1.5 energy per second,
+                                                                instead.<br><br>Takedowns restore 15% of your maximum
+                                                                mana or
+                                                                energy.
+                                                            </p>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="runes__row">
                                                 <div class="masteries">
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/LegendAlacrity.png" alt="LegendAlacrity">
+                                                        <span class="tooltip__text left">
+                                                            <h4>Legend: Alacrity</h4>
+                                                            <p>
+                                                                Gain 3% attack speed plus an additional 1.5% for every
+                                                                <i>Legend</i> stack (<statGood>max 10 stacks</statGood>
+                                                                ).<br><br>Earn progress toward <i>Legend</i> stacks for
+                                                                every champion takedown, epic monster takedown, large
+                                                                monster
+                                                                kill, and minion kill.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie masterie__active">
+                                                    <div class="masterie masterie__active tooltip">
                                                         <img src="assets/Runas/LegendTenacity.png" alt="LegendTenacity">
+                                                        <span class="tooltip__text">
+                                                            <h4>Legend: Tenacity</h4>
+                                                            <p>
+                                                                Gain 5% tenacity plus an additional 2.5% for every
+                                                                <i>Legend</i> stack (<statGood>max 10 stacks</statGood>
+                                                                ).<br><br>Earn
+                                                                progress toward <i>Legend</i> stacks for every champion
+                                                                takedown, epic monster takedown, large monster kill, and
+                                                                minion
+                                                                kill.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/LegendBloodline.png"
                                                             alt="LegendBloodline">
+                                                        <span class="tooltip__text">
+                                                            <h4>Legend: Bloodline</h4>
+                                                            <p>
+                                                                Gain 0.6% lifesteal for every <i>Legend</i> stack (
+                                                                <statGood>max 15 stacks</statGood>).<br><br>Earn
+                                                                progress toward
+                                                                <i>Legend</i> stacks for every champion takedown, epic
+                                                                monster takedown, large monster kill, and minion kill.
+                                                            </p>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="runes__row">
                                                 <div class="masteries">
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/CoupDeGrace.png" alt="CoupDeGrace">
+                                                        <span class="tooltip__text left">
+                                                            <h4>CoupDeGrace</h4>
+                                                            <p>
+                                                                Deal 8% more damage to champions who have less than 40%
+                                                                health.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/CutDown.png" alt="CutDown">
+                                                        <span class="tooltip__text">
+                                                            <h4>Deathbringer Stance</h4>
+                                                            <p>
+                                                                Deal 5% to 15% more damage to champions, based on how
+                                                                much more max health they have than you.<br><br>
+                                                                <rules>Bonus damage scales up linearly against enemies
+                                                                    with 10% to 100% more max health than you.</rules>
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie masterie__active">
+                                                    <div class="masterie masterie__active tooltip">
                                                         <img src="assets/Runas/LastStand.png" alt="LastStand">
+                                                        <span class="tooltip__text">
+                                                            <h4>Last Stand</h4>
+                                                            <p>
+                                                                Deal 5% - 11% increased damage to champions while you
+                                                                are below 60% health. Max damage gained at 30% health.
+                                                            </p>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -338,44 +472,139 @@
                                             </div>
                                             <div class="runes__row">
                                                 <div class="masteries shard">
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/Demolish.png" alt="Demolish">
+                                                        <span class="tooltip__text">
+                                                            <h4>Demolish</h4>
+                                                            <p>
+                                                                Charge up a powerful attack against a tower over 3s,
+                                                                while within 600 range of it. The charged attack deals
+                                                                100 (+35% of
+                                                                your max health) bonus physical damage.
+                                                                <br><br>Cooldown: 45s
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/FontOfLife.png" alt="FontOfLife">
+                                                        <span class="tooltip__text">
+                                                            <h4>Font of Life</h4>
+                                                            <p>
+                                                                Impairing the movement of an enemy champion marks them
+                                                                for 4s.<br><br>Ally champions who attack marked enemies
+                                                                heal for
+                                                                5 + 1% of your max health over 2s.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/MirrorShell.png" alt="MirrorShell">
+                                                        <span class="tooltip__text right">
+                                                            <h4>Shield Bash</h4>
+                                                            <p>
+                                                                While shielded, gain <scaleLevel>1 - 10</scaleLevel>
+                                                                Armor and Magic Resist based on Level.<br><br>Whenever
+                                                                you gain a
+                                                                new shield, your next basic attack against a champion
+                                                                deals <scaleLevel>5 - 30</scaleLevel>
+                                                                <scaleHealth>(+1.5% Bonus Health)</scaleHealth>
+                                                                <scaleMana>(+8.5% New Shield Amount)</scaleMana> bonus
+                                                                <lol-uikit-tooltipped-keyword
+                                                                    key='LinkTooltip_Description_Adaptive'>
+                                                                    <font color='#48C4B7'>adaptive</font>
+                                                                </lol-uikit-tooltipped-keyword> damage.<br><br>You have
+                                                                up to 2s after the shield expires to use this effect.
+                                                            </p>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="runes__row">
                                                 <div class="masteries shard">
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/Conditioning.png" alt="Conditioning">
+                                                        <span class="tooltip__text">
+                                                            <h4>Conditioning</h4>
+                                                            <p>
+                                                                After 12 min gain +9 Armor and +9 Magic Resist and
+                                                                increase your Armor and Magic Resist by 5%.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/SecondWind.png" alt="SecondWind">
+                                                        <span class="tooltip__text">
+                                                            <h4>Second Wind</h4>
+                                                            <p>
+                                                                After taking damage from an enemy champion, heal for 4%
+                                                                of your missing health +6 over 10s.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie masterie__active">
+                                                    <div class="masterie tooltip masterie__active">
                                                         <img src="assets/Runas/BonePlating.png" alt="BonePlating">
+                                                        <span class="tooltip__text right">
+                                                            <h4>Bone Plating</h4>
+                                                            <p>
+                                                                After taking damage from an enemy champion, the next 3
+                                                                spells or attacks you receive from them deal 30-60 less
+                                                                damage.<br><br><br>Duration: 1.5s<br>Cooldown: 45s
+                                                            </p>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="runes__row">
                                                 <div class="masteries shard">
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/Overgrowth.png" alt="Overgrowth">
+                                                        <span class="tooltip__text">
+                                                            <h4>Overgrowth</h4>
+                                                            <p>
+                                                                Absorb life essence from monsters or enemy minions that
+                                                                die near you, permanently gaining 3 maximum health for
+                                                                every
+                                                                8.<br><br>When you've absorbed 120 monsters or enemy
+                                                                minions, gain an additional 3.5% maximum health.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie masterie__active">
+                                                    <div class="masterie tooltip masterie__active">
                                                         <img src="assets/Runas/Revitalize.png" alt="Revitalize">
+                                                        <span class="tooltip__text">
+                                                            <h4>Revitalize</h4>
+                                                            <p>
+                                                                Gain 5% Heal and Shield Power.<br><br>Heals and shields
+                                                                you cast or receive are 10% stronger on targets below
+                                                                40%
+                                                                health.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie">
+                                                    <div class="masterie tooltip">
                                                         <img src="assets/Runas/Unflinching.png" alt="Unflinching">
+                                                        <span class="tooltip__text right">
+                                                            <h4>Unflinching</h4>
+                                                            <p>
+                                                                Gain 10% Tenacity and 10% Slow Resist.
+                                                                These values increase by up to an additional 20%
+                                                                Tenacity and 20% Slow Resist based on missing health.
+                                                                Maximum value
+                                                                achieved at 30% health.
+                                                            </p>
+                                                        </span>
                                                     </div>
-                                                    <div class="masterie keystone fake-none">
+                                                    <div class="masterie tooltip fake-none">
                                                         <img src="assets/Runas/UltimateHunter.png"
                                                             alt=" UltimateHunter.png">
+                                                        <span class="tooltip__text right">
+                                                            <h4>Deathbringer Stance</h4>
+                                                            <p>Periodically, Aatrox's next basic attack deals bonus
+                                                                <physicalDamage>physical
+                                                                    damage</physicalDamage> and heals him,
+                                                                based on the target's max health.
+                                                            </p>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -383,49 +612,85 @@
                                             <div class="runes__row">
                                                 <div class="runes__row">
                                                     <div class="masteries shard">
-                                                        <div class="rune masterie__active">
+                                                        <div class="rune tooltip masterie__active">
                                                             <img src="assets/Runas/StatModsAdaptiveForceIcon.png"
                                                                 alt="StatModsAdaptiveForceIcon">
+                                                            <span class="tooltip__text">
+                                                                <h4>Offense</h4>
+                                                                <p>+9 Adaptive Force (5.4 AD or 9AP)</p>
+                                                            </span>
                                                         </div>
-                                                        <div class="rune">
+                                                        <div class="rune tooltip">
                                                             <img src="assets/Runas/StatModsAttackSpeedIcon.png"
                                                                 alt="StatModsAttackSpeedIcon">
+                                                            <span class="tooltip__text">
+                                                                <h4>Offense</h4>
+                                                                <p>+10% Attack Speed</p>
+                                                            </span>
                                                         </div>
-                                                        <div class="rune">
+                                                        <div class="rune tooltip">
                                                             <img src="assets/Runas/StatModsCDRScalingIcon.png"
                                                                 alt="StatModsCDRScalingIcon">
+                                                            <span class="tooltip__text right">
+                                                                <h4>Offense</h4>
+                                                                <p>+8 Ability Haste</p>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="runes__row">
                                                     <div class="masteries shard">
-                                                        <div class="rune masterie__active">
+                                                        <div class="rune tooltip masterie__active">
                                                             <img src="assets/Runas/StatModsAdaptiveForceIcon.png"
                                                                 alt="StatModsAdaptiveForceIcon">
+                                                            <span class="tooltip__text">
+                                                                <h4>Offense</h4>
+                                                                <p>+9 Adaptive Force (5.4 AD or 9AP)</p>
+                                                            </span>
                                                         </div>
-                                                        <div class="rune">
+                                                        <div class="rune tooltip">
                                                             <img src="assets/Runas/StatModsArmorIcon.png"
                                                                 alt="StatModsArmorIcon">
+                                                            <span class="tooltip__text">
+                                                                <h4>Defense</h4>
+                                                                <p>+6 Armor</p>
+                                                            </span>
                                                         </div>
-                                                        <div class="rune">
+                                                        <div class="rune tooltip">
                                                             <img src="assets/Runas/StatModsMagicResIcon.png"
                                                                 alt="StatModsMagicResIcon">
+                                                            <span class="tooltip__text right">
+                                                                <h4>Defense</h4>
+                                                                <p>+8 Magic Resist</p>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="runes__row">
                                                     <div class="masteries shard">
-                                                        <div class="rune">
+                                                        <div class="rune tooltip">
                                                             <img src="assets/Runas/StatModsHealthScalingIcon.png"
                                                                 alt="StatModsHealthScalingIcon">
+                                                            <span class="tooltip__text">
+                                                                <h4>Defense</h4>
+                                                                <p>+15-90 Health (based on level)</p>
+                                                            </span>
                                                         </div>
-                                                        <div class="rune masterie__active">
+                                                        <div class="rune tooltip masterie__active">
                                                             <img src="assets/Runas/StatModsArmorIcon.png"
                                                                 alt="StatModsArmorIcon">
+                                                            <span class="tooltip__text">
+                                                                <h4>Defense</h4>
+                                                                <p>+6 Armor</p>
+                                                            </span>
                                                         </div>
-                                                        <div class="rune">
+                                                        <div class="rune tooltip">
                                                             <img src="assets/Runas/StatModsMagicResIcon.png"
                                                                 alt="StatModsMagicResIcon">
+                                                            <span class="tooltip__text right">
+                                                                <h4>Defense</h4>
+                                                                <p>+8 Magic Resist</p>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -441,25 +706,23 @@
                                         <div class="spells__container">
                                             <div class="tooltip">
                                                 <img src="assets/SummonerTeleport.png" alt="Teleport">
-                                                <span class="tooltip__text">
-                                                    <h4>Deathbringer Stance</h4>
-                                                    <p>Periodically, Aatrox's next basic attack deals bonus
-                                                        <physicalDamage>
-                                                            physical
-                                                            damage</physicalDamage> and heals him,
-                                                        based on the target's max health.
+                                                <span class="tooltip__text left">
+                                                    <h4>Teleport</h4>
+                                                    <p>
+                                                        After channeling for 4 seconds, teleports your champion to
+                                                        target allied structure, minion, or ward and grants a Move
+                                                        Speed boost. The cooldown of Teleport scales from 420-210
+                                                        seconds depending on champion level.
                                                     </p>
                                                 </span>
                                             </div>
                                             <div class="tooltip">
                                                 <img src="assets/SummonerFlash.png" alt="Flash">
-                                                <span class="tooltip__text">
-                                                    <h4>Deathbringer Stance</h4>
-                                                    <p>Periodically, Aatrox's next basic attack deals bonus
-                                                        <physicalDamage>
-                                                            physical
-                                                            damage</physicalDamage> and heals him,
-                                                        based on the target's max health.
+                                                <span class="tooltip__text left">
+                                                    <h4>Flash</h4>
+                                                    <p>
+                                                        Teleports your champion a short distance toward your cursor's
+                                                        location.
                                                     </p>
                                                 </span>
                                             </div>

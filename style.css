@@ -685,11 +685,11 @@ progress::-moz-progress-bar {
 }
 
 .champion__card {
-  margin: 0.5rem auto;
   padding: 1rem;
   width: 100%;
   text-align: center;
   transition: box-shadow 0.5s ease-in-out;
+  animation: fadein 2s;
 }
 
 .champion__card h3 {
@@ -783,7 +783,6 @@ progress::-moz-progress-bar {
   height: 12px;
   border-radius: 50%;
   background-color: var(--second-color);
-  /* color: var(--black-color); */
   font-size: 10px;
   font-weight: 700;
   pointer-events: none;
@@ -961,30 +960,35 @@ progress::-moz-progress-bar {
 
 .masterie img {
   width: 100%;
-}
-
-.masterie {
   filter: grayscale(70%);
   opacity: 0.27;
+  animation: fadeInactive 2s forwards;
 }
 
 .rune {
-  background-color: #3f3f6e;
+  background-color: #3f3f6e33;
   border-radius: 50%;
-  filter: grayscale(70%);
-  opacity: 0.27;
+  /* filter: grayscale(70%);
+  opacity: 0.27; */
 }
 
-.masterie__active {
-  border-width: 1px;
-  border: 1px solid var(--first-color);
+.masterie__active img {
   border-radius: 50%;
-  background-color: #11112a;
+  animation: fadein 2s forwards;
   filter: grayscale(0);
   opacity: 1;
 }
 
-.masterie__active.keystone {
+.rune.masterie__active {
+  border: 1px solid var(--first-color);
+  border-radius: 50%;
+  background-color: #11112a;
+  animation: fadein 2s forwards;
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.masterie__active.keystone img {
   border: none;
   background-color: transparent;
   filter: grayscale(0);
@@ -1554,7 +1558,6 @@ details[open] summary ~ * {
 }
 
 /* Tooltip */
-/* Tooltip */
 
 .tooltip {
   position: relative;
@@ -1580,13 +1583,21 @@ details[open] summary ~ * {
   top: calc(100% + 10px);
   transform-origin: top center;
   padding: 10px 18px;
-  width: 190px;
+  width: 160px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 11px;
   background-color: #0f0f2e;
   box-shadow: var(--box-shadow);
   color: var(--hero-text-color);
   transform: translate(-50%, 5px) scale(0.5);
+}
+
+.tooltip__text.right {
+  left: -130%;
+}
+
+.tooltip__text.left {
+  left: 150%;
 }
 
 .tooltip:hover .tooltip__text {
@@ -1754,6 +1765,13 @@ details[open] summary ~ * {
   /* Tooltip */
   .tooltip__text {
     width: 300px;
+    font-size: 12.5px;
+  }
+  .tooltip__text.left {
+    left: calc(100% + 70px);
+  }
+  .tooltip__text.right {
+    left: 50%;
   }
 }
 
@@ -1923,4 +1941,21 @@ details[open] summary ~ * {
 /* Scroll Espía */
 .spy__on[data__scroll--spy] {
   color: var(--text-color);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInactive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.27;
+  }
 }

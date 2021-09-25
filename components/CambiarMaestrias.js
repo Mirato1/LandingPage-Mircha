@@ -21,6 +21,7 @@ export function cambiarMaestrias(campeon, runes) {
       segundoArbol.map((el) => {
         totalSeg.push(el.runes);
       });
+
       let primerRuna = [],
         segundaRuna = [];
 
@@ -43,6 +44,10 @@ export function cambiarMaestrias(campeon, runes) {
             "src",
             `${api.KEYSTONE}${primerRuna[i].icon}`
           );
+          $primerArbol[i].lastElementChild.firstElementChild.textContent =
+            primerRuna[i].name;
+          $primerArbol[i].lastElementChild.lastElementChild.innerHTML =
+            primerRuna[i].longDesc;
         } else if (
           $primerArbol[0].classList.contains("fake") &&
           primerRuna.length <= 12
@@ -56,6 +61,10 @@ export function cambiarMaestrias(campeon, runes) {
               "src",
               `${api.KEYSTONE}${primerRuna[i].icon}`
             );
+            $primerArbol[i + 1].lastElementChild.firstElementChild.textContent =
+              primerRuna[i].name;
+            $primerArbol[i + 1].lastElementChild.lastElementChild.innerHTML =
+              primerRuna[i].longDesc;
           }
         }
       }
@@ -66,6 +75,10 @@ export function cambiarMaestrias(campeon, runes) {
             "src",
             `${api.KEYSTONE}${segundaRuna[i + 4].icon}`
           );
+          $secArbol[i].lastElementChild.firstElementChild.textContent =
+            segundaRuna[i + 4].name;
+          $secArbol[i].lastElementChild.lastElementChild.innerHTML =
+            segundaRuna[i + 4].longDesc;
         } else if (
           segundaRuna.length < 13 &&
           $secArbol[9].classList.contains("fake-none")
@@ -77,6 +90,10 @@ export function cambiarMaestrias(campeon, runes) {
               "src",
               `${api.KEYSTONE}${segundaRuna[i + 3].icon}`
             );
+            $secArbol[i].lastElementChild.firstElementChild.textContent =
+              segundaRuna[i + 3].name;
+            $secArbol[i].lastElementChild.lastElementChild.innerHTML =
+              segundaRuna[i + 3].longDesc;
           }
         } else if (
           segundaRuna.length < 13 &&
@@ -87,6 +104,10 @@ export function cambiarMaestrias(campeon, runes) {
             "src",
             `${api.KEYSTONE}${segundaRuna[i + 3].icon}`
           );
+          $secArbol[i].lastElementChild.firstElementChild.textContent =
+            segundaRuna[i + 3].name;
+          $secArbol[i].lastElementChild.lastElementChild.innerHTML =
+            segundaRuna[i + 3].longDesc;
         }
       }
     },
