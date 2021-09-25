@@ -986,9 +986,6 @@ progress::-moz-progress-bar {
   border: 1px solid var(--first-color);
   border-radius: 50%;
   background-color: #11112a;
-  animation: fadein 2s forwards;
-  filter: grayscale(0);
-  opacity: 1;
 }
 
 .masterie__active.keystone img {
