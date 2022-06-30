@@ -1,1843 +1,1827 @@
 /******* Propiedades Personalizadas *******/
 :root {
-  --first-color: #cf4444;
-  --first-alpha-color: rgba(207, 68, 68, 0.75);
-  --first-color-hover: #cb2f2f;
-  --second-color: #eaeaea;
-  --third-color: #501464;
-  --white-color: #fff;
-  --gray-light: #f3f3f3;
-  --gray-color: #ccc;
-  --gray-dark-color: #666;
-  --black-color: #000;
-  --link-color: #f6c55d;
-  --title-color: #333;
-  --text-color: #222;
-  --white-alpha-color: rgba(255, 255, 255, 0.5);
-  --black-alpha-color: rgba(0, 0, 0, 0.2);
-  --border-first-color: #414165;
-  --gray-background: #c2c2c2;
-  --white-gray: #eaeaea;
-  --font: "Raleway", sans-serif;
-  --max-width: 1200px;
-  --header-height: 4rem;
-  --box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
-  --hero-image: url("assets/Aatrox-wall-2.jpg");
-  --hero-text-color: #fff;
-  --drop-shadow: drop-shadow(0px 6px 20px #27f9ff);
+	--first-color: #cf4444;
+	--first-alpha-color: rgba(207, 68, 68, 0.75);
+	--first-color-hover: #cb2f2f;
+	--second-color: #eaeaea;
+	--third-color: #501464;
+	--white-color: #fff;
+	--gray-light: #f3f3f3;
+	--gray-color: #ccc;
+	--gray-dark-color: #666;
+	--black-color: #000;
+	--link-color: #f6c55d;
+	--title-color: #333;
+	--text-color: #222;
+	--white-alpha-color: rgba(255, 255, 255, 0.5);
+	--black-alpha-color: rgba(0, 0, 0, 0.2);
+	--border-first-color: #414165;
+	--gray-background: #c2c2c2;
+	--white-gray: #eaeaea;
+	--font: 'Raleway', sans-serif;
+	--max-width: 1200px;
+	--header-height: 4rem;
+	--box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+	--hero-image: url('assets/Aatrox-wall-2.jpg');
+	--hero-text-color: #fff;
+	--drop-shadow: drop-shadow(0px 6px 20px #27f9ff);
 }
 
 :root.dark-mode {
-  --second-color: #313160;
-  --gray-color: #383864;
-  --gray-background: #11112a;
-  --white-gray: #191937;
-  --white-color: #1a1a1a;
-  --gray-light: #2f2f2f;
-  --text-color: #eee;
-  --title-color: #f3f3f3;
-  --box-shadow: 0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.25);
-  --hero-image: url("assets/Aatrox_wall.jpg");
-  --black-alpha-color: rgba(0, 0, 0, 0.5);
-  --white-alpha-color: rgba(0, 0, 0, 0.5);
-  --drop-shadow: drop-shadow(0px 6px 20px #faa75b);
+	--second-color: #313160;
+	--gray-color: #383864;
+	--gray-background: #11112a;
+	--white-gray: #191937;
+	--white-color: #1a1a1a;
+	--gray-light: #2f2f2f;
+	--text-color: #eee;
+	--title-color: #f3f3f3;
+	--box-shadow: 0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.25);
+	--hero-image: url('assets/Aatrox_wall.jpg');
+	--black-alpha-color: rgba(0, 0, 0, 0.5);
+	--white-alpha-color: rgba(0, 0, 0, 0.5);
+	--drop-shadow: drop-shadow(0px 6px 20px #faa75b);
 }
 
 /****************************************** RESET  ***************************************/
 
 html {
-  box-sizing: border-box;
-  font-family: var(--font);
-  font-size: 16px;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	font-family: var(--font);
+	font-size: 16px;
+	scroll-behavior: smooth;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  margin: 0;
-  overflow-x: hidden;
-  color: var(--text-color);
-  background-color: var(--white-color);
+	margin: 0;
+	overflow-x: hidden;
+	color: var(--text-color);
+	background-color: var(--white-color);
 }
 
 a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: all 0.5s ease-out;
+	color: var(--link-color);
+	text-decoration: none;
+	transition: all 0.5s ease-out;
 }
 
 h1 {
-  margin: 0;
-  font-size: 3rem;
-  color: var(--first-color);
+	margin: 0;
+	font-size: 3rem;
+	color: var(--first-color);
 }
 
 h2 {
-  margin: 0;
-  font-size: 1.5rem;
+	margin: 0;
+	font-size: 1.5rem;
 }
 
 h3 {
-  margin: 0;
-  font-size: 1.25rem;
+	margin: 0;
+	font-size: 1.25rem;
 }
 
 h4 {
-  margin: 0;
-  font-size: 1rem;
+	margin: 0;
+	font-size: 1rem;
 }
 
 h5 {
-  margin: 0;
-  font-size: 0.85rem;
+	margin: 0;
+	font-size: 0.85rem;
 }
 
 h6 {
-  margin: 0;
-  font-size: 0.7rem;
+	margin: 0;
+	font-size: 0.7rem;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 p {
-  line-height: 1.6;
+	line-height: 1.6;
 }
 
 main {
-  background-color: var(--white-color);
+	background-color: var(--white-color);
 }
 
 ::selection {
-  background-color: var(--first-color);
-  color: white;
+	background-color: var(--first-color);
+	color: white;
 }
 
 /******* Contact Form *******/
 .contact__form {
-  margin: 2rem auto;
-  padding: 1rem;
-  max-width: 800px;
+	margin: 2rem auto;
+	padding: 1rem;
+	max-width: 800px;
 }
 
 .contact__form > * {
-  padding: 0.5rem;
-  margin: 1rem auto;
-  display: block;
-  width: 100%;
+	padding: 0.5rem;
+	margin: 1rem auto;
+	display: block;
+	width: 100%;
 }
 
 .contact__form input,
 .contact__form textarea {
-  font-size: 0.85rem;
-  font-family: var(--font);
-  color: var(--text-color);
-  background-color: var(--white-color);
-  outline: none;
-  border: none;
-  transition: border-bottom 0.3s ease-in-out;
+	font-size: 0.85rem;
+	font-family: var(--font);
+	color: var(--text-color);
+	background-color: var(--white-color);
+	outline: none;
+	border: none;
+	transition: border-bottom 0.3s ease-in-out;
 }
 
 .contact__form input {
-  border-bottom: thin solid var(--gray-dark-color);
+	border-bottom: thin solid var(--gray-dark-color);
 }
 
 .contact__form input:focus {
-  border-bottom: thin solid var(--first-color);
+	border-bottom: thin solid var(--first-color);
 }
 
 .contact__form textarea {
-  border-bottom: thin solid var(--gray-dark-color);
-  resize: none;
+	border-bottom: thin solid var(--gray-dark-color);
+	resize: none;
 }
 
 .contact__form textarea:focus {
-  border-bottom: thin solid var(--first-color);
+	border-bottom: thin solid var(--first-color);
 }
 
-.contact__form input[type="submit"] {
-  margin-top: 0;
-  cursor: pointer;
-  transition: all 0.5s ease-out;
+.contact__form input[type='submit'] {
+	margin-top: 0;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
 }
 
 .contact__form *::placeholder {
-  color: var(--gray-dark-color);
+	color: var(--gray-dark-color);
 }
 
 .contact__form--response {
-  padding: 1rem;
-  width: 400px;
-  text-align: center;
-  background-color: var(--white-color);
+	padding: 1rem;
+	width: 400px;
+	text-align: center;
+	background-color: var(--white-color);
 }
 
 .contact__form--response svg {
-  margin-top: 2rem;
-  width: 4rem;
-  height: 4rem;
-  fill: var(--first-color);
+	margin-top: 2rem;
+	width: 4rem;
+	height: 4rem;
+	fill: var(--first-color);
 }
 
 .modal#gracias:target {
-  opacity: 1;
-  cursor: pointer;
+	opacity: 1;
+	cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
-  .contact__form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem;
-  }
+	.contact__form {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1rem;
+	}
 
-  .contact__form input,
-  .contact__form textarea {
-    font-size: 1rem;
-  }
+	.contact__form input,
+	.contact__form textarea {
+		font-size: 1rem;
+	}
 
-  .contact__form textarea,
-  .contact__form--loader {
-    grid-column: span 2;
-  }
+	.contact__form textarea,
+	.contact__form--loader {
+		grid-column: span 2;
+	}
 
-  .contact__form input[type="submit"] {
-    background-color: var(--first-color);
-    margin-left: 0;
-    color: var(--hero-text-color);
-  }
+	.contact__form input[type='submit'] {
+		background-color: var(--first-color);
+		margin-left: 0;
+		color: var(--hero-text-color);
+	}
 }
 /******* Hero Image *******/
 .hero__image {
-  background-image: var(--hero-image);
-  background-repeat: no-repeat;
-  background-position: 60%;
-  background-size: cover;
-  background-attachment: var(--hero-attachment);
-  transition: background-image 0.4s ease;
+	background-image: var(--hero-image);
+	background-repeat: no-repeat;
+	background-position: 60%;
+	background-size: cover;
+	background-attachment: var(--hero-attachment);
+	transition: background-image 0.4s ease;
 }
 
 .hero__image--title b {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 .hero__image--opacity {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--hero-opacity-color);
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--hero-opacity-color);
 }
 
 .hero__image--title {
-  font-size: 7vw;
-  color: var(--hero-text-color);
+	font-size: 7vw;
+	color: var(--hero-text-color);
 }
 
 /***** Menú *****/
 .header__menu-btn {
-  border: 0;
-  cursor: pointer;
+	border: 0;
+	cursor: pointer;
 }
 
 .hamburger {
-  padding: 0;
+	padding: 0;
 }
 
 .hamburger-inner,
 .hamburger-inner:after,
 .hamburger-inner:before {
-  background-color: var(--first-color) !important;
+	background-color: var(--first-color) !important;
 }
 
 /* Dark Theme Button */
 .switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
+	display: inline-block;
+	height: 34px;
+	position: relative;
+	width: 60px;
 }
 
 .switch input {
-  display: none;
+	display: none;
 }
 
 .slider {
-  background-color: var(--text-color);
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
+	background-color: var(--text-color);
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: 0.4s;
 }
 
 /* La pelotita de color */
 .slider:before {
-  background-color: var(--first-color);
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: 0.4s;
-  width: 26px;
+	background-color: var(--first-color);
+	bottom: 4px;
+	content: '';
+	height: 26px;
+	left: 4px;
+	position: absolute;
+	transition: 0.4s;
+	width: 26px;
 }
 
 /* Cuando se apreta la pelota se cambia el fondo */
 input:checked + .slider {
-  background-color: var(--text-color);
+	background-color: var(--text-color);
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+	transform: translateX(26px);
 }
 
 .slider.round {
-  border-radius: 34px;
+	border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+	border-radius: 50%;
 }
 
 .nav__menu {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: var(--header-height);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white-color);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.2s ease;
-  transform: translate(0, 100%);
-  pointer-events: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: var(--header-height);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--white-color);
+	opacity: 0;
+	transition: transform 0.4s ease, opacity 0.2s ease;
+	transform: translate(0, 100%);
+	pointer-events: none;
 }
 
 .nav__menu.is-active {
-  transform: translate(0, 0);
-  opacity: 1;
-  pointer-events: auto;
+	transform: translate(0, 0);
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .nav__menu a {
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-align: center;
-  color: var(--first-color);
+	padding: 1rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-align: center;
+	color: var(--first-color);
 }
 
 .nav__menu a:hover {
-  color: var(--white-color);
-  background-color: var(--first-color);
-  opacity: 0.75;
+	color: var(--white-color);
+	background-color: var(--first-color);
+	opacity: 0.75;
 }
 
 @media screen and (min-width: 1024px) {
-  .header__menu-btn {
-    display: none;
-  }
+	.header__menu-btn {
+		display: none;
+	}
 
-  .nav__menu {
-    position: static;
-    opacity: 1;
-    pointer-events: auto;
-    width: auto;
-    flex-direction: row;
-    transform: none;
-  }
+	.nav__menu {
+		position: static;
+		opacity: 1;
+		pointer-events: auto;
+		width: auto;
+		flex-direction: row;
+		transform: none;
+	}
 
-  .nav__menu a {
-    padding: 0 1rem;
-  }
+	.nav__menu a {
+		padding: 0 1rem;
+	}
 
-  .nav__menu a:hover {
-    color: var(--title-color);
-    background-color: transparent;
-  }
+	.nav__menu a:hover {
+		color: var(--title-color);
+		background-color: transparent;
+	}
 
-  .nav__menu a:last-child {
-    padding-right: 0;
-  }
+	.nav__menu a:last-child {
+		padding-right: 0;
+	}
 }
 
 /* Modal */
 .modal {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--black-alpha-color);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 1s;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--black-alpha-color);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 1s;
 }
 
 /* Barra de Progreso */
 progress {
-  width: 100%;
-  height: 1rem;
-  background-color: var(--gray-dark-color);
+	width: 100%;
+	height: 1rem;
+	background-color: var(--gray-dark-color);
 }
 
 progress::-webkit-progress-bar {
-  background-color: var(--gray-dark-color);
+	background-color: var(--gray-dark-color);
 }
 
 progress::-webkit-progress-value {
-  background-color: var(--first-color);
+	background-color: var(--first-color);
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--first-color);
+	background-color: var(--first-color);
 }
 
 .progress {
-  margin-right: 1rem auto;
+	margin-right: 1rem auto;
 }
 .progress > p {
-  display: flex;
-  margin: 0;
-  justify-content: space-between;
-  font-size: 0.85rem;
+	display: flex;
+	margin: 0;
+	justify-content: space-between;
+	font-size: 0.85rem;
 }
 /****************************************** UTILIDADES ***************************************/
 
 .box-shadow-1 {
-  box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
 }
 
 .btn {
-  border-radius: 0.5rem;
-  padding: 1rem;
-  display: inline-block;
-  width: 200px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: var(--hero-text-color);
-  background-color: var(--first-color);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	display: inline-block;
+	width: 200px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: var(--hero-text-color);
+	background-color: var(--first-color);
 }
 
 .btn:hover {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--max-width);
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--max-width);
 }
 
 .none {
-  display: none;
+	display: none;
 }
 
 .section__title {
-  border-top: thin solid var(--first-color);
-  border-bottom: thin solid var(--first-color);
-  margin: 2rem auto;
-  padding: 0.5rem 1rem;
-  width: 250px;
-  text-align: center;
-  color: var(--title-color);
+	border-top: thin solid var(--first-color);
+	border-bottom: thin solid var(--first-color);
+	margin: 2rem auto;
+	padding: 0.5rem 1rem;
+	width: 250px;
+	text-align: center;
+	color: var(--title-color);
 }
 
 .section {
-  padding: 2rem 1rem;
+	padding: 2rem 1rem;
 }
 
 .text-first-color {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 .text__center {
-  text-align: center;
+	text-align: center;
 }
 
 .text__left {
-  text-align: left;
+	text-align: left;
 }
 
 .text__right {
-  text-align: right;
+	text-align: right;
 }
 
 @media screen and (min-width: 1024px) {
-  .full__screen--lg {
-    width: 100%;
-    min-height: 100vh;
-  }
-  .text__center--lg {
-    text-align: center;
-  }
+	.full__screen--lg {
+		width: 100%;
+		min-height: 100vh;
+	}
+	.text__center--lg {
+		text-align: center;
+	}
 
-  .text__left--lg {
-    text-align: left;
-  }
+	.text__left--lg {
+		text-align: left;
+	}
 
-  .text__right--lg {
-    text-align: right;
-  }
+	.text__right--lg {
+		text-align: right;
+	}
 }
 
 /************************************* ESTILOS DEL SITIO **************************************/
 /* Acerca */
 .about > article {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .about article:first-child {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .about article:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .chall__icon {
-  width: 300px;
-  filter: var(--drop-shadow);
+	width: 300px;
+	filter: var(--drop-shadow);
 }
 
 .about__data {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .about__data img {
-  width: 40px;
+	width: 40px;
 }
 
 .about__data h2 {
-  font-size: 2rem;
-  margin: 0 1rem;
+	font-size: 2rem;
+	margin: 0 1rem;
 }
 
 .about__data .icono {
-  width: 50px;
-  border-radius: 50%;
-  border: 2px solid #a57932;
+	width: 50px;
+	border-radius: 50%;
+	border: 2px solid #a57932;
 }
 
 .text__rank--list li {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .text__rank--list li:nth-child(n + 7) b {
-  color: #faa75b;
+	color: #faa75b;
 }
 .text__rank--list li:first-child b {
-  color: #8298a3;
+	color: #8298a3;
 }
 .text__rank--list li:nth-child(2) b {
-  color: #bf7b32;
+	color: #bf7b32;
 }
 .text__rank--list li:nth-child(3) b,
 .text__rank--list li:nth-child(4) b {
-  color: #27f9ff;
+	color: #27f9ff;
 }
 .text__rank--list li:nth-child(5) b,
 .text__rank--list li:nth-child(6) b {
-  color: #d226e4;
+	color: #d226e4;
 }
 
 .rank__data {
-  display: flex;
-  column-gap: 1rem;
+	display: flex;
+	column-gap: 1rem;
 }
 
 .rank__data p {
-  font-size: 1.4rem;
-  font-weight: bold;
+	font-size: 1.4rem;
+	font-weight: bold;
 }
 
 .win {
-  color: #12be12;
+	color: #12be12;
 }
 
 .losses {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 .lp {
-  color: #faa75b;
+	color: #faa75b;
 }
 
 /* Sección de contacto */
 .contact__card {
-  margin: 1rem auto;
-  padding: 1rem;
-  width: 100%;
-  height: 144px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+	margin: 1rem auto;
+	padding: 1rem;
+	width: 100%;
+	height: 144px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 .contact__card > svg {
-  width: 2rem;
-  height: 2rem;
-  fill: var(--first-color);
+	width: 2rem;
+	height: 2rem;
+	fill: var(--first-color);
 }
 
 .social-media a {
-  padding: 0 0.5rem;
+	padding: 0 0.5rem;
 }
 
 .social-media svg {
-  width: 1.7rem;
-  height: 1.7rem;
-  transition: 0.3s fill ease-in-out;
-  fill: var(--text-color);
+	width: 1.7rem;
+	height: 1.7rem;
+	transition: 0.3s fill ease-in-out;
+	fill: var(--text-color);
 }
 
 .social-media svg:hover {
-  fill: var(--first-color);
+	fill: var(--first-color);
 }
 
 /* Header */
 .header {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-  padding: 1rem;
-  width: 100%;
-  height: var(--header-height);
-  background-color: var(--white-color);
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	padding: 1rem;
+	width: 100%;
+	height: var(--header-height);
+	background-color: var(--white-color);
 }
 
 .header > .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .header__logo a {
-  color: var(--first-color);
-  font-weight: bold;
-  font-size: 2rem;
+	color: var(--first-color);
+	font-weight: bold;
+	font-size: 2rem;
 }
 
 .header__logo a:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 /*Champions Cards */
 .champions > .container {
-  display: grid;
-  grid-template-columns: repeat(2, 45%);
-  justify-content: space-between;
-  align-content: center;
+	display: grid;
+	grid-template-columns: repeat(2, 45%);
+	justify-content: space-between;
+	align-content: center;
 }
 
 .champions a {
-  color: initial;
-  margin-bottom: 1rem;
+	color: initial;
+	margin-bottom: 1rem;
 }
 
 .champions .section__title {
-  grid-column: span 2;
+	grid-column: span 2;
 }
 
 .champion__card {
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-  transition: box-shadow 0.5s ease-in-out;
-  animation: fadein 2s;
+	padding: 1rem;
+	width: 100%;
+	text-align: center;
+	transition: box-shadow 0.5s ease-in-out;
+	animation: fadein 2s;
 }
 
 .champion__card h3 {
-  color: var(--title-color);
-  transition: color 0.3s ease-in-out;
+	color: var(--title-color);
+	transition: color 0.3s ease-in-out;
 }
 
 .champion__card img {
-  border-radius: 50%;
-  filter: grayscale(1);
-  transition: filter 0.3s ease-in-out;
-  border: 2px solid var(--link-color);
+	border-radius: 50%;
+	filter: grayscale(1);
+	transition: filter 0.3s ease-in-out;
+	border: 2px solid var(--link-color);
 }
 
 .champion__card p {
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--text-color);
+	font-weight: bold;
+	font-size: 1rem;
+	color: var(--text-color);
 }
 
 .champion__card:hover {
-  box-shadow: 0rem 0.25rem 1rem var(--first-alpha-color);
+	box-shadow: 0rem 0.25rem 1rem var(--first-alpha-color);
 }
 
 .champion__card:hover > h3 {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 .champion__card:hover > img {
-  filter: grayscale(0);
-  animation: carta 1.2s ease-in-out infinite alternate;
+	filter: grayscale(0);
+	animation: carta 1.2s ease-in-out infinite alternate;
 }
 
 @keyframes carta {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg) scale(1.1);
-  }
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg) scale(1.1);
+	}
 }
 
 /* Champions Runes */
 .champion__info {
-  background-repeat: no-repeat;
-  background-position: 60% -60px;
+	background-repeat: no-repeat;
+	background-position: 60% -60px;
 }
 
 .champion__info--header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .champion__info--header > img {
-  margin: 1rem;
-  border: medium solid #313160;
-  border-radius: 10%;
+	margin: 1rem;
+	border: medium solid #313160;
+	border-radius: 10%;
 }
 
 .champion__header--content {
-  text-align: center;
-  color: var(--first-color);
+	text-align: center;
+	color: var(--first-color);
 }
 
 .champion__header--abilities {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
 }
 
 .champion__skill--label {
-  position: relative;
-  margin: 0 0.4rem;
+	position: relative;
+	margin: 0 0.4rem;
 }
 
 .champion__skill--label > img {
-  width: 30px;
-  height: 30px;
-  border-radius: 3px;
-  vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	border-radius: 3px;
+	vertical-align: middle;
 }
 
 .champion__skill--label .skill__label--key {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--second-color);
-  font-size: 10px;
-  font-weight: 700;
-  pointer-events: none;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--second-color);
+	font-size: 10px;
+	font-weight: 700;
+	pointer-events: none;
 }
 
 .skill__label--key.bottom-center {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  border: 1.5px solid var(--gray-dark-color);
-  box-sizing: content-box;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	border: 1.5px solid var(--gray-dark-color);
+	box-sizing: content-box;
 }
 
 /* Runes -- Build -- Spells */
 .champion__info--runes {
-  margin-top: 1rem;
-  border-radius: 10px;
-  background-image: linear-gradient(
-    227deg,
-    var(--second-color) -130%,
-    var(--white-gray)
-  );
-  /* background-image: linear-gradient(227deg, #313160 -130%, #191937); */
+	margin-top: 1rem;
+	border-radius: 10px;
+	background-image: linear-gradient(227deg, var(--second-color) -130%, var(--white-gray));
+	/* background-image: linear-gradient(227deg, #313160 -130%, #191937); */
 }
 
 .champion__runes--content {
-  padding: 1rem;
+	padding: 1rem;
 }
 
 .champion__build--spells {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  padding-top: 0.5rem;
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	padding-top: 0.5rem;
 }
 
 .champion__runes--spells {
-  border-right: 1px solid var(--border-first-color);
+	border-right: 1px solid var(--border-first-color);
 }
 
 .section__header::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 2px;
-  height: 20px;
-  border-radius: 2px;
-  background-color: var(--first-color);
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 2px;
+	height: 20px;
+	border-radius: 2px;
+	background-color: var(--first-color);
 }
 
 .section__header {
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  padding-left: 0.8rem;
+	position: relative;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	padding-left: 0.8rem;
 }
 
 .rune__tree {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 30px 1fr;
-  align-items: center;
-  border-bottom: 1px solid var(--border-first-color);
-  padding-bottom: 1rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 30px 1fr;
+	align-items: center;
+	border-bottom: 1px solid var(--border-first-color);
+	padding-bottom: 1rem;
 }
 
 .fake-none,
 .fake-none img {
-  display: none;
+	display: none;
 }
 
 .margin-child {
-  margin: 0 1rem;
+	margin: 0 1rem;
 }
 
 .rune {
-  flex: 0 0 18px;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	flex: 0 0 18px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .rune img {
-  width: 1rem;
+	width: 1rem;
 }
 
 .primary__tree {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 1rem;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 1rem;
 }
 
 .rune__tree--header {
-  display: flex;
-  align-items: center;
-  padding: 0.4rem;
-  margin-bottom: 12px;
-  width: 8rem;
-  height: 48px;
-  border-radius: 6px;
-  background-color: var(--gray-background);
+	display: flex;
+	align-items: center;
+	padding: 0.4rem;
+	margin-bottom: 12px;
+	width: 8rem;
+	height: 48px;
+	border-radius: 6px;
+	background-color: var(--gray-background);
 }
 
 .rune__img--container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 2px;
-  background-color: var(--gray-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 2px;
+	background-color: var(--gray-light);
 }
 
 .rune__img--container img {
-  width: 100%;
+	width: 100%;
 }
 
 .rune__tree--title {
-  font-size: 12px;
-  font-weight: 700;
-  padding-left: 0.6rem;
+	font-size: 12px;
+	font-weight: 700;
+	padding-left: 0.6rem;
 }
 
 .primary__tree--keystone .runes__row {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .secondary__tree {
-  height: 100%;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	height: 100%;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .secondary__tree .runes__row {
-  margin-bottom: 0.4rem;
+	margin-bottom: 0.4rem;
 }
 
 .runes__row {
-  width: 100%;
+	width: 100%;
 }
 
 .runes__row:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .keystone__row {
-  padding-bottom: 0.8rem;
-  margin-bottom: 0.8rem;
-  border-bottom: 1px solid var(--border-first-color);
+	padding-bottom: 0.8rem;
+	margin-bottom: 0.8rem;
+	border-bottom: 1px solid var(--border-first-color);
 }
 
 .masteries {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .masterie {
-  flex: 0 0 24px;
-  width: 24px;
-  height: 24px;
+	flex: 0 0 24px;
+	width: 24px;
+	height: 24px;
 }
 .keystone {
-  flex: 0 0 34px;
-  width: 34px;
-  height: 34px;
+	flex: 0 0 34px;
+	width: 34px;
+	height: 34px;
 }
 
 .masterie img {
-  width: 100%;
-  filter: grayscale(70%);
-  opacity: 0.27;
-  animation: fadeInactive 2s forwards;
+	width: 100%;
+	filter: grayscale(70%);
+	opacity: 0.27;
+	animation: fadeInactive 2s forwards;
 }
 
 .rune {
-  background-color: #3f3f6e33;
-  border-radius: 50%;
+	background-color: #3f3f6e33;
+	border-radius: 50%;
 }
 
 .rune img {
-  filter: grayscale(1);
-  opacity: 0.27;
+	filter: grayscale(1);
+	opacity: 0.27;
 }
 
 .masterie__active img {
-  border-radius: 50%;
-  animation: fadein 2s forwards;
-  filter: grayscale(0);
-  opacity: 1;
+	border-radius: 50%;
+	animation: fadein 2s forwards;
+	filter: grayscale(0);
+	opacity: 1;
 }
 
 .rune.masterie__active {
-  border: 1px solid var(--first-color);
-  border-radius: 50%;
-  background-color: #11112a;
+	border: 1px solid var(--first-color);
+	border-radius: 50%;
+	background-color: #11112a;
 }
 
 .masterie__active.keystone img {
-  border: none;
-  background-color: transparent;
-  filter: grayscale(0);
-  opacity: 1;
+	border: none;
+	background-color: transparent;
+	filter: grayscale(0);
+	opacity: 1;
 }
 
 .separador {
-  margin-bottom: 6px;
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-first-color);
+	margin-bottom: 6px;
+	width: 100%;
+	height: 1px;
+	background-color: var(--border-first-color);
 }
 
 /* Spells */
 
 .spells__container {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .spells__container img {
-  flex: 0 0 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 5px;
+	flex: 0 0 24px;
+	width: 24px;
+	height: 24px;
+	border-radius: 5px;
 }
 
 /* Build */
 
 .champion__runes--build {
-  display: flex;
-  flex-direction: column;
-  margin: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	margin: 0 1rem;
 }
 
 .build__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1.5rem);
-  justify-content: center;
-  gap: 5px;
+	display: grid;
+	grid-template-columns: repeat(3, 1.5rem);
+	justify-content: center;
+	gap: 5px;
 }
 
 .build__container img {
-  border: 1px solid #7582c8;
+	border: 1px solid #7582c8;
 }
 
 .build__container img:first-child {
-  border: 1px solid #f8b218;
+	border: 1px solid #f8b218;
 }
 
 /************************* HABILIDADES  **************************/
 .champion__info--skills {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: thin solid var(--border-first-color);
+	margin-top: 0.5rem;
+	padding-top: 0.5rem;
+	border-top: thin solid var(--border-first-color);
 }
 
 .skill__priority--path {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .arrow-right {
-  margin: 0 5px;
-  width: 13px;
-  fill: var(--text-color);
+	margin: 0 5px;
+	width: 13px;
+	fill: var(--text-color);
 }
 
 /************************* SKILL TABLE *******************/
 .champion__skill--path {
-  padding-top: 0.5rem;
-  margin-top: 1rem;
-  border-top: 1px solid var(--border-first-color);
+	padding-top: 0.5rem;
+	margin-top: 1rem;
+	border-top: 1px solid var(--border-first-color);
 }
 
 .skill__path--container {
-  display: grid;
-  overflow-x: auto;
-  justify-items: center;
+	display: grid;
+	overflow-x: auto;
+	justify-items: center;
 }
 
 .skill__path--container::-webkit-scrollbar {
-  height: 3px;
-  background-color: rgba(37, 37, 75, 0.5);
+	height: 3px;
+	background-color: rgba(37, 37, 75, 0.5);
 }
 
 .skill__path--container::-webkit-scrollbar-thumb {
-  background-color: #3a3a73;
+	background-color: #3a3a73;
 }
 
 .skill__order {
-  display: flex;
-  flex: 1 1;
-  color: #fff;
+	display: flex;
+	flex: 1 1;
+	color: #fff;
 }
 
 .skill__order--row {
-  display: flex;
-  margin-bottom: 6px;
+	display: flex;
+	margin-bottom: 6px;
 }
 
 .skill__img--label {
-  flex: 0 0 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 3px;
-  position: relative;
-  /* color: var(--black-color); */
+	flex: 0 0 24px;
+	width: 24px;
+	height: 24px;
+	border-radius: 3px;
+	position: relative;
+	/* color: var(--black-color); */
 }
 
 .skill__img--label img {
-  flex: 0 0 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 3px;
+	flex: 0 0 24px;
+	width: 24px;
+	height: 24px;
+	border-radius: 3px;
 }
 
 .skill__key--label {
-  bottom: 0;
-  right: 0;
-  transform: translate(30%, 30%);
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--gray-color);
-  font-size: 9px;
-  font-weight: 700;
-  pointer-events: none;
+	bottom: 0;
+	right: 0;
+	transform: translate(30%, 30%);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--gray-color);
+	font-size: 9px;
+	font-weight: 700;
+	pointer-events: none;
 }
 
 .no__skill--up,
 .skill__up,
 .skill__up--max {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 6px;
-  font-size: 10px;
-  width: 24px;
-  height: 24px;
-  border-radius: 3px;
-  color: #fff;
-  background-color: rgba(37, 37, 75, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 6px;
+	font-size: 10px;
+	width: 24px;
+	height: 24px;
+	border-radius: 3px;
+	color: #fff;
+	background-color: rgba(37, 37, 75, 0.5);
 }
 
 .skill__up {
-  background-color: var(--first-color);
-  font-weight: 500;
+	background-color: var(--first-color);
+	font-weight: 500;
 }
 
 .skill__up--max {
-  background-color: #e0af46;
-  font-weight: 800;
+	background-color: #e0af46;
+	font-weight: 800;
 }
 
 .blank__row {
-  margin-left: 6px;
-  height: 24px;
-  width: 534px;
-  border-radius: 3px;
-  background-color: rgba(37, 37, 75, 0.5);
+	margin-left: 6px;
+	height: 24px;
+	width: 534px;
+	border-radius: 3px;
+	background-color: rgba(37, 37, 75, 0.5);
 }
 
 /* Footer */
 .footer {
-  margin-bottom: var(--header-height);
-  background-color: var(--first-color);
-  color: white;
-  text-align: center;
-  padding: 0.5rem;
+	margin-bottom: var(--header-height);
+	background-color: var(--first-color);
+	color: white;
+	text-align: center;
+	padding: 0.5rem;
 }
 
 .heart {
-  animation: pulse 1s linear infinite;
-  display: inline-block;
-  position: relative;
-  width: 14px;
-  height: 10px;
+	animation: pulse 1s linear infinite;
+	display: inline-block;
+	position: relative;
+	width: 14px;
+	height: 10px;
 }
 
 .heart::after,
 .heart::before {
-  position: absolute;
-  content: "";
-  left: 7px;
-  top: 0;
-  width: 7px;
-  height: 12px;
-  background-color: var(--text-color);
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  border-radius: 7px 7px 0 0;
+	position: absolute;
+	content: '';
+	left: 7px;
+	top: 0;
+	width: 7px;
+	height: 12px;
+	background-color: var(--text-color);
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+	border-radius: 7px 7px 0 0;
 }
 
 .heart::after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
+	left: 0;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1.1);
+	}
+	50% {
+		transform: scale(0.8);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 /**************************** Counters y Estadísticas *************************/
 .counters__container {
-  background-image: linear-gradient(
-    227deg,
-    var(--second-color) -130%,
-    var(--white-gray)
-  );
-  border-radius: 10px;
-  padding: 1rem;
-  border-radius: 10px;
+	background-image: linear-gradient(227deg, var(--second-color) -130%, var(--white-gray));
+	border-radius: 10px;
+	padding: 1rem;
+	border-radius: 10px;
 }
 .counters__header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 2rem;
 }
 
 .stat__data svg {
-  width: 28px;
-  fill: #d0a85c;
+	width: 28px;
+	fill: #d0a85c;
 }
 
 .champ__data {
-  grid-row: 1/2;
-  grid-column: 1/2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+	grid-row: 1/2;
+	grid-column: 1/2;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .champ__data--name .stat__data {
-  height: 40px;
-  padding-bottom: 0.5rem;
+	height: 40px;
+	padding-bottom: 0.5rem;
 }
 
 .champ__data img {
-  margin-bottom: 0.5rem;
-  border: medium solid var(--first-color);
-  border-radius: 10%;
+	margin-bottom: 0.5rem;
+	border: medium solid var(--first-color);
+	border-radius: 10%;
 }
 
 .champ__data--name {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .champ__data--name h2 {
-  margin-bottom: 0.5rem;
-  color: var(--first-color);
+	margin-bottom: 0.5rem;
+	color: var(--first-color);
 }
 
 .champ__data--name input {
-  color: var(--text-color);
-  background-color: var(--white-color);
-  outline: none;
-  border: none;
-  border-bottom: thin solid var(--gray-dark-color);
-  font-size: 1rem;
-  width: 120px;
-  border-radius: 5px;
+	color: var(--text-color);
+	background-color: var(--white-color);
+	outline: none;
+	border: none;
+	border-bottom: thin solid var(--gray-dark-color);
+	font-size: 1rem;
+	width: 120px;
+	border-radius: 5px;
 }
 
 .stats__container {
-  grid-row: 1/3;
-  grid-column: 2/3;
+	grid-row: 1/3;
+	grid-column: 2/3;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .stat__data {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .stat__data p {
-  margin: 0;
-  margin-left: 1rem;
-  font-weight: bold;
-  font-size: 1rem;
+	margin: 0;
+	margin-left: 1rem;
+	font-weight: bold;
+	font-size: 1rem;
 }
 
 .stat__data img {
-  width: 1rem;
-  margin-left: 1rem;
+	width: 1rem;
+	margin-left: 1rem;
 }
 
 .stat__data.hp img {
-  filter: invert(40%) sepia(87%) saturate(520%) hue-rotate(69deg)
-    brightness(108%) contrast(86%);
+	filter: invert(40%) sepia(87%) saturate(520%) hue-rotate(69deg) brightness(108%) contrast(86%);
 }
 .stat__data.attack img {
-  filter: invert(40%) sepia(56%) saturate(493%) hue-rotate(332deg)
-    brightness(95%) contrast(103%);
+	filter: invert(40%) sepia(56%) saturate(493%) hue-rotate(332deg) brightness(95%) contrast(103%);
 }
 .stat__data.attackS img {
-  filter: invert(20%) sepia(100%) saturate(595%) hue-rotate(357deg)
-    brightness(86%) contrast(93%);
+	filter: invert(20%) sepia(100%) saturate(595%) hue-rotate(357deg) brightness(86%) contrast(93%);
 }
 .stat__data.ms img {
-  filter: invert(53%) sepia(87%) saturate(520%) hue-rotate(173deg)
-    brightness(108%) contrast(86%);
+	filter: invert(53%) sepia(87%) saturate(520%) hue-rotate(173deg) brightness(108%) contrast(86%);
 }
 .stat__data.armor img {
-  filter: invert(40%) sepia(100%) saturate(405%) hue-rotate(13deg)
-    brightness(98%) contrast(96%);
+	filter: invert(40%) sepia(100%) saturate(405%) hue-rotate(13deg) brightness(98%) contrast(96%);
 }
 .stat__data.mr img {
-  filter: invert(40%) sepia(89%) saturate(444%) hue-rotate(126deg)
-    brightness(102%) contrast(80%);
+	filter: invert(40%) sepia(89%) saturate(444%) hue-rotate(126deg) brightness(102%) contrast(80%);
 }
 
 .counters__matchups {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 /* Para sacar las flechitas del summary */
 details > summary {
-  list-style: none;
+	list-style: none;
 }
 details > summary::-webkit-details-marker {
-  display: none;
+	display: none;
 }
 
 .hard summary {
-  background: linear-gradient(rgba(255, 78, 80, 0.45), rgba(255, 78, 80, 0.7)),
-    linear-gradient(#1c1c32, #1c1c32);
-  border-radius: 10px;
-  margin-bottom: 1rem;
+	background: linear-gradient(rgba(255, 78, 80, 0.45), rgba(255, 78, 80, 0.7)), linear-gradient(#1c1c32, #1c1c32);
+	border-radius: 10px;
+	margin-bottom: 1rem;
 }
 
 .easy summary {
-  background: linear-gradient(rgb(8 166 255 / 75%), rgb(108 225 255 / 70%)),
-    linear-gradient(#1c1c32, #1c1c32);
-  border-radius: 10px;
-  margin-bottom: 1rem;
+	background: linear-gradient(rgb(8 166 255 / 75%), rgb(108 225 255 / 70%)), linear-gradient(#1c1c32, #1c1c32);
+	border-radius: 10px;
+	margin-bottom: 1rem;
 }
 
 summary img {
-  width: 40px;
-  border-radius: 50%;
+	width: 40px;
+	border-radius: 50%;
 }
 
 summary {
-  display: flex;
-  padding: 0.5rem 1rem;
-  align-items: center;
+	display: flex;
+	padding: 0.5rem 1rem;
+	align-items: center;
 }
 
 summary h3 {
-  margin-left: 0.8rem;
-  color: var(--hero-text-color);
+	margin-left: 0.8rem;
+	color: var(--hero-text-color);
 }
 
 .matchups__tips ul {
-  list-style-type: circle;
-  padding-left: 35px;
+	list-style-type: circle;
+	padding-left: 35px;
 }
 .matchups__tips ul li {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .matchups__tips b {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 details[open] summary ~ * {
-  animation: summaryA 0.5s ease-in-out;
+	animation: summaryA 0.5s ease-in-out;
 }
 
 @keyframes summaryA {
-  0% {
-    opacity: 0;
-    margin-left: -10px;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0px;
-  }
+	0% {
+		opacity: 0;
+		margin-left: -10px;
+	}
+	100% {
+		opacity: 1;
+		margin-left: 0px;
+	}
 }
 
 .tips__container {
-  padding-top: 1rem;
+	padding-top: 1rem;
 }
 
 .tips__list ul {
-  list-style-type: circle;
-  padding-left: 35px;
+	list-style-type: circle;
+	padding-left: 35px;
 }
 
 .tips__list ul li {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .tips__list b {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 /********************************* SKINS **********************************/
 
 .skins__content {
-  width: 100%;
+	width: 100%;
 }
 
 .carrousel {
-  position: relative;
-  margin: 1rem auto;
-  text-align: center;
-  box-shadow: 0px 0px 20px 4px;
+	position: relative;
+	margin: 1rem auto;
+	text-align: center;
+	box-shadow: 0px 0px 20px 4px;
 }
 
 .carrousel__slides {
-  position: relative;
-  height: 45vh;
+	position: relative;
+	height: 45vh;
 }
 
 .carrousel__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .carrousel__slide h3 {
-  margin: 0.5rem;
-  font-size: 2rem;
-  color: var(--first-color);
-  text-shadow: 0px 0px 3px var(--link-color);
+	margin: 0.5rem;
+	font-size: 2rem;
+	color: var(--first-color);
+	text-shadow: 0px 0px 3px var(--link-color);
 }
 
 .carrousel__slide img {
-  height: inherit;
-  width: inherit;
-  object-fit: cover;
-  object-position: 50% 0%;
+	height: inherit;
+	width: inherit;
+	object-fit: cover;
+	object-position: 50% 0%;
 }
 
 .carrousel__slide.active {
-  opacity: 1;
-  visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 .carrousel__slide.active img {
-  animation: test 0.4s;
+	animation: test 0.4s;
 }
 
 @keyframes test {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .carrousel__btns {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 3rem;
-  font-weight: bold;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 3rem;
+	font-weight: bold;
 }
 
 .carrousel a {
-  display: block;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  border: thin solid var(--secondary-color);
-  text-decoration: none;
-  background-color: var(--main-color);
-  color: var(--hero-text-color);
-  transition: color 0.3s ease;
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	border: thin solid var(--secondary-color);
+	text-decoration: none;
+	background-color: var(--main-color);
+	color: var(--hero-text-color);
+	transition: color 0.3s ease;
 }
 
 .carrousel a:hover {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 /* Tooltip */
 
 .tooltip {
-  position: relative;
+	position: relative;
 }
 
 .tooltip__text h4 {
-  color: var(--first-color);
+	color: var(--first-color);
 }
 
 .tooltip__text small {
-  color: var(--link-color);
-  font-size: 12px;
+	color: var(--link-color);
+	font-size: 12px;
 }
 
 .tooltip__text {
-  z-index: 500;
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  left: 50%;
-  pointer-events: none;
-  transition: 0.2s;
-  top: calc(100% + 10px);
-  transform-origin: top center;
-  padding: 10px 18px;
-  width: 160px;
-  border-radius: 10px;
-  font-size: 11px;
-  background-color: #0f0f2e;
-  box-shadow: var(--box-shadow);
-  color: var(--hero-text-color);
-  transform: translate(-50%, 5px) scale(0.5);
+	z-index: 500;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	left: 50%;
+	pointer-events: none;
+	transition: 0.2s;
+	top: calc(100% + 10px);
+	transform-origin: top center;
+	padding: 10px 18px;
+	width: 160px;
+	border-radius: 10px;
+	font-size: 11px;
+	background-color: #0f0f2e;
+	box-shadow: var(--box-shadow);
+	color: var(--hero-text-color);
+	transform: translate(-50%, 5px) scale(0.5);
 }
 
 .tooltip__text.right {
-  left: -130%;
+	left: -130%;
 }
 
 .tooltip__text.left {
-  left: 150%;
+	left: 150%;
 }
 
 .tooltip:hover .tooltip__text {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-50%) scaleY(1);
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-50%) scaleY(1);
 }
 
 /****************************** MEDIA 720 *************************** */
 
 @media screen and (min-width: 720px) {
-  .contact__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 48%);
-    justify-content: space-between;
-  }
+	.contact__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 48%);
+		justify-content: space-between;
+	}
 
-  .carrousel__slides {
-    height: 70vh;
-  }
+	.carrousel__slides {
+		height: 70vh;
+	}
 
-  /*************** CHAMPIONS  ***************/
-  .champions > .container {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
-    align-content: center;
-  }
-  .champions .section__title {
-    grid-column: span 3;
-  }
+	/*************** CHAMPIONS  ***************/
+	.champions > .container {
+		display: grid;
+		grid-template-columns: repeat(3, 30%);
+		justify-content: space-between;
+		align-content: center;
+	}
+	.champions .section__title {
+		grid-column: span 3;
+	}
 
-  /*************** RUNES ********************/
+	/*************** RUNES ********************/
 
-  .champion__skill--label > img {
-    width: 50px;
-    height: 50px;
-  }
+	.champion__skill--label > img {
+		width: 50px;
+		height: 50px;
+	}
 
-  .champion__skill--label .skill__label--key {
-    width: 1rem;
-    height: 1rem;
-    font-size: 12px;
-  }
+	.champion__skill--label .skill__label--key {
+		width: 1rem;
+		height: 1rem;
+		font-size: 12px;
+	}
 
-  .section__header {
-    font-size: 1rem;
-  }
+	.section__header {
+		font-size: 1rem;
+	}
 
-  /********************************* RUNES TREES  ****************************/
-  .rune__tree {
-    padding-bottom: 2rem;
-  }
+	/********************************* RUNES TREES  ****************************/
+	.rune__tree {
+		padding-bottom: 2rem;
+	}
 
-  .rune__tree--title {
-    font-size: 1rem;
-  }
+	.rune__tree--title {
+		font-size: 1rem;
+	}
 
-  .rune__tree--header {
-    width: 14rem;
-    height: 50px;
-    margin-bottom: 24px;
-  }
+	.rune__tree--header {
+		width: 14rem;
+		height: 50px;
+		margin-bottom: 24px;
+	}
 
-  .masterie {
-    flex: 0 0 36px;
-    width: 36px;
-    height: 36px;
-  }
+	.masterie {
+		flex: 0 0 36px;
+		width: 36px;
+		height: 36px;
+	}
 
-  .keystone__row {
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-  }
+	.keystone__row {
+		padding-bottom: 24px;
+		margin-bottom: 24px;
+	}
 
-  .primary__tree--keystone .runes__row {
-    margin-bottom: 26px;
-  }
+	.primary__tree--keystone .runes__row {
+		margin-bottom: 26px;
+	}
 
-  .secondary__tree .runes__row .masteries .masterie {
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
-  }
+	.secondary__tree .runes__row .masteries .masterie {
+		flex: 0 0 30px;
+		width: 30px;
+		height: 30px;
+	}
 
-  .secondary__tree .runes__row {
-    margin-bottom: 17px;
-  }
+	.secondary__tree .runes__row {
+		margin-bottom: 17px;
+	}
 
-  .secondary__tree .rune__row:last-child {
-    margin-bottom: 0;
-  }
+	.secondary__tree .rune__row:last-child {
+		margin-bottom: 0;
+	}
 
-  .keystone {
-    flex: 0 0 52px;
-    width: 52px;
-    height: 52px;
-  }
+	.keystone {
+		flex: 0 0 52px;
+		width: 52px;
+		height: 52px;
+	}
 
-  .rune {
-    flex: 0 0 24px;
-    width: 24px;
-    height: 24px;
-  }
+	.rune {
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+	}
 
-  .shard {
-    margin: 0 20px 0 20px;
-  }
+	.shard {
+		margin: 0 20px 0 20px;
+	}
 
-  .separador {
-    margin-bottom: 10px;
-  }
+	.separador {
+		margin-bottom: 10px;
+	}
 
-  /******************* SPELLS ---------------------------- ITEMS  *****************/
-  .champion__build--spells {
-    grid-template-columns: 20% 1fr;
-    padding-top: 1rem;
-  }
+	/******************* SPELLS ---------------------------- ITEMS  *****************/
+	.champion__build--spells {
+		grid-template-columns: 20% 1fr;
+		padding-top: 1rem;
+	}
 
-  .champion__runes--spells {
-    padding-right: 1rem;
-  }
+	.champion__runes--spells {
+		padding-right: 1rem;
+	}
 
-  .spells__container img {
-    width: 36px;
-    height: 36px;
-  }
+	.spells__container img {
+		width: 36px;
+		height: 36px;
+	}
 
-  .build__container {
-    grid-template-columns: repeat(6, 10%);
-    column-gap: 0;
-  }
+	.build__container {
+		grid-template-columns: repeat(6, 10%);
+		column-gap: 0;
+	}
 
-  .build__container img {
-    width: 45px;
-  }
-  /********************************************* SKILLS  *******************************/
-  .skill__priority--path .champion__skill--label img {
-    width: 40px;
-    height: 40px;
-  }
+	.build__container img {
+		width: 45px;
+	}
+	/********************************************* SKILLS  *******************************/
+	.skill__priority--path .champion__skill--label img {
+		width: 40px;
+		height: 40px;
+	}
 
-  /* Tooltip */
-  .tooltip__text {
-    width: 300px;
-    font-size: 12.5px;
-  }
-  .tooltip__text.left {
-    left: calc(100% + 70px);
-  }
-  .tooltip__text.right {
-    left: 50%;
-  }
+	/* Tooltip */
+	.tooltip__text {
+		width: 300px;
+		font-size: 12.5px;
+	}
+	.tooltip__text.left {
+		left: calc(100% + 70px);
+	}
+	.tooltip__text.right {
+		left: 50%;
+	}
 }
 
 /**************** MEDIA 850px *****************/
 
 @media screen and (min-width: 855px) {
-  .champion__info--skills {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding-top: 1rem;
-  }
+	.champion__info--skills {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		padding-top: 1rem;
+	}
 
-  .champion__skill--path {
-    padding-top: 0;
-    margin-top: 0;
-    border-top: none;
-  }
+	.champion__skill--path {
+		padding-top: 0;
+		margin-top: 0;
+		border-top: none;
+	}
 
-  /******************* STATS ESTADÍSTICAS ************************/
-  .counters__header {
-    grid-template-columns: 30% 25% 30%;
-  }
-  .champ__data img {
-    border: none;
-    width: 75%;
-  }
-  .stats__container {
-    grid-column: 3/4;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-  .champ__data--name {
-    margin-right: 1rem;
-  }
-  .champ__data--name h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  .champ__data--name .stat__data {
-    margin-bottom: 1rem;
-  }
-  .stat__data p {
-    font-size: 1.2rem;
-  }
+	/******************* STATS ESTADÍSTICAS ************************/
+	.counters__header {
+		grid-template-columns: 30% 25% 30%;
+	}
+	.champ__data img {
+		border: none;
+		width: 75%;
+	}
+	.stats__container {
+		grid-column: 3/4;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+	.champ__data--name {
+		margin-right: 1rem;
+	}
+	.champ__data--name h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+	.champ__data--name .stat__data {
+		margin-bottom: 1rem;
+	}
+	.stat__data p {
+		font-size: 1.2rem;
+	}
 }
 
 /****************************** MEDIA 1024 *************************** */
 
 @media screen and (min-width: 1024px) {
-  .hero__image {
-    background-position: center;
-  }
-  .about {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
-    align-items: center;
-  }
+	.hero__image {
+		background-position: center;
+	}
+	.about {
+		display: grid;
+		grid-template-columns: repeat(3, 30%);
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  .contact__cards {
-    grid-template-columns: repeat(4, 24%);
-  }
+	.contact__cards {
+		grid-template-columns: repeat(4, 24%);
+	}
 
-  .footer {
-    margin-bottom: 0;
-  }
+	.footer {
+		margin-bottom: 0;
+	}
 
-  .header {
-    position: sticky;
-    margin-top: 1.5rem;
-    top: -0.1rem;
-    padding: 0.5rem;
-    height: calc(var(--header-height) - 0.5rem);
-    border-bottom: thin solid var(--gray-light);
-  }
+	.header {
+		position: sticky;
+		margin-top: 1.5rem;
+		top: -0.1rem;
+		padding: 0.5rem;
+		height: calc(var(--header-height) - 0.5rem);
+		border-bottom: thin solid var(--gray-light);
+	}
 
-  .champions > .container {
-    grid-template-columns: repeat(4, 22.5%);
-  }
-  .champions .section__title {
-    grid-column: span 4;
-  }
+	.champions > .container {
+		grid-template-columns: repeat(4, 22.5%);
+	}
+	.champions .section__title {
+		grid-column: span 4;
+	}
 
-  /***********Runes Section ************/
-  .champion__runes--tree {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-  }
-  .rune__tree {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    padding-bottom: 0;
-    border-bottom: none;
-    padding-right: 1rem;
-  }
-  .champion__build--spells {
-    grid-column: 2/4;
-    grid-row: 1/2;
-    padding-top: 0;
-  }
-  .champion__info--skills {
-    grid-column: 2/4;
-    grid-row: 2/4;
-    flex-direction: column;
-    margin-top: 0;
-    padding-top: 0;
-    min-width: 100%;
-  }
+	/***********Runes Section ************/
+	.champion__runes--tree {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-template-rows: repeat(3, auto);
+	}
+	.rune__tree {
+		grid-column: 1/2;
+		grid-row: 1/4;
+		padding-bottom: 0;
+		border-bottom: none;
+		padding-right: 1rem;
+	}
+	.champion__build--spells {
+		grid-column: 2/4;
+		grid-row: 1/2;
+		padding-top: 0;
+	}
+	.champion__info--skills {
+		grid-column: 2/4;
+		grid-row: 2/4;
+		flex-direction: column;
+		margin-top: 0;
+		padding-top: 0;
+		min-width: 100%;
+	}
 
-  .build__container {
-    column-gap: 10px;
-  }
+	.build__container {
+		column-gap: 10px;
+	}
 
-  .champion__skill--priority {
-    padding-top: 1rem;
-  }
+	.champion__skill--priority {
+		padding-top: 1rem;
+	}
 
-  .champion__skill--label {
-    margin: 0 0.8rem;
-  }
+	.champion__skill--label {
+		margin: 0 0.8rem;
+	}
 
-  /************** STATS COUNTERS *********/
-  .counters__container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 1fr 30%;
-  }
-  .counters__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-row: 1/3;
-  }
-  .counters__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-  }
+	/************** STATS COUNTERS *********/
+	.counters__container {
+		display: grid;
+		grid-template-columns: 30% 70%;
+		grid-template-rows: 1fr 30%;
+	}
+	.counters__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		grid-row: 1/3;
+	}
+	.counters__content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.2rem;
+	}
 
-  summary {
-    margin-bottom: 1.5rem;
-  }
-  .champ__data--name {
-    margin-bottom: 1rem;
-    margin-right: 0;
-  }
+	summary {
+		margin-bottom: 1.5rem;
+	}
+	.champ__data--name {
+		margin-bottom: 1rem;
+		margin-right: 0;
+	}
 
-  .stats__container {
-    gap: 0.8rem;
-  }
-  .counters__matchups {
-    margin-bottom: 0;
-  }
+	.stats__container {
+		gap: 0.8rem;
+	}
+	.counters__matchups {
+		margin-bottom: 0;
+	}
 }
 
 /* Scroll Espía */
 .spy__on[data__scroll--spy] {
-  color: var(--text-color);
+	color: var(--text-color);
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 @keyframes fadeInactive {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.27;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.27;
+	}
 }
