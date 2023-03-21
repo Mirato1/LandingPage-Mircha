@@ -1,16 +1,17 @@
 export async function ajax(props) {
-  let { url, cbSuccess } = props;
+	let { url, cbSuccess } = props;
 
-  await fetch(url)
-    .then((res) => (res.ok ? res.json() : Promise.reject()))
-    .then((json) => cbSuccess(json))
-    .catch((err) => {
-      let message = err.statusText || "Ocurrió un error en la API";
+	await fetch(url)
+		.then((res) => (res.ok ? res.json() : Promise.reject()))
+		.then((json) => cbSuccess(json))
+		.catch((err) => {
+			let message = err?.statusText || 'Ocurrió un error en la API';
+			console.log('🚀 ~ ajax ~ message:', message);
 
-      document.getElementById("root").innerHTML = `
+			document.getElementById('root').innerHTML = `
             <div class="error">
-                <p>Error ${err.status}: ${message}</p>
+                <p>Error ${err?.status}: ${message}</p>
             </div>
         `;
-    });
+		});
 }

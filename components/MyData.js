@@ -9,9 +9,9 @@ export function MyData() {
 	ajax({
 		url: `${api.TOTALAPI}`,
 		cbSuccess: (rankJson) => {
-			win.textContent = `${rankJson[0].wins} V`;
-			losses.textContent = `${rankJson[0].losses} D`;
-			lp.textContent = `${rankJson[0].leaguePoints} LP`;
+			win.textContent = `${rankJson[1].wins} V`;
+			losses.textContent = `${rankJson[1].losses} D`;
+			lp.textContent = `${rankJson[1].leaguePoints} LP`;
 		},
 	});
 }

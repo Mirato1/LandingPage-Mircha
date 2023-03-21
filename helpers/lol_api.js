@@ -8,9 +8,9 @@ const CHAMPS = 'https://ddragon.leagueoflegends.com/cdn/11.19.1/data/en_US/champ
 	PASSIVE = 'https://ddragon.leagueoflegends.com/cdn/11.19.1/img/passive/',
 	SPELL = 'https://ddragon.leagueoflegends.com/cdn/11.19.1/img/spell/',
 	SUMMAPI =
-		'https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/ZdBOFiDYRWWGbjpmGts8rgP2ZsZl8MNRzvpujGXOHr6H',
+		'https://la2.api.riotgames.com/lol/league/v4/entries/by-summoner/L7pn4nX_XQEtmyo5FTtJB5Wv83qdTJA-iSDj0ikf-zPs',
 	// KEY
-	APIKEY = 'RGAPI-bd5290c6-8537-48b6-be79-1f0fbd15437e',
+	APIKEY = 'RGAPI-11df4e67-c74b-4653-8959-85c3e436ac27',
 	TOTALAPI = `${SUMMAPI}?api_key=${APIKEY}`,
 	//Runas
 	RUNESKEY = 'https://ddragon.leagueoflegends.com/cdn/11.19.1/data/en_US/runesReforged.json',
